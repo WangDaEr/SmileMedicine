@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// control the activity related to player character;
+/// </summary>
 public class PlayerController : MonoBehaviour
 {
     public GameManager gm;
@@ -9,8 +12,9 @@ public class PlayerController : MonoBehaviour
     public bool X_restraint;
     public bool Y_restraint;
 
-    public float runningSpeed = 0;
-    public float climbingSpeed = 0;
+    public float runningSpeed;
+    public float crochingSpeed;
+    public float climbingSpeed;
     
     private CharacterController controller;
     private bool usingLadder;
@@ -20,6 +24,7 @@ public class PlayerController : MonoBehaviour
     {
         controller = GetComponent<CharacterController>();
         usingLadder = false;
+
         X_restraint = false;
         Y_restraint = true;  //initially the player can only move horizontally;
     }
@@ -31,6 +36,9 @@ public class PlayerController : MonoBehaviour
         Interaction();
     }
 
+    /// <summary>
+    /// basic player movement in 2D space, horizontally and climbing;
+    /// </summary>
     private void PlayerMove()
     {
         Vector3 movementTotal = new Vector3(0.0F, 0.0F, 0.0F);
@@ -58,8 +66,19 @@ public class PlayerController : MonoBehaviour
         controller.Move(movementTotal);
     }
 
+    /// <summary>
+    /// interacting with other gameobjects when certain input is provided;
+    /// </summary>
     private void Interaction()
     {
+        if (m_input.START_pressed)
+        {
+            gm.StartPauseMenu();
+        }
 
+        if (m_input.SELECT_pressed)
+        {
+            gm.StartPauseMenu();
+        }
     }
 }

@@ -2,8 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// 1.activate a different interpolation of input (vertical movement for switching current layer);
+/// 2.notify the layer manager to change the position of related layers
+/// </summary>
 public class LayerSwitch : MonoBehaviour
 {
+    public int target_layer_index;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -16,6 +22,10 @@ public class LayerSwitch : MonoBehaviour
         
     }
 
+    /// <summary>
+    /// enter the collision of the portal;
+    /// </summary>
+    /// <param name="other"></param>
     private void OnTriggerEnter(Collider other)
     {
         GameObject sor = other.gameObject;
@@ -26,6 +36,10 @@ public class LayerSwitch : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// leave the collision of the portal;
+    /// </summary>
+    /// <param name="other"></param>
     private void OnTriggerExit(Collider other)
     {
         GameObject sor = other.gameObject;
@@ -36,6 +50,11 @@ public class LayerSwitch : MonoBehaviour
         }
     }
 
+    /*
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="collision"></param>
     private void OnCollisionEnter(Collision collision)
     {
         GameObject sor = collision.gameObject;
@@ -45,4 +64,5 @@ public class LayerSwitch : MonoBehaviour
 
         }
     }
+    */
 }

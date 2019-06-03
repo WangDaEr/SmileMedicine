@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// provided proccessed input value;
+/// </summary>
 public class InputSystem : MonoBehaviour
 {
     public float hor_axis_val;
@@ -25,6 +28,9 @@ public class InputSystem : MonoBehaviour
         ReadAllInputs();
     }
 
+    /// <summary>
+    /// initialize the value;
+    /// </summary>
     private void ResetAllInputs()
     {
         hor_axis_val = 0.0F;
@@ -35,6 +41,10 @@ public class InputSystem : MonoBehaviour
         SELECT_pressed = false;
     }
 
+    /// <summary>
+    /// check and read raw inputs from default input stream;
+    /// extension: location for code that reads input from switch in a specific way;
+    /// </summary>
     private void ReadAllInputs()
     {
         hor_axis_val = Input.GetAxis("Horizontal");

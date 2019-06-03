@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// check whether player can move vertically by ladder;
+/// </summary>
 public class LadderUsing : MonoBehaviour
 {
     // Start is called before the first frame update
@@ -16,6 +19,10 @@ public class LadderUsing : MonoBehaviour
         
     }
 
+    /// <summary>
+    /// change the constraint of player movememnt to allow of prohibit moving in certain direction;
+    /// </summary>
+    /// <param name="other"></param>
     private void OnTriggerEnter(Collider other)
     {
         GameObject sor = other.gameObject;
