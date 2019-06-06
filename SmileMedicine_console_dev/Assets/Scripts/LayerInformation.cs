@@ -31,7 +31,7 @@ public class LayerInformation : MonoBehaviour
     {
         if (startTransformation)
         {
-            startTransformation = LayerTransformation(lt_des_pos);
+            startTransformation = !LayerTransformation(lt_des_pos);
         }
     }
 
@@ -41,6 +41,11 @@ public class LayerInformation : MonoBehaviour
     /// <param name="des_pos"></param>
     public void StartLayerTransformation(Vector3 des_pos)
     {
+        if (startTransformation)
+        {
+            return;
+        }
+
         lt_des_pos = des_pos;
         startTransformation = true;
     }
@@ -53,8 +58,8 @@ public class LayerInformation : MonoBehaviour
     public bool LayerTransformation(Vector3 des_pos)
     {
         transform.position = Vector3.MoveTowards(transform.position, des_pos, switchSpeed * Time.deltaTime);
-        bool not_reach_end = des_pos.Equals(transform.position);
+        bool reach_end = des_pos.Equals(transform.position);
 
-        return not_reach_end;
+        return reach_end;
     }
 }

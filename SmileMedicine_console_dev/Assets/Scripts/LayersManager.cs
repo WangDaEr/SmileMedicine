@@ -14,7 +14,7 @@ public class LayersManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        Set_LM_Reference();
     }
 
     // Update is called once per frame
@@ -26,16 +26,20 @@ public class LayersManager : MonoBehaviour
     /// <summary>
     /// notify related layers to change their position;
     /// </summary>
-    /// <param name="tar"></param>
-    /// <param name="des"></param>
-    public void LayersTransformation(int tar, int des)
+    /// <param name="cur">the index of layer player is at currently</param>
+    /// <param name="des">the index of layer player desires to move to</param>
+    public void LayersTransformation(int cur, int des)
     {
-        int dif = tar - des;
-        Vector3 distance = new Vector3(0.0F, Y_offset * dif, Z_offset * dif);
+        //int dif = cur - des;
+        //Vector3 distance = new Vector3(0.0F, Y_offset * dif, Z_offset * dif);
+
+        Vector3 movement = transform.GetChild(cur).position - transform.GetChild(des).position;
+
+        Debug.Log("move: " + movement);
 
         foreach (Transform layer in transform)
         {
-            layer.gameObject.GetComponent<LayerInformation>().StartLayerTransformation(layer.position + distance);
+            layer.gameObject.GetComponent<LayerInformation>().StartLayerTransformation(layer.position + movement);
         }
     }
 

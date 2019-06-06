@@ -236,7 +236,7 @@ GameObject:
   - component: {fileID: 174974518}
   - component: {fileID: 174974519}
   m_Layer: 0
-  m_Name: layers
+  m_Name: layerManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -271,7 +271,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4bf0b082898e6f046b7615ae6e467b9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  switchSpeed: 1
+  switchSpeed: 2
   Y_offset: 0.4
   Z_offset: 2
 --- !u!1001 &354976962
@@ -529,7 +529,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df773199809a11447a5e6590463ffe17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target_layer_index: 0
+  target_layer_index_up: 1
+  target_layer_index_down: 2
+  layerManager: {fileID: 174974517}
 --- !u!65 &478371182
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -678,7 +680,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df773199809a11447a5e6590463ffe17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target_layer_index: 0
+  target_layer_index_up: 0
+  target_layer_index_down: 2
+  layerManager: {fileID: 174974517}
 --- !u!65 &732755607
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1063,7 +1067,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df773199809a11447a5e6590463ffe17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target_layer_index: 0
+  target_layer_index_up: 0
+  target_layer_index_down: 1
+  layerManager: {fileID: 174974517}
 --- !u!65 &1619489052
 BoxCollider:
   m_ObjectHideFlags: 0
