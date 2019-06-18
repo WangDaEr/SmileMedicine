@@ -8,6 +8,16 @@ public class LayerManagerCyclical : MonoBehaviour
     public List<GameObject> layers = new List<GameObject>();
     public int LayersNumber;
 
+    public int layerIndex_init = 0;
+
+    public int layerTranformationOption = 0;
+
+    public float Y_Offset;
+    public float Z_Offset;
+
+    public float CylinderRadius;
+    public float CylinderIntervalDegree;
+
     private void InstantiateLayers()
     {
         foreach (GameObject layer in layers)
@@ -19,7 +29,7 @@ public class LayerManagerCyclical : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        InstantiateLayers();
+        //InstantiateLayers();
     }
 
     // Update is called once per frame
