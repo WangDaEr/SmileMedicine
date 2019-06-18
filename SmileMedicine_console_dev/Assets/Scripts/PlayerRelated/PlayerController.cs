@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour
     public InputSystem m_input;
     public bool X_restraint;
     public bool Y_restraint;
+    public bool enable_movement;
 
     public float runningSpeed;
     public float crouchingSpeed;
@@ -40,6 +41,7 @@ public class PlayerController : MonoBehaviour
         
         X_restraint = false;
         Y_restraint = true;  //initially the player can only move horizontally;
+        enable_movement = true;
 
         mov_dir = string.Empty;
         usingLadder = false;
@@ -66,6 +68,8 @@ public class PlayerController : MonoBehaviour
     /// </summary>
     private void PlayerMove()
     {
+        if (!enable_movement) { return; }
+
         Vector3 movementTotal = new Vector3(0.0F, 0.0F, 0.0F);
 
         //add gravity?
