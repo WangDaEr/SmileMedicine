@@ -18,18 +18,10 @@ public class LayerManagerCyclical : MonoBehaviour
     public float CylinderRadius;
     public float CylinderIntervalDegree;
 
-    private void InstantiateLayers()
-    {
-        foreach (GameObject layer in layers)
-        {
-            GameObject newObj = Instantiate(layer, transform);
-        }
-    }
-
     // Start is called before the first frame update
     void Start()
     {
-        //InstantiateLayers();
+
     }
 
     // Update is called once per frame

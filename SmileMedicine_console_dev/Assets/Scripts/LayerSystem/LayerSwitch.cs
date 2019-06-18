@@ -24,7 +24,7 @@ public class LayerSwitch : MonoBehaviour
         cur_layer_index = transform.parent.parent.gameObject.GetComponent<LayerInformation>().layerIndex;
         allowTranformation = false;
 
-        //lm = layerManager.GetComponent<LayersManager>();
+        lm = layerManager.GetComponent<LayersManager>();
     }
 
     // Update is called once per frame

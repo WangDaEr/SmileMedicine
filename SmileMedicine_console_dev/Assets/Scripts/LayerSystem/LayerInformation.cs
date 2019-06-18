@@ -11,6 +11,9 @@ public class LayerInformation : MonoBehaviour
     private LayersManager lm;
     private float switchSpeed;
     private Vector3 lt_des_pos;
+    private float lt_des_degree;
+    private float degreeCount = 0.0F;
+    private bool lt_rotate_dir;
 
     private bool startTransformation;
 
@@ -31,7 +34,11 @@ public class LayerInformation : MonoBehaviour
     {
         if (startTransformation)
         {
-            startTransformation = !LayerTransformation(lt_des_pos);
+            startTransformation = !LayerTransformation(lt_des_pos, lt_des_degree, lt_rotate_dir);
+        }
+        else
+        {
+            degreeCount = 0.0F;
         }
     }
 
@@ -39,7 +46,7 @@ public class LayerInformation : MonoBehaviour
     /// only called once to start the transformation;
     /// </summary>
     /// <param name="des_pos"></param>
-    public void StartLayerTransformation(Vector3 des_pos)
+    public void StartLayerTransformation(Vector3 des_pos, int rotateDir)
     {
         if (startTransformation)
         {
@@ -47,6 +54,9 @@ public class LayerInformation : MonoBehaviour
         }
 
         lt_des_pos = des_pos;
+        lt_des_degree = lm.CylinderIntervalDegree * rotateDir;
+        lt_rotate_dir = rotateDir > 0;
+
         startTransformation = true;
     }
 
@@ -55,10 +65,21 @@ public class LayerInformation : MonoBehaviour
     /// </summary>
     /// <param name="des_pos"></param>
     /// <returns></returns>
-    public bool LayerTransformation(Vector3 des_pos)
+    public bool LayerTransformation(Vector3 des_pos, float degree, bool rotateDir)
     {
-        transform.position = Vector3.MoveTowards(transform.position, des_pos, switchSpeed * Time.deltaTime);
-        bool reach_end = des_pos.Equals(transform.position);
+
+        if (lm.layerTranformationOption == 0)
+        {
+            transform.position = Vector3.MoveTowards(transform.position, des_pos, switchSpeed * Time.deltaTime);
+        }
+        else if (lm.layerTranformationOption == 1)
+        {
+            transform.RotateAround(new Vector3(0.0F, -lm.CylinderRadius, 0.0F), Vector3.right, rotateDir ? switchSpeed * Time.deltaTime : -switchSpeed * Time.deltaTime);
+            degreeCount += rotateDir ? switchSpeed * Time.deltaTime : -switchSpeed * Time.deltaTime;
+            //Debug.Log("roatting!!!!!");
+        }
+
+        bool reach_end = lm.layerTranformationOption == 0 ? des_pos.Equals(transform.position) : (degreeCount - lt_des_degree) / lt_des_degree >= 0;
 
         return reach_end;
     }

@@ -7,9 +7,19 @@ using UnityEngine;
 /// </summary>
 public class LayersManager : MonoBehaviour
 {
-    public float switchSpeed;
-    public float Y_offset;
-    public float Z_offset;
+    public float switchSpeed = 1;
+    public float Y_Offset;
+    public float Z_Offset;
+
+    public float CylinderRadius;
+    public float CylinderIntervalDegree;
+
+    public List<GameObject> layers = new List<GameObject>();
+    public int LayersNumber;
+
+    public int layerIndex_init = 0;
+
+    public int layerTranformationOption = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -39,7 +49,7 @@ public class LayersManager : MonoBehaviour
 
         foreach (Transform layer in transform)
         {
-            layer.gameObject.GetComponent<LayerInformation>().StartLayerTransformation(layer.position + movement);
+            layer.gameObject.GetComponent<LayerInformation>().StartLayerTransformation(layer.position + movement, cur - des);
         }
     }
 
