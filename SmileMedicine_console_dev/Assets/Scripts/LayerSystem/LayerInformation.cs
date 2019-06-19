@@ -67,6 +67,7 @@ public class LayerInformation : MonoBehaviour
     /// <returns></returns>
     public bool LayerTransformation(Vector3 des_pos, float degree, bool rotateDir)
     {
+        Debug.Log("Switching speed: " + switchSpeed);
 
         if (lm.layerTranformationOption == 0)
         {

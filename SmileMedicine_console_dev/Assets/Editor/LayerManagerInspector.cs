@@ -53,7 +53,6 @@ public class LayerManagerInspector : Editor
         switchSpeed = lm.switchSpeed;
 
         Debug.Log("op: " + layerTranformationOption);
-
     }
 
     private void CheckLayerNumber(int newLayerNum)
@@ -169,9 +168,8 @@ public class LayerManagerInspector : Editor
 
         CheckLayerNumber(EditorGUILayout.IntSlider("Number of Layers", layersNumber, 0, 10));
 
-        LayerIndex_init = EditorGUILayout.IntSlider("Index of Initial Layer", LayerIndex_init, 0, layersNumber);
+        LayerIndex_init = EditorGUILayout.IntSlider("Index of Initial Layer", layerIndex_init, 0, layersNumber);
 
-        //layerTranformationOption = (LayerTransformationOptions)EditorGUILayout.EnumPopup("Layer Transformation Option", layerTranformationOption);
         CheckLayer_T_Option((LayerTransformationOptions)EditorGUILayout.EnumPopup("Layer Transformation Option", layerTranformationOption));
 
         if (layerTranformationOption == LayerTransformationOptions.OneDirection)
@@ -181,15 +179,13 @@ public class LayerManagerInspector : Editor
         }
         else if (layerTranformationOption == LayerTransformationOptions.Cyclical)
         {
-            CylinderRadius = EditorGUILayout.Slider("Cylinder Radius", CylinderRadius, 0, 15);
-            CylinderIntervalDegree = EditorGUILayout.Slider("Interval Degree", CylinderIntervalDegree, 0, layersNumber > 0 ? 360 / layersNumber : 180);
+            CylinderRadius = EditorGUILayout.Slider("Cylinder Radius", cylinderRadius, 0, 15);
+            CylinderIntervalDegree = EditorGUILayout.Slider("Interval Degree", cylinderIntervalDegree, 0, layersNumber > 0 ? 360 / layersNumber : 180);
         }
 
-        SwitchSpeed = EditorGUILayout.Slider("Transform Speed", SwitchSpeed, 0, layerTranformationOption == LayerTransformationOptions.OneDirection ? 10 : 30);
-        //Debug.Log("switchspeed: " + lm.switchSpeed);
+        SwitchSpeed = EditorGUILayout.Slider("Transform Speed", switchSpeed, 0, layerTranformationOption == LayerTransformationOptions.OneDirection ? 10 : 30);
 
-
-        for (int i = 0; i < layersNumber; ++i)
+        for (int i = 0; i < lm.layers.Count; ++i)
         {
             Debug.Log("length: " + lm.layers.Count + " " + i + " " + layersNumber);
             lm.layers[i] = (GameObject)EditorGUILayout.ObjectField("Layer " + i, lm.layers[i], typeof(GameObject), false);
