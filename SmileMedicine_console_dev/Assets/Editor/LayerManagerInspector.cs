@@ -166,42 +166,42 @@ public class LayerManagerInspector : Editor
     {
         EditorGUILayout.BeginVertical();
 
-        CheckLayerNumber(EditorGUILayout.IntSlider("Number of Layers", layersNumber, 0, 10));
+        CheckLayerNumber(EditorGUILayout.IntSlider(new GUIContent("Number of Layers", "the number of layer ready to create"), layersNumber, 0, 10));
 
-        LayerIndex_init = EditorGUILayout.IntSlider("Index of Initial Layer", layerIndex_init, 0, layersNumber);
+        LayerIndex_init = EditorGUILayout.IntSlider(new GUIContent("Index of Initial Layer", "The index of layer that will be used for player spawn place"), layerIndex_init, 0, layersNumber);
 
-        CheckLayer_T_Option((LayerTransformationOptions)EditorGUILayout.EnumPopup("Layer Transformation Option", layerTranformationOption));
+        CheckLayer_T_Option((LayerTransformationOptions)EditorGUILayout.EnumPopup(new GUIContent("Layer Transformation Option", "the layout of layers;\nlayers can either be on a plane or the side of cylinder"), layerTranformationOption));
 
         if (layerTranformationOption == LayerTransformationOptions.OneDirection)
         {
-            Y_Offset = EditorGUILayout.Slider("Depth", Y_Offset, 0, 15);
-            Z_Offset = EditorGUILayout.Slider("Height", Z_Offset, 0, 15);
+            Y_Offset = EditorGUILayout.Slider(new GUIContent("Depth", "how far the layer is away from camera on Z axis"), Y_Offset, 0, 15);
+            Z_Offset = EditorGUILayout.Slider(new GUIContent("Height", "how high the layer is above the original plane on Y axis"), Z_Offset, 0, 15);
         }
         else if (layerTranformationOption == LayerTransformationOptions.Cyclical)
         {
-            CylinderRadius = EditorGUILayout.Slider("Cylinder Radius", cylinderRadius, 0, 15);
-            CylinderIntervalDegree = EditorGUILayout.Slider("Interval Degree", cylinderIntervalDegree, 0, layersNumber > 0 ? 360 / layersNumber : 180);
+            CylinderRadius = EditorGUILayout.Slider(new GUIContent("Cylinder Radius", "if all layers are on the side of a cylinder, the radius of it"), cylinderRadius, 0, 15);
+            CylinderIntervalDegree = EditorGUILayout.Slider(new GUIContent("Interval Degree", "if all layers are on the side of a cylinder, degree between each layer"), cylinderIntervalDegree, 0, layersNumber > 0 ? 360 / layersNumber : 180);
         }
 
-        SwitchSpeed = EditorGUILayout.Slider("Transform Speed", switchSpeed, 0, layerTranformationOption == LayerTransformationOptions.OneDirection ? 10 : 30);
+        SwitchSpeed = EditorGUILayout.Slider(new GUIContent("Transform Speed", "One Direction: translation on Z axis (units)\nCyclical: rotation around X axis (degree)"), switchSpeed, 0, layerTranformationOption == LayerTransformationOptions.OneDirection ? 10 : 30);
 
         for (int i = 0; i < lm.layers.Count; ++i)
         {
             Debug.Log("length: " + lm.layers.Count + " " + i + " " + layersNumber);
-            lm.layers[i] = (GameObject)EditorGUILayout.ObjectField("Layer " + i, lm.layers[i], typeof(GameObject), false);
+            lm.layers[i] = (GameObject)EditorGUILayout.ObjectField(new GUIContent("Layer " + i, "the layer at index " + i + " (0 is the one farest from camera)"), lm.layers[i], typeof(GameObject), false);
         }
 
-        if (GUILayout.Button("Instantiate All Layers"))
+        if (GUILayout.Button(new GUIContent("Instantiate All Layers", "create the layers in the scene")))
         {
             InstantiateLayers();
         }
 
-        if (GUILayout.Button("Update Positions of All Layers"))
+        if (GUILayout.Button(new GUIContent("Update Positions of All Layers", "update states of layers in the scene")))
         {
             UpdateLayersPosition();
         }
 
-        if (GUILayout.Button("Destroy All Layers"))
+        if (GUILayout.Button(new GUIContent("Destroy All Layers", "remove all the layers in the scene under current layer manager")))
         {
             DestroyLayers();
         }
