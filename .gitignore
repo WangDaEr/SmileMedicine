@@ -34,3 +34,10 @@ sysinfo.txt
 # Builds
 *.apk
 *.unitypackage
+
+#OXS file syetem
+*.DS_Store
+.vscode/
+
+#Other unrelated files
+*.pdf
