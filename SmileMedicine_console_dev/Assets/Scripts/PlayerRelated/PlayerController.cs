@@ -22,6 +22,10 @@ public class PlayerController : MonoBehaviour
     private bool usingLadder;
     private string mov_dir;
 
+    private bool startSpecialMove;
+    private Vector3 des_pos;
+    private float switchSpeed;
+
     public string movDir
     {
         get
@@ -46,12 +50,22 @@ public class PlayerController : MonoBehaviour
         mov_dir = string.Empty;
         usingLadder = false;
         curSpeed = 0.0F;
+
+        startSpecialMove = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        PlayerMove();
+        if (startSpecialMove)
+        {
+            startSpecialMove = !PlayerSpecialMove(des_pos, switchSpeed);
+        }
+        else
+        {
+            PlayerMove();
+        }
+
         Interaction();
     }
 
@@ -61,6 +75,20 @@ public class PlayerController : MonoBehaviour
         {
 
         }
+    }
+
+    public void StartSpecialMove(Vector3 des_pos, float switchSpeed)
+    {
+        startSpecialMove = true;
+        this.des_pos = des_pos;
+        this.switchSpeed = switchSpeed; 
+    }
+
+    private bool PlayerSpecialMove(Vector3 des_pos, float switchSpeed)
+    {
+        transform.position = Vector3.MoveTowards(transform.position, des_pos, switchSpeed * Time.deltaTime);
+
+        return des_pos.Equals(transform.position);
     }
 
     /// <summary>

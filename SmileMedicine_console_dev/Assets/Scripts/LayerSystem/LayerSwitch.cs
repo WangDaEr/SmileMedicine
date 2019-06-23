@@ -12,8 +12,12 @@ public class LayerSwitch : MonoBehaviour
     public int target_layer_index_down = -1;
     public GameObject layerManager;
 
+    public GameObject UpArrowPortal;
+    public GameObject DownArrowPortal;
+
     private LayersManager lm;
     private int cur_layer_index;
+    public int CurLayerIndex { get { return cur_layer_index; } set { cur_layer_index = value; } }
     private bool allowTranformation;
     private GameObject playerCharacter;
 
@@ -21,7 +25,7 @@ public class LayerSwitch : MonoBehaviour
     void Start()
     {        
         //get which layer the portal is at currently;
-        cur_layer_index = transform.parent.parent.gameObject.GetComponent<LayerInformation>().layerIndex;
+        cur_layer_index = transform.parent.gameObject.GetComponent<LayerInformation>().layerIndex;
         allowTranformation = false;
 
         layerManager = GameObject.FindGameObjectWithTag("LayersManager");
@@ -45,6 +49,7 @@ public class LayerSwitch : MonoBehaviour
     {
         float move_dir = playerCharacter.GetComponent<PlayerController>().m_input.ver_axis_val;
 
+        /*
         if (target_layer_index_up > -1 && move_dir > 0.0F)
         {
             lm.LayersTransformation(cur_layer_index, target_layer_index_up);
@@ -56,6 +61,19 @@ public class LayerSwitch : MonoBehaviour
             lm.LayersTransformation(cur_layer_index, target_layer_index_down);
 
             Debug.Log("from layer " + cur_layer_index + " to " + target_layer_index_down);
+        }
+        */
+        if (UpArrowPortal && move_dir > 0.0F)
+        {
+            lm.LayersTransformation(cur_layer_index, UpArrowPortal.GetComponent<LayerSwitch>().CurLayerIndex, UpArrowPortal.transform.position);
+
+            Debug.Log("from layer " + cur_layer_index + " to " + UpArrowPortal.GetComponent<LayerSwitch>().CurLayerIndex);
+        }
+        else if (DownArrowPortal && move_dir < 0.0F)
+        {
+            lm.LayersTransformation(cur_layer_index, DownArrowPortal.GetComponent<LayerSwitch>().CurLayerIndex, DownArrowPortal.transform.position);
+
+            Debug.Log("from layer " + cur_layer_index + " to " + DownArrowPortal.GetComponent<LayerSwitch>().CurLayerIndex);
         }
     }
 
@@ -74,6 +92,10 @@ public class LayerSwitch : MonoBehaviour
 
             Debug.Log("entered portal");
             sor.GetComponent<PlayerController>().movDir = "to another layer";
+        }
+        else
+        {
+            Debug.Log("asdasdasdasd");
         }
     }
 

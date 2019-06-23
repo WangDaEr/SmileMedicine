@@ -1,5 +1,18 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!65 &3204521737300964436
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1104815892745359724}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.49875, y: 1.8351749, z: 0.85677326}
+  m_Center: {x: 0, y: -0.05160651, z: -0.4283865}
 --- !u!64 &3204521737300964438
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -14,19 +27,6 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 14
   m_Mesh: {fileID: -2432090755550338912, guid: 209f32d3c9cdd4f4885ad36bd189e742, type: 3}
---- !u!65 &3204521737300964436
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1104815892745359724}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.49875, y: 1.8351749, z: 0.85677326}
-  m_Center: {x: 0, y: -0.05160651, z: -0.4283865}
 --- !u!114 &3204521737300964439
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42,6 +42,8 @@ MonoBehaviour:
   target_layer_index_up: 1
   target_layer_index_down: 2
   layerManager: {fileID: 0}
+  UpArrowPortal: {fileID: 0}
+  DownArrowPortal: {fileID: 0}
 --- !u!1 &3204521737825342315
 GameObject:
   m_ObjectHideFlags: 0

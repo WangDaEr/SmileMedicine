@@ -8,7 +8,7 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public GameObject playerCharacter;
-    public GameObject layers;
+    public GameObject layerManager;
 
     // Start is called before the first frame update
     void Start()
@@ -29,6 +29,8 @@ public class GameManager : MonoBehaviour
     {
         playerCharacter.GetComponent<PlayerController>().gm = this;
         playerCharacter.GetComponent<PlayerController>().m_input = GetComponent<InputSystem>();
+
+        layerManager.GetComponent<LayersManager>().gm = this;
     }
 
     /// <summary>

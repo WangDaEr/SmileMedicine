@@ -43,7 +43,7 @@ public class LayerManagerInspector : Editor
     {
         lm = (LayersManager)target;
 
-        layersNumber = lm.transform.childCount;
+        layersNumber = lm.layers.Count;
         layerIndex_init = lm.layerIndex_init;
         layerTranformationOption = (LayerTransformationOptions)lm.layerTranformationOption;
         y_Offset = lm.Y_Offset;
@@ -104,8 +104,8 @@ public class LayerManagerInspector : Editor
 
             Vector3 newTranslation = new Vector3(
                 0.0F,
-                isOneDir ? index_diff * -Y_Offset : 0.0F,
-                isOneDir ? index_diff * Z_Offset : CylinderRadius
+                isOneDir ? index_diff * Y_Offset : CylinderRadius,
+                isOneDir ? index_diff * Z_Offset : 0.0F
                 );
             /*
             Vector3 newRot_v3 = new Vector3(
@@ -129,7 +129,7 @@ public class LayerManagerInspector : Editor
 
             if (!isOneDir)
             {
-                newObj.transform.Translate(new Vector3(newTranslation.x, -newTranslation.z, 0.0F), Space.World);
+                newObj.transform.Translate(new Vector3(newTranslation.x, -newTranslation.y, 0.0F), Space.World);
             }
         }
     }
@@ -144,12 +144,12 @@ public class LayerManagerInspector : Editor
 
             Vector3 newTranslation = new Vector3(
                 0.0F,
-                isOneDir ? index_diff * -Y_Offset : 0.0F,
+                isOneDir ? index_diff * Y_Offset : 0.0F,
                 isOneDir ? index_diff * Z_Offset : CylinderRadius
                 );
 
 
-            layer.transform.rotation = Quaternion.Euler(new Vector3(-90.0F, 0.0F, 0.0F));
+            layer.transform.rotation = Quaternion.Euler(new Vector3(0.0F, 0.0F, 0.0F));
             layer.transform.position = new Vector3(0.0F, 0.0F, 0.0F);
 
             layer.transform.Rotate(Vector3.right, index_diff * CylinderIntervalDegree, Space.World);
@@ -174,8 +174,8 @@ public class LayerManagerInspector : Editor
 
         if (layerTranformationOption == LayerTransformationOptions.OneDirection)
         {
-            Y_Offset = EditorGUILayout.Slider(new GUIContent("Depth", "how far the layer is away from camera on Z axis"), Y_Offset, 0, 15);
-            Z_Offset = EditorGUILayout.Slider(new GUIContent("Height", "how high the layer is above the original plane on Y axis"), Z_Offset, 0, 15);
+            Z_Offset = EditorGUILayout.Slider(new GUIContent("Depth", "how far the layer is away from camera on Z axis"), Z_Offset, 0, 15);
+            Y_Offset = EditorGUILayout.Slider(new GUIContent("Height", "how high the layer is above the original plane on Y axis"), Y_Offset, 0, 15);
         }
         else if (layerTranformationOption == LayerTransformationOptions.Cyclical)
         {
