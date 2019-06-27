@@ -9,17 +9,38 @@ public class GameManager : MonoBehaviour
 {
     public GameObject playerCharacter;
     public GameObject layerManager;
+    public GameObject inventoryCanvas;
+
+    public enum SystemUsingInput
+    {
+        PlayerController,
+        InventoryMenu,
+    }
+
+    private InputSystem m_input;
+    private SystemUsingInput sui;
 
     // Start is called before the first frame update
     void Start()
     {
         SetGMReference();
+
+        m_input = GetComponent<InputSystem>();
+        sui = SystemUsingInput.PlayerController;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (m_input.SELECT_pressed)
+        {
+            sui = (SystemUsingInput)(((int)sui + 1) % 2);
+
+            playerCharacter.GetComponent<PlayerController>().ChangeInputLock();
+            inventoryCanvas.GetComponent<InventoryCanvasController>().ChangeInputLock();
+
+            inventoryCanvas.SetActive(sui == SystemUsingInput.InventoryMenu);
+        }
     }
 
     /// <summary>
@@ -31,6 +52,9 @@ public class GameManager : MonoBehaviour
         playerCharacter.GetComponent<PlayerController>().m_input = GetComponent<InputSystem>();
 
         layerManager.GetComponent<LayersManager>().gm = this;
+
+        inventoryCanvas.GetComponent<InventoryCanvasController>().gm = this;
+        inventoryCanvas.GetComponent<InventoryCanvasController>().m_input = GetComponent<InputSystem>();
     }
 
     /// <summary>
@@ -46,6 +70,6 @@ public class GameManager : MonoBehaviour
     /// </summary>
     public void StartInventory()
     {
-
+        inventoryCanvas.SetActive(true);
     }
 }

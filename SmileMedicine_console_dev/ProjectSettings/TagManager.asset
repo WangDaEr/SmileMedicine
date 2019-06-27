@@ -11,6 +11,13 @@ TagManager:
   - ladderEntrance
   - GameManager
   - LayersManager
+  - lightSources
+  - lightSource
+  - Environment
+  - layerPortal
+  - InventoryButtons
+  - InventoryButton
+  - InventoryCanvas
   layers:
   - Default
   - TransparentFX

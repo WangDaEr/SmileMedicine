@@ -26,6 +26,8 @@ public class PlayerController : MonoBehaviour
     private Vector3 des_pos;
     private float switchSpeed;
 
+    private bool inputLoackAcquired;
+
     public string movDir
     {
         get
@@ -52,21 +54,31 @@ public class PlayerController : MonoBehaviour
         curSpeed = 0.0F;
 
         startSpecialMove = false;
+
+        inputLoackAcquired = true;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (startSpecialMove)
+        if (inputLoackAcquired)
         {
-            startSpecialMove = !PlayerSpecialMove(des_pos, switchSpeed);
-        }
-        else
-        {
-            PlayerMove();
-        }
+            if (startSpecialMove)
+            {
+                startSpecialMove = !PlayerSpecialMove(des_pos, switchSpeed);
+            }
+            else
+            {
+                PlayerMove();
+            }
 
-        Interaction();
+            Interaction();
+        }
+    }
+
+    public void ChangeInputLock()
+    {
+        inputLoackAcquired = !inputLoackAcquired;
     }
 
     private void movement_debug_info(string pos_val, string neg_val, float check, float threshold, bool tag)
