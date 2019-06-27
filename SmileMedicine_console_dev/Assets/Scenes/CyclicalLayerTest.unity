@@ -211,7 +211,7 @@ GameObject:
   - component: {fileID: 109242884}
   m_Layer: 0
   m_Name: JournalItemPanel
-  m_TagString: Untagged
+  m_TagString: InventoryItemPanel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -951,9 +951,10 @@ GameObject:
   - component: {fileID: 349965923}
   - component: {fileID: 349965922}
   - component: {fileID: 349965921}
+  - component: {fileID: 349965924}
   m_Layer: 0
   m_Name: JournalMainPanel
-  m_TagString: Untagged
+  m_TagString: InventoryMainPanel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1028,6 +1029,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 349965919}
   m_CullTransparentMesh: 0
+--- !u!114 &349965924
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 349965919}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df07d42d4a0cce542a1f0c3f89f343b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentSelectedIndex: 0
 --- !u!1 &418575505
 GameObject:
   m_ObjectHideFlags: 0
@@ -1368,6 +1382,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gm: {fileID: 0}
   m_input: {fileID: 0}
+  menuIndex_init: 0
+  currentSelectedUIItem: 0
 --- !u!1 &581278628
 GameObject:
   m_ObjectHideFlags: 0
@@ -1382,7 +1398,7 @@ GameObject:
   - component: {fileID: 581278630}
   m_Layer: 0
   m_Name: CollectionItemPanel
-  m_TagString: Untagged
+  m_TagString: InventoryItemPanel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2176,9 +2192,10 @@ GameObject:
   - component: {fileID: 989821673}
   - component: {fileID: 989821672}
   - component: {fileID: 989821674}
+  - component: {fileID: 989821675}
   m_Layer: 0
   m_Name: KnapsackMainPanel
-  m_TagString: Untagged
+  m_TagString: InventoryMainPanel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2253,6 +2270,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ShowMaskGraphic: 1
+--- !u!114 &989821675
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 989821670}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 878d3beb5a7260d499330d486ee38f9d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentSelectedIndex: 0
 --- !u!1 &1005344711
 GameObject:
   m_ObjectHideFlags: 0
@@ -3171,9 +3201,10 @@ GameObject:
   - component: {fileID: 1432529316}
   - component: {fileID: 1432529315}
   - component: {fileID: 1432529314}
+  - component: {fileID: 1432529317}
   m_Layer: 0
   m_Name: CollectionMainPanel
-  m_TagString: Untagged
+  m_TagString: InventoryMainPanel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3248,6 +3279,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1432529312}
   m_CullTransparentMesh: 0
+--- !u!114 &1432529317
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1432529312}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 878d3beb5a7260d499330d486ee38f9d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentSelectedIndex: 0
 --- !u!1 &1461168361
 GameObject:
   m_ObjectHideFlags: 0
@@ -4941,7 +4985,7 @@ GameObject:
   - component: {fileID: 2116548852}
   m_Layer: 0
   m_Name: KnapsackItemPanel
-  m_TagString: Untagged
+  m_TagString: InventoryItemPanel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

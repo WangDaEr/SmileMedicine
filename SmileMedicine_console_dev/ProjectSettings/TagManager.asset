@@ -18,6 +18,8 @@ TagManager:
   - InventoryButtons
   - InventoryButton
   - InventoryCanvas
+  - InventoryMainPanel
+  - InventoryItemPanel
   layers:
   - Default
   - TransparentFX
