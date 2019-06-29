@@ -23,6 +23,9 @@ public class LayersManager : MonoBehaviour
 
     public int layerTranformationOption = 0;
 
+    public bool useFakePespective;
+    public int lastUnchangedLayerIndex;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -47,9 +50,9 @@ public class LayersManager : MonoBehaviour
 
         if (layerTranformationOption == 0)
         {
-            gm.playerCharacter.GetComponent<PlayerController>().StartSpecialMove(des_pos, switchSpeed);
+            gm.playerCharacter.GetComponent<PlayerController>().StartSpecialMove(des_pos, switchSpeed, transform.GetChild(des).localScale);
         }
-        else
+        else if(layerTranformationOption == 1)
         {
             Vector3 movement = transform.GetChild(cur).position - transform.GetChild(des).position;
 

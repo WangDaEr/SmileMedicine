@@ -16,6 +16,8 @@ public class PlayerController : MonoBehaviour
     public float runningSpeed;
     public float crouchingSpeed;
     public float climbingSpeed;
+
+    public float speedFactor;
     
     private CharacterController controller;
     private float curSpeed;
@@ -24,6 +26,9 @@ public class PlayerController : MonoBehaviour
 
     private bool startSpecialMove;
     private Vector3 des_pos;
+    private Vector3 des_scale;
+    private Vector3 total_scale_change;
+    private float des_dis;
     private float switchSpeed;
 
     private bool inputLoackAcquired;
@@ -56,6 +61,7 @@ public class PlayerController : MonoBehaviour
         startSpecialMove = false;
 
         inputLoackAcquired = true;
+        speedFactor = 1.0F;
     }
 
     // Update is called once per frame
@@ -89,18 +95,25 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    public void StartSpecialMove(Vector3 des_pos, float switchSpeed)
+    public void StartSpecialMove(Vector3 des_pos, float switchSpeed, Vector3 des_scale)
     {
         startSpecialMove = true;
         this.des_pos = des_pos;
-        this.switchSpeed = switchSpeed; 
+        this.switchSpeed = switchSpeed;
+        des_dis = (des_pos - transform.position).magnitude;
+        this.des_scale = des_scale;
+        total_scale_change = des_scale - transform.localScale;
+        speedFactor = des_scale.magnitude / transform.localScale.magnitude;
     }
 
     private bool PlayerSpecialMove(Vector3 des_pos, float switchSpeed)
     {
         transform.position = Vector3.MoveTowards(transform.position, des_pos, switchSpeed * Time.deltaTime);
 
-        return des_pos.Equals(transform.position);
+        float scale_ratio_sub = (des_pos - transform.position).magnitude / des_dis;
+        transform.localScale = des_scale - (total_scale_change * scale_ratio_sub);
+
+        return des_pos == transform.position;
     }
 
     /// <summary>
@@ -115,6 +128,7 @@ public class PlayerController : MonoBehaviour
         //add gravity?
 
         curSpeed = m_input.B_hold ? crouchingSpeed : runningSpeed;
+        curSpeed *= speedFactor;
         if (m_input.B_hold) { Debug.Log("crouching!"); }  //debug info (crouch)
 
         //check horizontal movement;

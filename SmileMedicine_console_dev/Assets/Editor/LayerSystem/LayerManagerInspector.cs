@@ -39,6 +39,10 @@ public class LayerManagerInspector : Editor
     private float switchSpeed = 0.0F;
     public float SwitchSpeed { get { return switchSpeed; } set { switchSpeed = value; lm.switchSpeed = value; } }
 
+    private bool useFakePespective;
+
+    public bool UseFakePespective { get { return useFakePespective; } set { useFakePespective = value; lm.useFakePespective = value; } }
+
     void OnEnable()
     {
         lm = (LayersManager)target;
@@ -51,6 +55,7 @@ public class LayerManagerInspector : Editor
         cylinderIntervalDegree = lm.CylinderIntervalDegree;
         cylinderRadius = lm.CylinderRadius;
         switchSpeed = lm.switchSpeed;
+        useFakePespective = lm.useFakePespective;
 
         Debug.Log("op: " + layerTranformationOption);
     }
@@ -94,26 +99,57 @@ public class LayerManagerInspector : Editor
         }
     }
 
+    private void ChangeScaleForFakePesp()
+    {
+        if (useFakePespective)
+        {
+            Vector3 cameraPos =  GameObject.FindGameObjectWithTag("MainCamera").transform.position;
+            Vector3 unitLayerPos = lm.transform.GetChild(lm.layerIndex_init).position;
+            Debug.Log("pos: " + cameraPos);
+
+            float unit_dis = unitLayerPos.z - cameraPos.z;
+
+            foreach (Transform layer in lm.transform)
+            {
+                //only affect layers in front of camera;
+                if (layer.position.z <= cameraPos.z)
+                {
+                    lm.lastUnchangedLayerIndex = layer.GetComponent<LayerInformation>().layerIndex;
+                    continue;
+                }
+
+                float distanceToUnitLayer = layer.position.z - unitLayerPos.z;
+                float scale_ratio = unit_dis / (unit_dis + distanceToUnitLayer);
+
+                Vector3 newScale = new Vector3(scale_ratio, scale_ratio, scale_ratio);
+                if (layer.localScale != newScale)
+                {
+                    layer.localScale = newScale;
+                }
+            }
+        }
+        else
+        {
+            foreach (Transform layer in lm.transform)
+            {
+                layer.localScale = new Vector3(1.0F, 1.0F, 1.0F);
+            }
+        }
+    }
+
     private void InstantiateLayers()
     {
         bool isOneDir = layerTranformationOption == LayerTransformationOptions.OneDirection;
 
         for (int i = 0; i < lm.layers.Count; ++i)
         {
-            float index_diff = i - LayerIndex_init;
+            float index_diff = LayerIndex_init - i;
 
             Vector3 newTranslation = new Vector3(
                 0.0F,
                 isOneDir ? index_diff * Y_Offset : CylinderRadius,
                 isOneDir ? index_diff * Z_Offset : 0.0F
                 );
-            /*
-            Vector3 newRot_v3 = new Vector3(
-                isOneDir ? 0.0F : index_diff * CylinderIntervalDegree,
-                0.0F,
-                0.0F
-                );
-            */
 
             GameObject newObj = Instantiate(lm.layers[i], lm.transform);
 
@@ -132,6 +168,8 @@ public class LayerManagerInspector : Editor
                 newObj.transform.Translate(new Vector3(newTranslation.x, -newTranslation.y, 0.0F), Space.World);
             }
         }
+
+        ChangeScaleForFakePesp();
     }
 
     private void UpdateLayersPosition()
@@ -139,7 +177,7 @@ public class LayerManagerInspector : Editor
         bool isOneDir = layerTranformationOption == LayerTransformationOptions.OneDirection;
         for (int i = 0; i < lm.transform.childCount; ++i)
         {
-            float index_diff = i - LayerIndex_init;
+            float index_diff = LayerIndex_init - i;
             Transform layer = lm.transform.GetChild(i);
 
             Vector3 newTranslation = new Vector3(
@@ -152,7 +190,11 @@ public class LayerManagerInspector : Editor
             layer.transform.rotation = Quaternion.Euler(new Vector3(0.0F, 0.0F, 0.0F));
             layer.transform.position = new Vector3(0.0F, 0.0F, 0.0F);
 
-            layer.transform.Rotate(Vector3.right, index_diff * CylinderIntervalDegree, Space.World);
+            if (!isOneDir)
+            {
+                layer.transform.Rotate(Vector3.right, index_diff * CylinderIntervalDegree, Space.World);
+            }
+
             layer.transform.Translate(newTranslation, Space.Self);
 
             if (!isOneDir)
@@ -160,6 +202,8 @@ public class LayerManagerInspector : Editor
                 layer.transform.Translate(new Vector3(newTranslation.x, -newTranslation.z, 0.0F), Space.World);
             }
         }
+
+        ChangeScaleForFakePesp();
     }
 
     public override void OnInspectorGUI()
@@ -176,6 +220,8 @@ public class LayerManagerInspector : Editor
         {
             Z_Offset = EditorGUILayout.Slider(new GUIContent("Depth", "how far the layer is away from camera on Z axis"), Z_Offset, 0, 15);
             Y_Offset = EditorGUILayout.Slider(new GUIContent("Height", "how high the layer is above the original plane on Y axis"), Y_Offset, 0, 15);
+
+            UseFakePespective = EditorGUILayout.Toggle(new GUIContent("Use Fake Pespective"), UseFakePespective);
         }
         else if (layerTranformationOption == LayerTransformationOptions.Cyclical)
         {
@@ -187,7 +233,7 @@ public class LayerManagerInspector : Editor
 
         for (int i = 0; i < lm.layers.Count; ++i)
         {
-            Debug.Log("length: " + lm.layers.Count + " " + i + " " + layersNumber);
+            //Debug.Log("length: " + lm.layers.Count + " " + i + " " + layersNumber);
             lm.layers[i] = (GameObject)EditorGUILayout.ObjectField(new GUIContent("Layer " + i, "the layer at index " + i + " (0 is the one farest from camera)"), lm.layers[i], typeof(GameObject), false);
         }
 
