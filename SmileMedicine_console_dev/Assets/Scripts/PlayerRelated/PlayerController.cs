@@ -18,6 +18,8 @@ public class PlayerController : MonoBehaviour
     public float climbingSpeed;
 
     public float speedFactor;
+
+    public float gravity = 0.9F;
     
     private CharacterController controller;
     private float curSpeed;
@@ -30,6 +32,9 @@ public class PlayerController : MonoBehaviour
     private Vector3 total_scale_change;
     private float des_dis;
     private float switchSpeed;
+
+    private float last_pos_y;
+    private float last_delta_time;
 
     private bool inputLoackAcquired;
 
@@ -103,7 +108,7 @@ public class PlayerController : MonoBehaviour
         des_dis = (des_pos - transform.position).magnitude;
         this.des_scale = des_scale;
         total_scale_change = des_scale - transform.localScale;
-        speedFactor = des_scale.magnitude / transform.localScale.magnitude;
+        speedFactor = des_scale.x;
     }
 
     private bool PlayerSpecialMove(Vector3 des_pos, float switchSpeed)
@@ -114,6 +119,26 @@ public class PlayerController : MonoBehaviour
         transform.localScale = des_scale - (total_scale_change * scale_ratio_sub);
 
         return des_pos == transform.position;
+    }
+
+    void OnCollisionEnter(Collision collision)
+    {
+        Debug.Log("player impulseL: " + collision.impulse); 
+    }
+
+    private float AddGravity(Vector3 input_mov)
+    {
+        float y_dif = last_pos_y - transform.position.y;
+        float v_start = (y_dif / last_delta_time) + ((gravity * last_delta_time) / 2);
+        float v_end = v_start + (gravity * Time.deltaTime);
+
+        last_pos_y = transform.position.y;
+        last_delta_time = Time.deltaTime;
+
+        float ans = -((v_start + v_end) * Time.deltaTime) / 2;
+        Debug.Log("y_mov: " + ans);
+
+        return ans;
     }
 
     /// <summary>
@@ -158,6 +183,9 @@ public class PlayerController : MonoBehaviour
             mov_dir = string.Empty;
         }
 
+        movementTotal += new Vector3(0.0F, AddGravity(movementTotal), 0.0F);
+        //movementTotal += Vector3.down * Time.deltaTime;
+        //Debug.Log("move_y: " + (Vector3.down * Time.deltaTime).y);
         controller.Move(movementTotal);
     }
 
