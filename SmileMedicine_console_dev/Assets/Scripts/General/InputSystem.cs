@@ -15,6 +15,18 @@ public class InputSystem : MonoBehaviour
     public bool B_hold;
     public bool START_pressed;
     public bool SELECT_pressed;
+
+    public AxisButtomPressed hor_axis_button;
+    private bool hor_button_lock;
+    public AxisButtomPressed ver_axis_button;
+    private bool ver_button_lock;
+
+    public enum AxisButtomPressed
+    {
+        Positive,
+        Negative,
+        NoInput
+    }
     
     // Start is called before the first frame update
     void Start()
@@ -26,6 +38,9 @@ public class InputSystem : MonoBehaviour
     void Update()
     {
         ReadAllInputs();
+        SetAxisButtonPressed(ref hor_axis_button, hor_axis_val, ref hor_button_lock);
+        SetAxisButtonPressed(ref ver_axis_button, ver_axis_val, ref ver_button_lock);
+        //Debug.Log("Change: " + hor_axis_button );
     }
 
     /// <summary>
@@ -39,6 +54,37 @@ public class InputSystem : MonoBehaviour
         B_pressed = false;
         START_pressed = false;
         SELECT_pressed = false;
+
+        hor_axis_button = AxisButtomPressed.NoInput;
+        ver_axis_button = AxisButtomPressed.NoInput;
+    }
+
+    private void SetAxisButtonPressed(ref AxisButtomPressed button, float val, ref bool button_lock)
+    {
+        //Debug.Log("Change: " + button + " " + (button != AxisButtomPressed.Positive) + " " + (val > 0.0000000F));
+        if (val > 0.0F && button != AxisButtomPressed.Positive && !button_lock)
+        {
+            //Debug.Log("Positive##################");
+            button = AxisButtomPressed.Positive;
+            button_lock = true;
+        }
+        else if (val < 0.0F && button != AxisButtomPressed.Negative && !button_lock)
+        {
+            button = AxisButtomPressed.Negative;
+            button_lock = true;
+        }
+        else
+        {
+            
+            button = AxisButtomPressed.NoInput;
+            
+        }
+
+        if (val == 0.0F)
+        {
+            button_lock = false;
+        }
+        //Debug.Log("Change: " + hor_axis_button);
     }
 
     /// <summary>

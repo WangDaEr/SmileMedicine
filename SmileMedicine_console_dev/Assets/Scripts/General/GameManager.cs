@@ -37,7 +37,7 @@ public class GameManager : MonoBehaviour
             sui = (SystemUsingInput)(((int)sui + 1) % 2);
 
             playerCharacter.GetComponent<PlayerController>().ChangeInputLock();
-            inventoryCanvas.GetComponent<InventoryCanvasController>().ChangeInputLock();
+            //inventoryCanvas.GetComponent<InventoryCanvasController>().ChangeInputLock();
 
             inventoryCanvas.SetActive(sui == SystemUsingInput.InventoryMenu);
         }

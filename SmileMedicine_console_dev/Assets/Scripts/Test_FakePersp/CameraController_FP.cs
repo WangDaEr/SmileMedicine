@@ -20,14 +20,18 @@ public class CameraController_FP : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float input_hor_val = pc.m_input.hor_axis_val;
-        if (input_hor_val != 0.0F)
+        if (pc.InputLockAcquired)
         {
-            float move_hor_val = input_hor_val * pc.runningSpeed * Time.deltaTime;
-            transform.Translate(Vector3.right * move_hor_val * pc.speedFactor);
+            float input_hor_val = pc.m_input.hor_axis_val;
+            if (input_hor_val != 0.0F)
+            {
+                float move_hor_val = input_hor_val * pc.runningSpeed * Time.deltaTime;
+                transform.Translate(Vector3.right * move_hor_val * pc.speedFactor);
 
-            MoveLayers_relative(move_hor_val);
+                MoveLayers_relative(move_hor_val);
+            }
         }
+        
     }
 
     private void MoveLayers_relative(float player_move_hor_val)

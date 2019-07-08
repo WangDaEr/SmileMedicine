@@ -19,7 +19,7 @@ public class PlayerController : MonoBehaviour
 
     public float speedFactor;
 
-    public float gravity = 0.9F;
+    public float gravity = 0.98F;
     
     private CharacterController controller;
     private float curSpeed;
@@ -37,6 +37,7 @@ public class PlayerController : MonoBehaviour
     private float last_delta_time;
 
     private bool inputLoackAcquired;
+    public bool InputLockAcquired { get { return inputLoackAcquired; } set { } }
 
     public string movDir
     {
@@ -136,7 +137,7 @@ public class PlayerController : MonoBehaviour
         last_delta_time = Time.deltaTime;
 
         float ans = -((v_start + v_end) * Time.deltaTime) / 2;
-        Debug.Log("y_mov: " + ans);
+        //Debug.Log("y_mov: " + v_end);
 
         return ans;
     }
