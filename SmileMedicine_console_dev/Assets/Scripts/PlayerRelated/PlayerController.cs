@@ -119,6 +119,11 @@ public class PlayerController : MonoBehaviour
         float scale_ratio_sub = (des_pos - transform.position).magnitude / des_dis;
         transform.localScale = des_scale - (total_scale_change * scale_ratio_sub);
 
+        if (des_pos == transform.position)
+        {
+            Debug.Log("player arrive: " + des_pos);
+        }
+
         return des_pos == transform.position;
     }
 
@@ -184,7 +189,7 @@ public class PlayerController : MonoBehaviour
             mov_dir = string.Empty;
         }
 
-        movementTotal += new Vector3(0.0F, AddGravity(movementTotal), 0.0F);
+        //movementTotal += new Vector3(0.0F, AddGravity(movementTotal), 0.0F);
         //movementTotal += Vector3.down * Time.deltaTime;
         //Debug.Log("move_y: " + (Vector3.down * Time.deltaTime).y);
         controller.Move(movementTotal);

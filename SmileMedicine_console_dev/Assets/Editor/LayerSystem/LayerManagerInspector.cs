@@ -143,7 +143,7 @@ public class LayerManagerInspector : Editor
 
         for (int i = 0; i < lm.layers.Count; ++i)
         {
-            float index_diff = LayerIndex_init - i;
+            float index_diff = i - layerIndex_init;
 
             Vector3 newTranslation = new Vector3(
                 0.0F,
@@ -177,7 +177,7 @@ public class LayerManagerInspector : Editor
         bool isOneDir = layerTranformationOption == LayerTransformationOptions.OneDirection;
         for (int i = 0; i < lm.transform.childCount; ++i)
         {
-            float index_diff = LayerIndex_init - i;
+            float index_diff = i - layerIndex_init;
             Transform layer = lm.transform.GetChild(i);
 
             Vector3 newTranslation = new Vector3(

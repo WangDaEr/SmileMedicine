@@ -51,6 +51,8 @@ public class LayersManager : MonoBehaviour
         if (layerTranformationOption == 0)
         {
             gm.playerCharacter.GetComponent<PlayerController>().StartSpecialMove(des_pos, switchSpeed, transform.GetChild(des).localScale);
+
+            Debug.Log("%%%%%%%%%%% " + des_pos);
         }
         else if(layerTranformationOption == 1)
         {
