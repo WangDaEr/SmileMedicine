@@ -11,16 +11,19 @@ public class PlayerController : MonoBehaviour
     public InputSystem m_input;
     public bool X_restraint;
     public bool Y_restraint;
+    public bool Z_restraint;
     public bool enable_movement;
 
     public float runningSpeed;
     public float crouchingSpeed;
     public float climbingSpeed;
+    public float z_movementUnit;
+    public float z_movementSpeed;
+    public bool z_movementClip;
+    public float gravityFactor = 0.98F;
 
     public float speedFactor;
 
-    public float gravity = 0.98F;
-    
     private CharacterController controller;
     private float curSpeed;
     private bool usingLadder;
@@ -35,6 +38,11 @@ public class PlayerController : MonoBehaviour
 
     private float last_pos_y;
     private float last_delta_time;
+
+    private bool startZMove;
+    private float zMovementDistance;
+    private float usedZUnit;
+    private Vector3 zMoveDirection;
 
     private bool inputLoackAcquired;
     public bool InputLockAcquired { get { return inputLoackAcquired; } set { } }
@@ -55,9 +63,10 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         controller = GetComponent<CharacterController>();
-        
+
         X_restraint = false;
         Y_restraint = true;  //initially the player can only move horizontally;
+        Z_restraint = false;
         enable_movement = true;
 
         mov_dir = string.Empty;
@@ -65,9 +74,12 @@ public class PlayerController : MonoBehaviour
         curSpeed = 0.0F;
 
         startSpecialMove = false;
+        startZMove = false;
 
         inputLoackAcquired = true;
         speedFactor = 1.0F;
+
+        Debug.Log("local scale: " + transform.localScale);
     }
 
     // Update is called once per frame
@@ -75,30 +87,26 @@ public class PlayerController : MonoBehaviour
     {
         if (inputLoackAcquired)
         {
+            /*
             if (startSpecialMove)
             {
                 startSpecialMove = !PlayerSpecialMove(des_pos, switchSpeed);
+            }
+            */
+            if (startZMove)
+            {
+                startZMove = !ZMove();
             }
             else
             {
                 PlayerMove();
             }
-
-            Interaction();
         }
     }
 
     public void ChangeInputLock()
     {
         inputLoackAcquired = !inputLoackAcquired;
-    }
-
-    private void movement_debug_info(string pos_val, string neg_val, float check, float threshold, bool tag)
-    {
-        if (tag)
-        {
-
-        }
     }
 
     public void StartSpecialMove(Vector3 des_pos, float switchSpeed, Vector3 des_scale)
@@ -127,16 +135,62 @@ public class PlayerController : MonoBehaviour
         return des_pos == transform.position;
     }
 
+    public void StartZMove(float z_axis_val)
+    {
+        startZMove = true;
+
+        usedZUnit = z_movementUnit;
+        //zMoveDirection = z_axis_val > 0.0F ? Vector3.forward : Vector3.back;
+        des_pos = transform.position + ((z_axis_val > 0.0F ? Vector3.forward : Vector3.back) * z_movementUnit);
+        des_scale = new Vector3(1.0F, 1.0F, 1.0F);
+        total_scale_change = des_scale - transform.localScale;
+        des_dis = (des_pos - transform.position).magnitude;
+    }
+
+    public void StartZMove(float z_axis_val, Vector3 des_pos, Vector3 des_scale)
+    {
+        startZMove = true;
+
+        usedZUnit = z_movementClip ?
+            Mathf.Max(z_movementUnit, (des_pos - transform.position).magnitude) :
+            z_movementUnit;
+        //zMoveDirection = (des_pos - transform.position).normalized;
+        //zMoveDirection.z = z_axis_val > 0.0F ? Mathf.Abs(zMoveDirection) : -Mathf.Abs(zMoveDirection);
+        this.des_pos = des_pos;
+        //this.des_pos.z = z_axis_val > 0.0F ? Mathf.
+        this.des_scale = des_scale;
+        total_scale_change = des_scale - transform.localScale;
+        des_dis = (des_pos - transform.position).magnitude;
+    }
+
+    private bool ZMove()
+    {
+        transform.position = Vector3.MoveTowards(transform.position, des_pos, z_movementSpeed * Time.deltaTime);
+
+        float scale_ratio_sub = (des_pos - transform.position).magnitude / des_dis;
+
+        //Debug.Log("player local scale: " + transform.localScale + " " + total_scale_change + " " + scale_ratio_sub);
+
+        transform.localScale = des_scale - (total_scale_change * scale_ratio_sub);
+
+        if (des_pos == transform.position)
+        {
+            Debug.Log("player arrive: " + des_pos);
+        }
+
+        return des_pos == transform.position;
+    }
+
     void OnCollisionEnter(Collision collision)
     {
-        Debug.Log("player impulseL: " + collision.impulse); 
+        Debug.Log("player impulse: " + collision.impulse);
     }
 
     private float AddGravity(Vector3 input_mov)
     {
         float y_dif = last_pos_y - transform.position.y;
-        float v_start = (y_dif / last_delta_time) + ((gravity * last_delta_time) / 2);
-        float v_end = v_start + (gravity * Time.deltaTime);
+        float v_start = (y_dif / last_delta_time) + ((gravityFactor * last_delta_time) / 2);
+        float v_end = v_start + (gravityFactor * Time.deltaTime);
 
         last_pos_y = transform.position.y;
         last_delta_time = Time.deltaTime;
@@ -178,13 +232,23 @@ public class PlayerController : MonoBehaviour
         //check vertical movement;
         if (!Y_restraint && m_input.ver_axis_val != 0.0F)
         {
-            Vector3 movementVer = transform.TransformDirection(Vector3.forward);
+            Vector3 movementVer = transform.TransformDirection(Vector3.up);
             movementVer *= m_input.ver_axis_val * climbingSpeed * Time.deltaTime;
             movementTotal += movementVer;
 
             //debug info (mov dir)
             if (mov_dir == string.Empty) { mov_dir = m_input.ver_axis_val > 0.0F ? "UP" : "DOWN"; }
+            Debug.Log("moving " + mov_dir);
+            mov_dir = string.Empty;
+        }
+
+        if (!startZMove && !Z_restraint && m_input.ver_axis_val != 0.0F)
+        {
+            StartZMove(m_input.ver_axis_val);
             
+
+            //debug info (mov dir)
+            if (mov_dir == string.Empty) { mov_dir = m_input.ver_axis_val > 0.0F ? "FORWARD" : "BACK"; }
             Debug.Log("moving " + mov_dir);
             mov_dir = string.Empty;
         }
@@ -195,6 +259,7 @@ public class PlayerController : MonoBehaviour
         controller.Move(movementTotal);
     }
 
+    /*
     /// <summary>
     /// interacting with other gameobjects when certain input is provided;
     /// </summary>
@@ -210,4 +275,5 @@ public class PlayerController : MonoBehaviour
             gm.StartPauseMenu();
         }
     }
+    */
 }
