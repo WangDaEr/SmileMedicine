@@ -50,7 +50,9 @@ public class LayersManager : MonoBehaviour
 
         if (layerTranformationOption == 0)
         {
-            gm.playerCharacter.GetComponent<PlayerController>().StartSpecialMove(des_pos, switchSpeed, transform.GetChild(des).localScale);
+            //gm.playerCharacter.GetComponent<PlayerController>().StartSpecialMove(des_pos, switchSpeed, transform.GetChild(des).localScale);
+            //gm.playerCharacter.GetComponent<PlayerController>().Z_restraint = false;
+            gm.playerCharacter.GetComponent<PlayerController>().SetZAxisMovePara(des_pos, transform.GetChild(des).localScale);
 
             Debug.Log("%%%%%%%%%%% " + des_pos);
         }

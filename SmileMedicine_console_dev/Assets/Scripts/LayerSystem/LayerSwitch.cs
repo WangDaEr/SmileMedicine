@@ -49,6 +49,12 @@ public class LayerSwitch : MonoBehaviour
     {
         float move_dir = playerCharacter.GetComponent<PlayerController>().m_input.ver_axis_val;
 
+        if (!playerCharacter.GetComponent<PlayerController>().Z_restraint)
+        {
+            Debug.Log("not arrive at " + cur_layer_index);
+            return;
+        }
+
         /*
         if (target_layer_index_up > -1 && move_dir > 0.0F)
         {

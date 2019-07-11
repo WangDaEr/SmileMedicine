@@ -39,10 +39,15 @@ public class PlayerController : MonoBehaviour
     private float last_pos_y;
     private float last_delta_time;
 
+    private bool specifyDestination;
     private bool startZMove;
-    private float zMovementDistance;
     private float usedZUnit;
-    private Vector3 zMoveDirection;
+    private Vector3 zMoveDestination;
+    private Vector3 zMoveStartPosition;
+    private Vector3 zMoveForwardPosition;
+    private Vector3 zMoveForwardScale;
+    private Vector3 zMoveBackPosition;
+    private Vector3 zMoveBackScale;
 
     private bool inputLoackAcquired;
     public bool InputLockAcquired { get { return inputLoackAcquired; } set { } }
@@ -66,7 +71,7 @@ public class PlayerController : MonoBehaviour
 
         X_restraint = false;
         Y_restraint = true;  //initially the player can only move horizontally;
-        Z_restraint = false;
+        Z_restraint = true;
         enable_movement = true;
 
         mov_dir = string.Empty;
@@ -87,15 +92,26 @@ public class PlayerController : MonoBehaviour
     {
         if (inputLoackAcquired)
         {
-            /*
+            
             if (startSpecialMove)
             {
                 startSpecialMove = !PlayerSpecialMove(des_pos, switchSpeed);
             }
-            */
-            if (startZMove)
+            else if (startZMove)
             {
                 startZMove = !ZMove();
+
+                if (specifyDestination && (transform.position == zMoveDestination || transform.position == zMoveStartPosition))
+                {
+                    
+
+                    startZMove = false;
+                    X_restraint = false;
+                    Y_restraint = true;
+                    Z_restraint = true;
+                    specifyDestination = false;
+                    Debug.Log("player arrive portal destination " + startZMove);
+                }
             }
             else
             {
@@ -140,7 +156,6 @@ public class PlayerController : MonoBehaviour
         startZMove = true;
 
         usedZUnit = z_movementUnit;
-        //zMoveDirection = z_axis_val > 0.0F ? Vector3.forward : Vector3.back;
         des_pos = transform.position + ((z_axis_val > 0.0F ? Vector3.forward : Vector3.back) * z_movementUnit);
         des_scale = new Vector3(1.0F, 1.0F, 1.0F);
         total_scale_change = des_scale - transform.localScale;
@@ -154,13 +169,41 @@ public class PlayerController : MonoBehaviour
         usedZUnit = z_movementClip ?
             Mathf.Max(z_movementUnit, (des_pos - transform.position).magnitude) :
             z_movementUnit;
-        //zMoveDirection = (des_pos - transform.position).normalized;
-        //zMoveDirection.z = z_axis_val > 0.0F ? Mathf.Abs(zMoveDirection) : -Mathf.Abs(zMoveDirection);
         this.des_pos = des_pos;
-        //this.des_pos.z = z_axis_val > 0.0F ? Mathf.
+
+        Debug.Log("start z move des_pos: " + des_pos);
+
         this.des_scale = des_scale;
         total_scale_change = des_scale - transform.localScale;
         des_dis = (des_pos - transform.position).magnitude;
+    }
+
+    public void SetZAxisMovePara(Vector3 des_pos, Vector3 des_scale)
+    {
+        specifyDestination = true;
+        zMoveDestination = des_pos;
+        zMoveStartPosition = transform.position;
+
+        if (des_pos.z > transform.position.z)
+        {
+            zMoveForwardPosition = des_pos;
+            zMoveForwardScale = des_scale;
+            zMoveBackPosition = transform.position;
+            zMoveBackScale = transform.localScale;
+        }
+        else
+        {
+            zMoveForwardPosition = transform.position;
+            zMoveForwardScale = transform.localScale;
+            zMoveBackPosition = des_pos;
+            zMoveBackScale = des_scale;
+        }
+
+        X_restraint = true;
+        Y_restraint = true;
+        Z_restraint = false;
+
+        Debug.Log("set para: " + des_pos);
     }
 
     private bool ZMove()
@@ -170,6 +213,11 @@ public class PlayerController : MonoBehaviour
         float scale_ratio_sub = (des_pos - transform.position).magnitude / des_dis;
 
         //Debug.Log("player local scale: " + transform.localScale + " " + total_scale_change + " " + scale_ratio_sub);
+
+        if (des_dis == 0.0F)
+        {
+            Debug.Log("************ scale_ratio_sub: " + des_pos);
+        }
 
         transform.localScale = des_scale - (total_scale_change * scale_ratio_sub);
 
@@ -199,6 +247,18 @@ public class PlayerController : MonoBehaviour
         //Debug.Log("y_mov: " + v_end);
 
         return ans;
+    }
+
+    public void StartZMove_OneStep()
+    {
+        Vector3 step_des = m_input.ver_axis_val > 0.0F ? zMoveForwardPosition : zMoveBackPosition;
+        Vector3 step_pos = Vector3.MoveTowards(transform.position, step_des, z_movementUnit);
+
+        Debug.Log("step_pos: " + step_pos);
+
+        float scale_ratio = (step_pos - transform.position).magnitude / (step_des - transform.position).magnitude;
+        float scale_diff = ((m_input.ver_axis_val > 0.0F ? zMoveForwardScale.x : zMoveBackScale.x) - transform.localScale.x) * scale_ratio;
+        StartZMove(m_input.ver_axis_val, step_pos, new Vector3(scale_diff, scale_diff, scale_diff) + transform.localScale);
     }
 
     /// <summary>
@@ -242,10 +302,23 @@ public class PlayerController : MonoBehaviour
             mov_dir = string.Empty;
         }
 
-        if (!startZMove && !Z_restraint && m_input.ver_axis_val != 0.0F)
+        if (!Z_restraint && m_input.ver_axis_val != 0.0F)
         {
-            StartZMove(m_input.ver_axis_val);
-            
+            if (specifyDestination)
+            {
+                Vector3 step_des = m_input.ver_axis_val > 0.0F ? zMoveForwardPosition : zMoveBackPosition;
+                Vector3 step_pos = Vector3.MoveTowards(transform.position, step_des, z_movementUnit);
+
+                Debug.Log("step_pos: " + step_pos);
+
+                float scale_ratio = (step_pos - transform.position).magnitude / (step_des - transform.position).magnitude;
+                float scale_diff = ((m_input.ver_axis_val > 0.0F ? zMoveForwardScale.x : zMoveBackScale.x) - transform.localScale.x) * scale_ratio;
+                StartZMove(m_input.ver_axis_val, step_pos, new Vector3(scale_diff, scale_diff, scale_diff) + transform.localScale);
+            }
+            else
+            {
+                StartZMove(m_input.ver_axis_val);
+            }
 
             //debug info (mov dir)
             if (mov_dir == string.Empty) { mov_dir = m_input.ver_axis_val > 0.0F ? "FORWARD" : "BACK"; }
@@ -253,9 +326,6 @@ public class PlayerController : MonoBehaviour
             mov_dir = string.Empty;
         }
 
-        //movementTotal += new Vector3(0.0F, AddGravity(movementTotal), 0.0F);
-        //movementTotal += Vector3.down * Time.deltaTime;
-        //Debug.Log("move_y: " + (Vector3.down * Time.deltaTime).y);
         controller.Move(movementTotal);
     }
 
