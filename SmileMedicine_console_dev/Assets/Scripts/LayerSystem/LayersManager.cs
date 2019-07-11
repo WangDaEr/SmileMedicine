@@ -53,6 +53,7 @@ public class LayersManager : MonoBehaviour
             //gm.playerCharacter.GetComponent<PlayerController>().StartSpecialMove(des_pos, switchSpeed, transform.GetChild(des).localScale);
             //gm.playerCharacter.GetComponent<PlayerController>().Z_restraint = false;
             gm.playerCharacter.GetComponent<PlayerController>().SetZAxisMovePara(des_pos, transform.GetChild(des).localScale);
+            gm.playerCharacter.GetComponent<PlayerController>().StartZMove_OneStep();
 
             Debug.Log("%%%%%%%%%%% " + des_pos);
         }

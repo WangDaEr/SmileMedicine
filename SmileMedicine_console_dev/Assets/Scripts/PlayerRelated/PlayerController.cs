@@ -251,7 +251,7 @@ public class PlayerController : MonoBehaviour
 
     public void StartZMove_OneStep()
     {
-        Vector3 step_des = m_input.ver_axis_val > 0.0F ? zMoveForwardPosition : zMoveBackPosition;
+        Vector3 step_des = zMoveDestination;
         Vector3 step_pos = Vector3.MoveTowards(transform.position, step_des, z_movementUnit);
 
         Debug.Log("step_pos: " + step_pos);
