@@ -11,7 +11,8 @@ public class PlayerController : MonoBehaviour
     public InputSystem m_input;
     public bool X_restraint;
     public bool Y_restraint;
-    public bool Z_restraint;
+    private bool z_restraint;
+    public bool Z_restraint { get { return z_restraint; } set { z_restraint = value; Debug.Log("ZRestraint: " + z_restraint); } }
     public bool enable_movement;
 
     public float runningSpeed;
@@ -20,6 +21,7 @@ public class PlayerController : MonoBehaviour
     public float z_movementUnit;
     public float z_movementSpeed;
     public bool z_movementClip;
+    public bool z_test;
     public float gravityFactor = 0.98F;
 
     public float speedFactor;
@@ -40,6 +42,7 @@ public class PlayerController : MonoBehaviour
     private float last_delta_time;
 
     private bool specifyDestination;
+    public bool SpecifyDestination { get { return specifyDestination; } set { } }
     private bool startZMove;
     private float usedZUnit;
     private Vector3 zMoveDestination;
@@ -48,6 +51,7 @@ public class PlayerController : MonoBehaviour
     private Vector3 zMoveForwardScale;
     private Vector3 zMoveBackPosition;
     private Vector3 zMoveBackScale;
+
 
     private bool inputLoackAcquired;
     public bool InputLockAcquired { get { return inputLoackAcquired; } set { } }
@@ -72,6 +76,7 @@ public class PlayerController : MonoBehaviour
         X_restraint = false;
         Y_restraint = true;  //initially the player can only move horizontally;
         Z_restraint = true;
+        specifyDestination = false;
         enable_movement = true;
 
         mov_dir = string.Empty;
@@ -212,11 +217,6 @@ public class PlayerController : MonoBehaviour
 
         //Debug.Log("player local scale: " + transform.localScale + " " + total_scale_change + " " + scale_ratio_sub);
 
-        if (des_dis == 0.0F)
-        {
-            Debug.Log("************ scale_ratio_sub: " + des_pos);
-        }
-
         transform.localScale = des_scale - (total_scale_change * scale_ratio_sub);
 
         if (des_pos == transform.position)
@@ -247,7 +247,7 @@ public class PlayerController : MonoBehaviour
         return ans;
     }
 
-    public void StartZMove_OneStep()
+    public void StartZMove_OneStep(Vector3 des_scale)
     {
         Vector3 step_des = zMoveDestination;
         Vector3 step_pos = Vector3.MoveTowards(transform.position, step_des, z_movementUnit);
@@ -255,8 +255,11 @@ public class PlayerController : MonoBehaviour
         Debug.Log("step_pos: " + step_pos);
 
         float scale_ratio = (step_pos - transform.position).magnitude / (step_des - transform.position).magnitude;
-        float scale_diff = ((m_input.ver_axis_val > 0.0F ? zMoveForwardScale.x : zMoveBackScale.x) - transform.localScale.x) * scale_ratio;
+        //float scale_diff = ((m_input.ver_axis_val > 0.0F ? zMoveForwardScale.x : zMoveBackScale.x) - transform.localScale.x) * scale_ratio;
+        float scale_diff = (des_scale.x - transform.localScale.x) * scale_ratio;
         StartZMove(m_input.ver_axis_val, step_pos, new Vector3(scale_diff, scale_diff, scale_diff) + transform.localScale);
+
+        Debug.Log("des Scale: " + scale_diff + scale_ratio);
     }
 
     /// <summary>
@@ -313,9 +316,10 @@ public class PlayerController : MonoBehaviour
                 float scale_diff = ((m_input.ver_axis_val > 0.0F ? zMoveForwardScale.x : zMoveBackScale.x) - transform.localScale.x) * scale_ratio;
                 StartZMove(m_input.ver_axis_val, step_pos, new Vector3(scale_diff, scale_diff, scale_diff) + transform.localScale);
             }
-            else
+            else if (z_test)
             {
                 StartZMove(m_input.ver_axis_val);
+                Debug.Log("test Z movement");
             }
 
             //debug info (mov dir)
@@ -326,22 +330,4 @@ public class PlayerController : MonoBehaviour
 
         controller.Move(movementTotal);
     }
-
-    /*
-    /// <summary>
-    /// interacting with other gameobjects when certain input is provided;
-    /// </summary>
-    private void Interaction()
-    {
-        if (m_input.START_pressed)
-        {
-            gm.StartPauseMenu();
-        }
-
-        if (m_input.SELECT_pressed)
-        {
-            gm.StartPauseMenu();
-        }
-    }
-    */
 }

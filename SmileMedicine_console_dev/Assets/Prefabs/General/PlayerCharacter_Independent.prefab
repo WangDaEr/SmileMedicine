@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 596096324829619433}
   - component: {fileID: 8439302089814268017}
   - component: {fileID: 8439302089814268030}
-  - component: {fileID: 8417242363200055209}
   m_Layer: 0
   m_Name: PlayerCharacter_Independent
   m_TagString: Player
@@ -112,25 +111,3 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0.5, z: 0}
---- !u!114 &8417242363200055209
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8439302089814268028}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1280288adf61eb546b6d8abf62da7df0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gm: {fileID: 0}
-  m_input: {fileID: 0}
-  X_restraint: 0
-  Y_restraint: 0
-  enable_movement: 0
-  runningSpeed: 0
-  crouchingSpeed: 0
-  climbingSpeed: 0
-  speedFactor: 0
-  gravity: 0.98

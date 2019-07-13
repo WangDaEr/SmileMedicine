@@ -26,11 +26,11 @@ public class PlayerControllerInspector : Editor
     private bool z_movementClip;
     public bool Z_movementClip { get { return z_movementClip; } set { z_movementClip = value; pc.z_movementClip = value; } }
 
-    private bool z_restraint;
-    public bool Z_restraint { get { return z_restraint; } set { z_restraint = value; pc.Z_restraint = value; } }
+    private bool z_test;
+    public bool Z_test { get { return z_test; } set { z_test = value; pc.z_test = value;  if (value && !pc.SpecifyDestination) { pc.Z_restraint = !value; } /*pc.Z_restraint = !value; Debug.Log("Zrestraint:" + pc.Z_restraint);*/ } }
 
     private float gravityFactor;
-    public float GravityFactor { get { return gravityFactor; } set { gravityFactor = value; pc.gravityFactor = value; } }
+    public float GravityFactor { get { return gravityFactor; } set { gravityFactor = value; pc.gravityFactor = value;} }
 
     private void OnEnable()
     {
@@ -42,7 +42,7 @@ public class PlayerControllerInspector : Editor
         z_movementUnit = pc.z_movementUnit;
         z_movementSpeed = pc.z_movementSpeed;
         z_movementClip = pc.z_movementClip;
-        z_restraint = pc.Z_restraint;
+        z_test = pc.z_test;
         gravityFactor = pc.gravityFactor;
     }
 
@@ -55,9 +55,9 @@ public class PlayerControllerInspector : Editor
         ClimbingSpeed = EditorGUILayout.FloatField(new GUIContent("Climbing Speed"), ClimbingSpeed);
         Z_movementUnit = EditorGUILayout.Slider(new GUIContent("Z Axis Movement Unit"), Z_movementUnit, 0, 10);
         Z_movementSpeed = EditorGUILayout.FloatField(new GUIContent("Z Axis Move Speed"), Z_movementSpeed);
-        Z_movementClip = EditorGUILayout.Toggle(new GUIContent("Clip the Z Movement Unit"), Z_movementClip);
+        //Z_movementClip = EditorGUILayout.Toggle(new GUIContent("Clip the Z Movement Unit"), Z_movementClip);
 
-        //Z_restraint = !EditorGUILayout.Toggle(new GUIContent("Allow Z Axis Movement"), !Z_restraint);
+        Z_test = EditorGUILayout.Toggle(new GUIContent("Test Z Axis Movement"), Z_test);
 
         GravityFactor = EditorGUILayout.FloatField(new GUIContent("Gravity For Player"), GravityFactor);
 

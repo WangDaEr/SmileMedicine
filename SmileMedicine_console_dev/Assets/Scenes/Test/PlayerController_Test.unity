@@ -1430,8 +1430,7 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 8417242363200055209, guid: 09c6b77bb288b5c4397f4005bb045334, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 09c6b77bb288b5c4397f4005bb045334, type: 3}
 --- !u!1 &8356539587658724636 stripped
 GameObject:
@@ -1455,13 +1454,13 @@ MonoBehaviour:
   m_input: {fileID: 0}
   X_restraint: 0
   Y_restraint: 0
-  Z_restraint: 0
   enable_movement: 0
-  runningSpeed: 2
+  runningSpeed: 5
   crouchingSpeed: 1
   climbingSpeed: 1
-  z_movementUnit: 0.6
-  z_movementSpeed: 1
+  z_movementUnit: 0.8
+  z_movementSpeed: 3
   z_movementClip: 0
+  z_test: 0
   gravityFactor: 0.98
   speedFactor: 0
