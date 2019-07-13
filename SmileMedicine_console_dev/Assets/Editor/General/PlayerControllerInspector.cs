@@ -42,6 +42,7 @@ public class PlayerControllerInspector : Editor
         z_movementUnit = pc.z_movementUnit;
         z_movementSpeed = pc.z_movementSpeed;
         z_movementClip = pc.z_movementClip;
+        z_restraint = pc.Z_restraint;
         gravityFactor = pc.gravityFactor;
     }
 
@@ -56,7 +57,7 @@ public class PlayerControllerInspector : Editor
         Z_movementSpeed = EditorGUILayout.FloatField(new GUIContent("Z Axis Move Speed"), Z_movementSpeed);
         Z_movementClip = EditorGUILayout.Toggle(new GUIContent("Clip the Z Movement Unit"), Z_movementClip);
 
-        Z_restraint = !EditorGUILayout.Toggle(new GUIContent("Test Z Axis Movement"), !Z_restraint);
+        //Z_restraint = !EditorGUILayout.Toggle(new GUIContent("Allow Z Axis Movement"), !Z_restraint);
 
         GravityFactor = EditorGUILayout.FloatField(new GUIContent("Gravity For Player"), GravityFactor);
 

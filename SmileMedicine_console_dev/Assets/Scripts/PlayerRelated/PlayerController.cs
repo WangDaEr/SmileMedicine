@@ -103,8 +103,6 @@ public class PlayerController : MonoBehaviour
 
                 if (specifyDestination && (transform.position == zMoveDestination || transform.position == zMoveStartPosition))
                 {
-                    
-
                     startZMove = false;
                     X_restraint = false;
                     Y_restraint = true;
@@ -203,7 +201,7 @@ public class PlayerController : MonoBehaviour
         Y_restraint = true;
         Z_restraint = false;
 
-        Debug.Log("set para: " + des_pos);
+        Debug.Log("set specifyDestination: " + specifyDestination);
     }
 
     private bool ZMove()
