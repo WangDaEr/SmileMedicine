@@ -8,152 +8,74 @@ public class InventoryCanvasController : MonoBehaviour
     public GameManager gm;
     public InputSystem m_input;
 
-    //public Dictionary<GameObject, GameObject> menus = new Dictionary<GameObject, GameObject>();
-    //public List<KeyValuePair<GameObject, GameObject>> menus = new List<KeyValuePair<GameObject, GameObject>>();
-    public List<GameObject> menus = new List<GameObject>();
-
-    public int menuIndex_init;
-    public pairIndex currentSelectedUIItem;
-    //public GameObject currentSelectedObject;
-
-    private int currentActiveButtonIndex;
-
-    private List<GameObject[]> pairs;
-
-    public bool setList = false;
-
-    private bool hor_allow_input;
-    private bool ver_allow_input;
-
-    private Dictionary<InputSystem.AxisButtomPressed, int> button_value;
-
-    public enum pairIndex
-    {
-        Button,
-        Panel
-    }
+    public int currentPanelIdx;
+    public int currentButtonIdx;
 
     private bool inputLockAcquired;
+    private Dictionary<InputSystem.AxisButtomPressed, int> inputMapping;
 
     // Start is called before the first frame update
     void Start()
     {
         inputLockAcquired = false;
-        BindPanelWithButtons();
 
-        foreach (GameObject[] pair in pairs)
-        {
-            Debug.Log("valid: " + pair[1]);
-            pair[1].SetActive(false);
-        }
-
-        currentActiveButtonIndex = menuIndex_init;
-
-        pairs[currentActiveButtonIndex][(int)pairIndex.Panel].SetActive(true);
-        currentSelectedUIItem = pairIndex.Button;
-
-        hor_allow_input = true;
-        ver_allow_input = true;
-
+        //inputMappingSetup();
+        initializeLayout();
         Debug.Log("Canvas active;");
-    }
-
-    private void Init_button_value()
-    {
-        button_value = new Dictionary<InputSystem.AxisButtomPressed, int>();
-        button_value.Add(InputSystem.AxisButtomPressed.Positive, 1);
-        button_value.Add(InputSystem.AxisButtomPressed.Negative, -1);
-        button_value.Add(InputSystem.AxisButtomPressed.NoInput, 0);
-    }
-
-    private void BindPanelWithButtons()
-    {
-        pairs = new List<GameObject[]>();
-        Transform buttons = transform.GetChild(0);
-
-        for (int i = 0; i < menus.Count; ++i)
-        {
-            pairs.Add(new GameObject[2] { buttons.GetChild(i).gameObject, menus[i]});
-
-            Color c = new Color();
-
-            if (menus[i].GetComponent<InventoryGridMainPanel>())
-            {
-                menus[i].GetComponent<InventoryGridMainPanel>().focusColor = buttons.GetChild(i).GetComponent<Image>().color;
-                c = menus[i].GetComponent<InventoryGridMainPanel>().focusColor;
-            }
-            else if (menus[i].GetComponent<InventoryVerticalMainPanel>())
-            {
-                menus[i].GetComponent<InventoryVerticalMainPanel>().focusColor = buttons.GetChild(i).GetComponent<Image>().color;
-                c = menus[i].GetComponent<InventoryVerticalMainPanel>().focusColor;
-            }
-            Debug.Log("color: " + menus[i].GetComponent<InventoryMainPanel>().focusColor);
-            //Debug.Log("Colour: " + c);
-        }
     }
 
     // Update is called once per frame
     void Update()
     {
         //Debug.Log("CanvasInputLock!!!!!: " + inputLockAcquired);
+        
+        //check input lock when has player controller
+        /*
+        if (inputLockAcquired)
+        {
+            CanvasInput();
+        }
+        */
+
         CanvasInput();
+    }
+
+    private void inputMappingSetup()
+    {
+        inputMapping = new Dictionary<InputSystem.AxisButtomPressed, int>
+        {
+            { InputSystem.AxisButtomPressed.Positive, 1 },
+            { InputSystem.AxisButtomPressed.Negative, -1 },
+            { InputSystem.AxisButtomPressed.NoInput, 0 }
+        };
+    }
+
+    private void initializeLayout()
+    {
+        currentButtonIdx = 0;
+        currentPanelIdx = 1;
     }
 
     private void CanvasInput()
     {
         Debug.Log("Canvas: " + m_input.hor_axis_button);
-        /*
-        if (currentSelectedUIItem == pairIndex.Button)
-        {
-            if (m_input.hor_axis_val > 0.0F)
-            {
-                SwitchPanel(1);
-                
-            }
-            else if (m_input.hor_axis_val < 0.0F)
-            {
-                SwitchPanel(-1);
-                
-            }
-            else if (m_input.ver_axis_val > 0.0F)
-            {
 
-            }
-            else if (m_input.ver_axis_val < 0.0F)
-            {
-
-            }
-        }
-        else if (currentSelectedUIItem == pairIndex.Panel)
-        {
-            if (m_input.hor_axis_val > 0.0F)
-            {
-                
-            }
-            else if (m_input.hor_axis_val < 0.0F)
-            {
-                
-            }
-            else if (m_input.ver_axis_val > 0.0F)
-            {
-
-            }
-            else if (m_input.ver_axis_val < 0.0F)
-            {
-
-            }
-        }
-        */
+        int newButtonIdx = -1;
+        int newPanelIdx = -1;
         switch (m_input.hor_axis_button)
         {
             case InputSystem.AxisButtomPressed.Positive:
-                SwitchItemHorizontal(1);
-                return;
+
+                newButtonIdx = currentButtonIdx + 1;
+                newButtonIdx = newButtonIdx >= transform.GetChild(currentPanelIdx).childCount ? transform.GetChild(currentPanelIdx).childCount - 1 : newButtonIdx;
+
                 break;
 
             case InputSystem.AxisButtomPressed.Negative:
-                SwitchItemHorizontal(-1);
-                return;
+
+                newButtonIdx = currentButtonIdx - 1;
+                newButtonIdx = newButtonIdx < 0 ? 0 : newButtonIdx;
+
                 break;
 
             default:
@@ -163,75 +85,45 @@ public class InventoryCanvasController : MonoBehaviour
         switch (m_input.ver_axis_button)
         {
             case InputSystem.AxisButtomPressed.Positive:
-                SwitchItemVertical(1);
-                return;
+
+                newPanelIdx = currentPanelIdx + 1;
+                newPanelIdx = newPanelIdx >= 2 ? 1 : newPanelIdx;
+
+                newButtonIdx = newButtonIdx < 0 ? currentButtonIdx : newButtonIdx;
+                newButtonIdx = newButtonIdx >= transform.GetChild(newPanelIdx).childCount ? transform.GetChild(newPanelIdx).childCount - 1 : newButtonIdx;
+
                 break;
 
             case InputSystem.AxisButtomPressed.Negative:
-                SwitchItemVertical(-1);
-                return;
+
+                newPanelIdx = currentPanelIdx - 1;
+                newPanelIdx = newPanelIdx < 0 ? 0 : newPanelIdx;
+
+                newButtonIdx = newButtonIdx < 0 ? currentButtonIdx : newButtonIdx;
+                newButtonIdx = newButtonIdx >= transform.GetChild(newPanelIdx).childCount ? transform.GetChild(newPanelIdx).childCount - 1 : newButtonIdx;
+
                 break;
 
             default:
                 break; 
         }
-    }
 
-    public void SwitchItemHorizontal(int dir)
-    {
-        switch (currentSelectedUIItem)
+        if (newButtonIdx != -1)
         {
-            case pairIndex.Button:
+            newPanelIdx = newPanelIdx < 0 ? currentPanelIdx : newPanelIdx;
 
-                int newButtonIndex = currentActiveButtonIndex + dir;
+            transform.GetChild(currentPanelIdx).GetChild(currentButtonIdx).GetComponent<InventoryButton>().LoseFocus();
+            transform.GetChild(newPanelIdx).GetChild(newButtonIdx).GetComponent<InventoryButton>().GetFocus();
 
-                if (newButtonIndex < 0)
-                {
-                    newButtonIndex = pairs.Count - 1;
-                }
-                else if (newButtonIndex == pairs.Count)
-                {
-                    newButtonIndex = 0;
-                }
+            Debug.Log("new Button: " + newButtonIdx + " panel: " + newPanelIdx);
 
-                pairs[currentActiveButtonIndex][(int)pairIndex.Panel].SetActive(false);
-                pairs[newButtonIndex][(int)pairIndex.Panel].SetActive(true);
-                currentActiveButtonIndex = newButtonIndex;
-
-                break;
-
-            case pairIndex.Panel:
-
-                pairs[currentActiveButtonIndex][(int)pairIndex.Panel].GetComponent<InventoryMainPanel>().ChangeSelectedItem(dir, InventoryMainPanel.NewIndexType.Increment);
-
-                break;
-            
-            default:
-                break;
-        }
-        
-    }
-
-    private void SwitchItemVertical(int dir)
-    {
-        switch (currentSelectedUIItem)
-        {
-            case pairIndex.Button:
-
-                
-
-                break;
-
-            case pairIndex.Panel:
-
-
-
-                break;
-
-            default:
-                break;
+            currentButtonIdx = newButtonIdx;
+            currentPanelIdx = newPanelIdx;
         }
     }
 
+    private void Interaction()
+    {
 
+    }
 }

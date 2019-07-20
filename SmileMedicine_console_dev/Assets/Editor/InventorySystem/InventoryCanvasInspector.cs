@@ -8,26 +8,27 @@ public class InventoryCanvasInspector : Editor
 {
     private InventoryCanvasController icc;
 
-    private int menuIndex_init;
-    private int MenuIndex_init { get { return menuIndex_init; }set { menuIndex_init = value; icc.menuIndex_init = value; } }
+    private GameObject currentButton;
+
+    private int currentPanelIdx = 0;
+    public int CurrentPanelIdx { get { return currentPanelIdx; } set { currentPanelIdx = value; icc.currentPanelIdx = value; } }
+
+    private int currentButtonIdx = 0;
+    public int CurrentButtonIdx { get { return currentButtonIdx; }set { currentButtonIdx = value; icc.currentButtonIdx = value; } }
 
     private void OnEnable()
     {
         icc = (InventoryCanvasController)target;
-        CountButtons();
     }
 
-    private void CountButtons()
+    private void getButtonIdx()
     {
-        Transform buttons = icc.transform.GetChild(0);
-        if (icc.menus.Count != buttons.childCount)
+        if (currentButton != null)
         {
-            Debug.Log("Clearing menus: " + icc.menus.Count + " buttons: " + buttons.childCount);
-            icc.menus.Clear();
-            for (int i = 0; i < buttons.childCount; ++i)
-            {
-                icc.menus.Add(null);
-            }
+            CurrentButtonIdx = currentButton.transform.GetSiblingIndex();
+            CurrentPanelIdx = currentButton.transform.parent.GetSiblingIndex();
+
+            Debug.Log("button Idx: " + currentButtonIdx + " panel Idx: " + currentPanelIdx);
         }
     }
 
@@ -35,23 +36,8 @@ public class InventoryCanvasInspector : Editor
     {
         EditorGUILayout.BeginVertical();
 
-        Transform buttons = icc.transform.GetChild(0);
-        GUIContent[] buttonsName = new GUIContent[buttons.childCount];
-        for (int i = 0; i < icc.menus.Count; ++i)
-        {
-            buttonsName[i] = new GUIContent(buttons.GetChild(i).gameObject.name);
-        }
-        MenuIndex_init = EditorGUILayout.Popup(new GUIContent("Initial Displaying Button"), menuIndex_init, buttonsName);
-
-        for (int i = 0; i < icc.menus.Count; ++i)
-        {
-            icc.menus[i] = (GameObject)EditorGUILayout.ObjectField(
-                new GUIContent("Main Panel for " + buttonsName[i].text),
-                icc.menus[i],
-                typeof(GameObject),
-                true
-                );
-        }
+        currentButton = (GameObject)EditorGUILayout.ObjectField(new GUIContent("Initial button"), currentButton, typeof(GameObject), true);
+        getButtonIdx();
 
         EditorGUILayout.EndVertical();
     }

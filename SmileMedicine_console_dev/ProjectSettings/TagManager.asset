@@ -20,6 +20,7 @@ TagManager:
   - InventoryCanvas
   - InventoryMainPanel
   - InventoryItemPanel
+  - InventoryWindows
   layers:
   - Default
   - TransparentFX

@@ -2547,7 +2547,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &6683510307554533771
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2643,13 +2643,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gm: {fileID: 0}
   m_input: {fileID: 0}
-  menus:
-  - {fileID: 6683510307931974514}
-  - {fileID: 6683510307235543092}
-  - {fileID: 6683510308298891211}
   menuIndex_init: 0
-  currentSelectedUIItem: 0
-  setList: 1
 --- !u!1 &6683510307749443662
 GameObject:
   m_ObjectHideFlags: 0
