@@ -8,6 +8,8 @@ public class InventoryButton : MonoBehaviour
     public float unselectedAlpha;
     public float alphaSwitchDuration;
 
+    public GameObject bindedPanel;
+
     public virtual void GetFocus()
     {
 

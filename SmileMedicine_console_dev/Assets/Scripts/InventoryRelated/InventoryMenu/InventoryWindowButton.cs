@@ -12,8 +12,10 @@ public class InventoryWindowButton : InventoryButton
         unselectedAlpha = 1.0F;
         alphaSwitchDuration = 1.0F;
 
-        if (transform.parent.parent.GetComponent<InventoryCanvasController>().currentButtonIdx == transform.GetSiblingIndex() 
-            && transform.parent.parent.GetComponent<InventoryCanvasController>().currentPanelIdx == transform.parent.GetSiblingIndex())
+        //Debug.Log("Window button: " + gameObject.name + transform.parent.parent.GetComponent<InventoryCanvasController>().initialButtonIdx + " " + transform.parent.parent.GetComponent<InventoryCanvasController>().initialPanelIdx);
+
+        if (transform.parent.parent.GetComponent<InventoryCanvasController>().initialButtonIdx == transform.GetSiblingIndex() 
+            && transform.parent.parent.GetComponent<InventoryCanvasController>().initialPanelIdx == transform.parent.GetSiblingIndex())
         {
             //Color temp = GetComponent<Image>().color;
             //temp.a = selectedAlpha;

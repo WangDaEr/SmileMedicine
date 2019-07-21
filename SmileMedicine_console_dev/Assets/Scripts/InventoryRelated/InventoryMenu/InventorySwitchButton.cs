@@ -11,6 +11,20 @@ public class InventorySwitchButton : InventoryButton
         selectedAlpha = 0.3F;
         unselectedAlpha = 1.0F;
         alphaSwitchDuration = 1.0F;
+
+        //Debug.Log("Switch button: " + gameObject.name + transform.parent.parent.GetComponent<InventoryCanvasController>().initialButtonIdx + " " + transform.parent.parent.GetComponent<InventoryCanvasController>().initialPanelIdx);
+
+        if (transform.parent.parent.GetComponent<InventoryCanvasController>().initialButtonIdx == transform.GetSiblingIndex()
+            && transform.parent.parent.GetComponent<InventoryCanvasController>().initialPanelIdx == transform.parent.GetSiblingIndex())
+        {
+            //Color temp = GetComponent<Image>().color;
+            //temp.a = selectedAlpha;
+            //GetComponent<Image>().color = temp;
+
+            GetFocus();
+
+            Debug.Log("initial button: " + gameObject.name);
+        }
     }
 
     // Update is called once per frame

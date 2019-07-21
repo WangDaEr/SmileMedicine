@@ -8,27 +8,32 @@ public class InventoryCanvasInspector : Editor
 {
     private InventoryCanvasController icc;
 
-    private GameObject currentButton;
+    private GameObject initialButton;
+    public GameObject InitialButton { get { return initialButton; } set { initialButton = value; icc.initialButton = value; } }
 
-    private int currentPanelIdx = 0;
-    public int CurrentPanelIdx { get { return currentPanelIdx; } set { currentPanelIdx = value; icc.currentPanelIdx = value; } }
+    private int initialPanelIdx = 0;
+    public int InitialPanelIdx { get { return initialPanelIdx; } set { initialPanelIdx = value; icc.initialPanelIdx = value; } }
 
-    private int currentButtonIdx = 0;
-    public int CurrentButtonIdx { get { return currentButtonIdx; }set { currentButtonIdx = value; icc.currentButtonIdx = value; } }
+    private int initialButtonIdx = 0;
+    public int InitialButtonIdx { get { return initialButtonIdx; }set { initialButtonIdx = value; icc.initialButtonIdx = value; } }
 
     private void OnEnable()
     {
         icc = (InventoryCanvasController)target;
+
+        initialButton = icc.initialButton;
+        initialButtonIdx = icc.initialButtonIdx;
+        initialPanelIdx = icc.initialPanelIdx;
     }
 
     private void getButtonIdx()
     {
-        if (currentButton != null)
+        if (initialButton != null)
         {
-            CurrentButtonIdx = currentButton.transform.GetSiblingIndex();
-            CurrentPanelIdx = currentButton.transform.parent.GetSiblingIndex();
+            InitialButtonIdx = initialButton.transform.GetSiblingIndex();
+            InitialPanelIdx = initialButton.transform.parent.GetSiblingIndex();
 
-            Debug.Log("button Idx: " + currentButtonIdx + " panel Idx: " + currentPanelIdx);
+            Debug.Log("button Idx: " + initialButtonIdx + " panel Idx: " + initialPanelIdx);
         }
     }
 
@@ -36,7 +41,7 @@ public class InventoryCanvasInspector : Editor
     {
         EditorGUILayout.BeginVertical();
 
-        currentButton = (GameObject)EditorGUILayout.ObjectField(new GUIContent("Initial button"), currentButton, typeof(GameObject), true);
+        InitialButton = (GameObject)EditorGUILayout.ObjectField(new GUIContent("Initial button"), initialButton, typeof(GameObject), true);
         getButtonIdx();
 
         EditorGUILayout.EndVertical();

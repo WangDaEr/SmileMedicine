@@ -8,6 +8,10 @@ public class InventoryCanvasController : MonoBehaviour
     public GameManager gm;
     public InputSystem m_input;
 
+    public int initialPanelIdx;
+    public int initialButtonIdx;
+    public GameObject initialButton;
+
     public int currentPanelIdx;
     public int currentButtonIdx;
 
