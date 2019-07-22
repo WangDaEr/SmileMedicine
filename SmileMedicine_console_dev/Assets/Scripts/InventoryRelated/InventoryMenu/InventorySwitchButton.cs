@@ -43,4 +43,9 @@ public class InventorySwitchButton : InventoryButton
     {
         GetComponent<Image>().CrossFadeAlpha(unselectedAlpha, alphaSwitchDuration, false);
     }
+
+    public override void ButtonClick()
+    {
+        Debug.Log("Button is Clicked: " + gameObject.name);
+    }
 }

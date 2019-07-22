@@ -19,4 +19,9 @@ public class InventoryButton : MonoBehaviour
     {
 
     }
+
+    public virtual void ButtonClick()
+    {
+
+    }
 }

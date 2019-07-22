@@ -42,6 +42,7 @@ public class InventoryCanvasController : MonoBehaviour
         */
 
         CanvasInput();
+        Interaction();
     }
 
     private void inputMappingSetup()
@@ -128,6 +129,9 @@ public class InventoryCanvasController : MonoBehaviour
 
     private void Interaction()
     {
-
+        if (m_input.A_pressed)
+        {
+            transform.GetChild(currentPanelIdx).GetChild(currentButtonIdx).GetComponent<InventoryButton>().ButtonClick();
+        }
     }
 }

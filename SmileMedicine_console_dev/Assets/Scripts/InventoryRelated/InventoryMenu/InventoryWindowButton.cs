@@ -5,6 +5,9 @@ using UnityEngine.UI;
 
 public class InventoryWindowButton : InventoryButton
 {
+    public float panelInitialScale;
+    public float panelShowupTime;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -41,5 +44,12 @@ public class InventoryWindowButton : InventoryButton
     public override void LoseFocus()
     {
         GetComponent<Image>().CrossFadeAlpha(unselectedAlpha, alphaSwitchDuration, false);
+    }
+
+    public override void ButtonClick()
+    {
+        Debug.Log("Button is Clicked: " + gameObject.name);
+
+        
     }
 }
