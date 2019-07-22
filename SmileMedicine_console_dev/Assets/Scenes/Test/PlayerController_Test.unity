@@ -383,6 +383,24 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 1238995135}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &94689652 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 14881087735875709, guid: 27d78ec6b05698e45b5cd3350913510d,
+    type: 3}
+  m_PrefabInstance: {fileID: 633168429}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &94689655
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 94689652}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c196041d95747f409c2b14803cf6314, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &108666159
 GameObject:
   m_ObjectHideFlags: 0
@@ -1973,9 +1991,11 @@ MonoBehaviour:
   selectedAlpha: 0
   unselectedAlpha: 0
   alphaSwitchDuration: 0
+  icc: {fileID: 0}
   bindedPanel: {fileID: 1938818115}
-  panelInitialScale: 0.3
-  panelShowupTime: 0
+  panelInitialScale: 1
+  panelShowupTime: 2
+  panelDistance: 22
 --- !u!1 &491845937
 GameObject:
   m_ObjectHideFlags: 0
@@ -3371,7 +3391,7 @@ PrefabInstance:
     - target: {fileID: 14881087735875698, guid: 27d78ec6b05698e45b5cd3350913510d,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -30.52
+      value: -30.6
       objectReference: {fileID: 0}
     - target: {fileID: 14881087735875698, guid: 27d78ec6b05698e45b5cd3350913510d,
         type: 3}
@@ -3411,6 +3431,11 @@ PrefabInstance:
     - target: {fileID: 14881087735875698, guid: 27d78ec6b05698e45b5cd3350913510d,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 14881087735875699, guid: 27d78ec6b05698e45b5cd3350913510d,
+        type: 3}
+      propertyPath: orthographic
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
@@ -3516,6 +3541,7 @@ MonoBehaviour:
   selectedAlpha: 0
   unselectedAlpha: 0
   alphaSwitchDuration: 0
+  icc: {fileID: 0}
   bindedPanel: {fileID: 0}
 --- !u!1 &686843416
 GameObject:
@@ -4635,7 +4661,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 972421133}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -25}
+  m_LocalPosition: {x: 0, y: 0, z: -21.95}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 925282449}
@@ -4732,6 +4758,9 @@ MonoBehaviour:
   initialButton: {fileID: 485669309}
   currentPanelIdx: 0
   currentButtonIdx: 0
+  cameraPanelDis: 0
+  mainCamera: {fileID: 0}
+  cameraStartPos: {x: 0, y: 0, z: 0}
 --- !u!1001 &1026394104
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5546,6 +5575,7 @@ MonoBehaviour:
   selectedAlpha: 0
   unselectedAlpha: 0
   alphaSwitchDuration: 0
+  icc: {fileID: 0}
   bindedPanel: {fileID: 0}
 --- !u!1001 &1238995135
 PrefabInstance:
@@ -6310,8 +6340,8 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1338404996}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
+  m_LocalPosition: {x: 0, y: 0, z: 18.321383}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2110679205}
   - {fileID: 841587070}
@@ -6319,10 +6349,10 @@ RectTransform:
   m_Father: {fileID: 972421134}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 5.75, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 17.928955, y: 0}
+  m_SizeDelta: {x: 20, y: 10}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1338404998
 MonoBehaviour:
@@ -7068,9 +7098,11 @@ MonoBehaviour:
   selectedAlpha: 0
   unselectedAlpha: 0
   alphaSwitchDuration: 0
+  icc: {fileID: 0}
   bindedPanel: {fileID: 1338404996}
-  panelInitialScale: 0
-  panelShowupTime: 0
+  panelInitialScale: 1
+  panelShowupTime: 2
+  panelDistance: 22
 --- !u!1 &1533120562
 GameObject:
   m_ObjectHideFlags: 0
@@ -7996,8 +8028,8 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1674988496}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
+  m_LocalPosition: {x: 0, y: 0, z: 22}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 193143055}
   - {fileID: 2025011567}
@@ -8005,10 +8037,10 @@ RectTransform:
   m_Father: {fileID: 972421134}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 20, y: 10}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1674988498
 MonoBehaviour:
@@ -8068,6 +8100,7 @@ MonoBehaviour:
   selectedAlpha: 0
   unselectedAlpha: 0
   alphaSwitchDuration: 0
+  icc: {fileID: 0}
   bindedPanel: {fileID: 0}
 --- !u!1 &1681976189
 GameObject:
@@ -9147,6 +9180,7 @@ MonoBehaviour:
   selectedAlpha: 0
   unselectedAlpha: 0
   alphaSwitchDuration: 0
+  icc: {fileID: 0}
   bindedPanel: {fileID: 0}
 --- !u!1 &1876567969
 GameObject:
@@ -9474,8 +9508,8 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1938818115}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
+  m_LocalPosition: {x: 0, y: 0, z: 18.321383}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1702426485}
   - {fileID: 339425231}
@@ -9485,7 +9519,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -5.75, y: 0}
+  m_AnchoredPosition: {x: -17.928955, y: 0}
   m_SizeDelta: {x: 20, y: 10}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1938818117
@@ -10118,9 +10152,11 @@ MonoBehaviour:
   selectedAlpha: 0
   unselectedAlpha: 0
   alphaSwitchDuration: 0
+  icc: {fileID: 0}
   bindedPanel: {fileID: 1674988496}
-  panelInitialScale: 0.3
-  panelShowupTime: 0
+  panelInitialScale: 1
+  panelShowupTime: 2
+  panelDistance: 22
 --- !u!1 &2110679204
 GameObject:
   m_ObjectHideFlags: 0

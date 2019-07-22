@@ -17,6 +17,9 @@ public class InventoryCanvasInspector : Editor
     private int initialButtonIdx = 0;
     public int InitialButtonIdx { get { return initialButtonIdx; }set { initialButtonIdx = value; icc.initialButtonIdx = value; } }
 
+    private float cameraPanelDis;
+    public float CameraPanelDis { get { return cameraPanelDis; } set { cameraPanelDis = value; icc.cameraPanelDis = value; } }
+
     private void OnEnable()
     {
         icc = (InventoryCanvasController)target;

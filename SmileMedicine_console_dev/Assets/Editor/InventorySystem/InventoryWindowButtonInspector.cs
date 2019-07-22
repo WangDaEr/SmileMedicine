@@ -36,6 +36,25 @@ public class InventoryWindowButtonInspector : Editor
         }
     }
 
+    private float panelDistance;
+    public float PanelDistance
+    {
+        get { return panelDistance;}
+        set
+        {
+            Vector3 dir = iwb.transform.position - Camera.main.transform.position;
+            Vector3 translation = dir *  (value / dir.magnitude);
+
+            if (bindedPanel)
+            {
+                bindedPanel.GetComponent<RectTransform>().position = iwb.transform.position + translation;
+            }
+
+            panelDistance = value;
+            iwb.panelDistance = value;
+        }
+    }
+
     private float panelShowupTime;
     public float PanelShowupTime { get { return panelShowupTime; } set { panelShowupTime = value; iwb.panelShowupTime = value; } }
 
@@ -45,6 +64,7 @@ public class InventoryWindowButtonInspector : Editor
 
         bindedPanel = iwb.bindedPanel;
         panelInitialScale = iwb.panelInitialScale;
+        panelDistance = iwb.panelDistance;
         panelShowupTime = iwb.panelShowupTime;
     }
 
@@ -69,6 +89,7 @@ public class InventoryWindowButtonInspector : Editor
         }
 
         PanelInitialScale = EditorGUILayout.Slider(new GUIContent("Panel Initial Scale"), PanelInitialScale, 0.0F, 1.0F);
+        PanelDistance = EditorGUILayout.Slider(new GUIContent("Panel Distance From Windows"), panelDistance, 0.0F, 30.0F);
 
         PanelShowupTime = EditorGUILayout.FloatField(new GUIContent("Panel Showup Time"), panelShowupTime);
 

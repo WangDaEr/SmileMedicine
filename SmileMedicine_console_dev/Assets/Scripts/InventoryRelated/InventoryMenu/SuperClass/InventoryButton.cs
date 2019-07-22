@@ -8,6 +8,8 @@ public class InventoryButton : MonoBehaviour
     public float unselectedAlpha;
     public float alphaSwitchDuration;
 
+    public InventoryCanvasController icc;
+
     public GameObject bindedPanel;
 
     public virtual void GetFocus()
@@ -21,6 +23,11 @@ public class InventoryButton : MonoBehaviour
     }
 
     public virtual void ButtonClick()
+    {
+
+    }
+
+    public virtual void ReturnCanvas()
     {
 
     }

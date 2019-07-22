@@ -8,6 +8,10 @@ public class InventoryWindowButton : InventoryButton
     public float panelInitialScale;
     public float panelShowupTime;
 
+    public float panelDistance;
+
+    private float cameraTransformSpeed;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -50,6 +54,16 @@ public class InventoryWindowButton : InventoryButton
     {
         Debug.Log("Button is Clicked: " + gameObject.name);
 
-        
+        Vector3 des_pos = bindedPanel.transform.position;
+        Vector3 off_set = icc.mainCamera.transform.position - icc.transform.position;
+
+        cameraTransformSpeed = (des_pos + off_set - icc.mainCamera.transform.position).magnitude / panelShowupTime;
+
+        icc.mainCamera.GetComponent<CameraController_IC>().startSpecialMove(des_pos + off_set, cameraTransformSpeed);
+    }
+
+    public override void ReturnCanvas()
+    {
+        icc.mainCamera.GetComponent<CameraController_IC>().startSpecialMove(icc.cameraStartPos, cameraTransformSpeed);
     }
 }

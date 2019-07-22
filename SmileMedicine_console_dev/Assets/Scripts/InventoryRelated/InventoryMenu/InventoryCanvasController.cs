@@ -15,6 +15,13 @@ public class InventoryCanvasController : MonoBehaviour
     public int currentPanelIdx;
     public int currentButtonIdx;
 
+    public float cameraPanelDis;
+    public Camera mainCamera;
+    public Vector3 cameraStartPos;
+
+    private bool atIndividualPanel;
+    
+
     private bool inputLockAcquired;
     private Dictionary<InputSystem.AxisButtomPressed, int> inputMapping;
 
@@ -22,17 +29,29 @@ public class InventoryCanvasController : MonoBehaviour
     void Start()
     {
         inputLockAcquired = false;
+        atIndividualPanel = false;
 
         //inputMappingSetup();
         initializeLayout();
+
+        for (int i = 0; i < 2; i++)
+        {
+            foreach (Transform window in transform.GetChild(i))
+            {
+                window.GetComponent<InventoryButton>().icc = this;
+            }
+        }
+        mainCamera = Camera.main;
+        cameraStartPos = mainCamera.transform.position;
+
+        mainCamera.orthographic = false; //change project mode when active canvas in GameManager
+
         Debug.Log("Canvas active;");
     }
 
     // Update is called once per frame
     void Update()
-    {
-        //Debug.Log("CanvasInputLock!!!!!: " + inputLockAcquired);
-        
+    {        
         //check input lock when has player controller
         /*
         if (inputLockAcquired)
@@ -129,9 +148,17 @@ public class InventoryCanvasController : MonoBehaviour
 
     private void Interaction()
     {
-        if (m_input.A_pressed)
+        if (m_input.A_pressed && !atIndividualPanel)
         {
             transform.GetChild(currentPanelIdx).GetChild(currentButtonIdx).GetComponent<InventoryButton>().ButtonClick();
+
+            atIndividualPanel = true;
+        }
+        else if (m_input.B_pressed && atIndividualPanel)
+        {
+            transform.GetChild(currentPanelIdx).GetChild(currentButtonIdx).GetComponent<InventoryButton>().ReturnCanvas();
+
+            atIndividualPanel = false;
         }
     }
 }
