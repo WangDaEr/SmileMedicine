@@ -47,5 +47,18 @@ public class InventorySwitchButton : InventoryButton
     public override void ButtonClick()
     {
         Debug.Log("Button is Clicked: " + gameObject.name);
+
+        icc.PanelFilter(bindedPanel.tag, false, true);
+        bindedPanel.SetActive(true);
+    }
+
+    public override void ReturnCanvas()
+    {
+        icc.PanelFilter(bindedPanel.tag, true, true);
+        bindedPanel.SetActive(false);
+
+        Color temp = GetComponent<Image>().color;
+        temp.a = selectedAlpha;
+        GetComponent<Image>().color = temp;
     }
 }

@@ -12,9 +12,6 @@ public class InventoryGridMainPanel : InventoryMainPanel
     void Start()
     {
         currentSelectedIndex = 0;
-        //transform.GetChild(0).GetChild(currentSelectedIndex).gameObject.GetComponent<Image>().color = focusColor;
-
-        Debug.Log("setactive$$$$$$$$$$$$$$$$$$" + focusColor);
     }
 
     // Update is called once per frame

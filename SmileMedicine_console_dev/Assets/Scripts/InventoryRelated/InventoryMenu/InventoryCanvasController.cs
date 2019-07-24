@@ -146,6 +146,19 @@ public class InventoryCanvasController : MonoBehaviour
         }
     }
 
+    public void PanelFilter(string targetPanelTag, bool targetStatus, bool filterOthers)
+    {
+        foreach (Transform panel in transform)
+        {
+            if (panel.tag == targetPanelTag ^ filterOthers)
+            {
+                panel.gameObject.SetActive(targetStatus);
+
+                Debug.Log("panel set active: " + panel.name + " " + panel.tag + " " + (panel.tag == targetPanelTag));
+            }
+        }
+    }
+
     private void Interaction()
     {
         if (m_input.A_pressed && !atIndividualPanel)
