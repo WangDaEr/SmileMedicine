@@ -17,10 +17,6 @@ public class InventorySwitchButton : InventoryButton
         if (transform.parent.parent.GetComponent<InventoryCanvasController>().initialButtonIdx == transform.GetSiblingIndex()
             && transform.parent.parent.GetComponent<InventoryCanvasController>().initialPanelIdx == transform.parent.GetSiblingIndex())
         {
-            //Color temp = GetComponent<Image>().color;
-            //temp.a = selectedAlpha;
-            //GetComponent<Image>().color = temp;
-
             GetFocus();
 
             Debug.Log("initial button: " + gameObject.name);
@@ -36,7 +32,6 @@ public class InventorySwitchButton : InventoryButton
     public override void GetFocus()
     {
         GetComponent<Image>().CrossFadeAlpha(selectedAlpha, alphaSwitchDuration, false);
-        //Color temp = new Color(GetComponent<Image>().color);
     }
 
     public override void LoseFocus()

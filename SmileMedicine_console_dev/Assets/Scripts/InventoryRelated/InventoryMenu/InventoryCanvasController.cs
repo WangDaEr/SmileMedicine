@@ -28,7 +28,7 @@ public class InventoryCanvasController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        inputLockAcquired = false;
+        inputLockAcquired = true;
         atIndividualPanel = false;
 
         //inputMappingSetup();
@@ -51,17 +51,17 @@ public class InventoryCanvasController : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {        
-        //check input lock when has player controller
-        /*
+    {
         if (inputLockAcquired)
         {
             CanvasInput();
         }
-        */
+        Interaction();        
+    }
 
-        CanvasInput();
-        Interaction();
+    public void ChangeInputLock()
+    {
+        inputLockAcquired = !inputLockAcquired;
     }
 
     private void inputMappingSetup()
@@ -166,12 +166,14 @@ public class InventoryCanvasController : MonoBehaviour
             transform.GetChild(currentPanelIdx).GetChild(currentButtonIdx).GetComponent<InventoryButton>().ButtonClick();
 
             atIndividualPanel = true;
+            ChangeInputLock();
         }
         else if (m_input.B_pressed && atIndividualPanel)
         {
             transform.GetChild(currentPanelIdx).GetChild(currentButtonIdx).GetComponent<InventoryButton>().ReturnCanvas();
 
             atIndividualPanel = false;
+            ChangeInputLock();
         }
     }
 }

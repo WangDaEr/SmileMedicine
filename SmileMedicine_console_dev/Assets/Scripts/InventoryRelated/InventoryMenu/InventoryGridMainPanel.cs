@@ -5,44 +5,77 @@ using UnityEngine.UI;
 
 public class InventoryGridMainPanel : InventoryMainPanel
 {
-    //public int currentSelectedIndex;
-    //public Color focusColor;
-    // Start is called before the first frame update
+    public bool useGridLayoutGroup;
 
+    public int gridRowSize;
+    public int gridColumnSize;
+    
+    // Start is called before the first frame update
     void Start()
     {
-        currentSelectedIndex = 0;
+        if (useGridLayoutGroup)
+        {
+            GridLayoutGroup ItemPanelGroup = childPanels[(int)panelIndex["InventoryChildItemPanel"]].GetComponent<GridLayoutGroup>();
+
+            switch (ItemPanelGroup.constraint)
+            {
+                case GridLayoutGroup.Constraint.FixedColumnCount:
+
+                    gridRowSize = ItemPanelGroup.constraintCount;
+                    gridColumnSize = Mathf.CeilToInt(((float)ItemPanelGroup.transform.childCount / (float)gridRowSize));
+
+                    break;
+
+                case GridLayoutGroup.Constraint.FixedRowCount:
+
+                    gridColumnSize = ItemPanelGroup.constraintCount;
+                    gridRowSize = Mathf.CeilToInt(((float)ItemPanelGroup.transform.childCount / (float)gridColumnSize));
+
+                    break;
+
+                default:
+                    break;
+            }
+        }
+
+        Debug.Log(name + " GridRowSize: " + gridRowSize + " GridColumnSize: " + gridColumnSize);
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (InputLockAcquired)
+        {
+            PanelInput();
+        }
     }
 
-    public override void ChangeSelectedItem(int input, NewIndexType it)
+    protected override void switchItem(bool isHorInput)
     {
-        int newItemIndex = 0;
-        switch (it)
+        int newItemIdx = currentSelectedIndex;
+        int increment = 0;
+        if (isHorInput)
         {
-            case NewIndexType.Increment:
+            
+        }
+        else
+        {
 
-                newItemIndex = currentSelectedIndex + input;
+        }
+    }
 
-                break;
-
-            case NewIndexType.NewIndex:
-
-                newItemIndex = input;
-
-                break;
-
-            default:
-                break;
+    protected override void PanelInput()
+    {
+        if (inputInterpolation[icc.m_input.hor_axis_button] != 0)
+        {
+            
+            return;
         }
 
-        transform.GetChild(0).GetChild(currentSelectedIndex).gameObject.GetComponent<Image>().color = Color.white;
-        transform.GetChild(0).GetChild(newItemIndex).gameObject.GetComponent<Image>().color = focusColor;
-        currentSelectedIndex = newItemIndex;
+        if (inputInterpolation[icc.m_input.ver_axis_button] != 0)
+        {
+
+            return;
+        }
     }
 }

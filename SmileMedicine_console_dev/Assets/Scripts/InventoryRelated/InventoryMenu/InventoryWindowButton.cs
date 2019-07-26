@@ -60,10 +60,13 @@ public class InventoryWindowButton : InventoryButton
         cameraTransformSpeed = (des_pos + off_set - icc.mainCamera.transform.position).magnitude / panelShowupTime;
 
         icc.mainCamera.GetComponent<CameraController_IC>().startSpecialMove(des_pos + off_set, cameraTransformSpeed);
+
+        bindedPanel.GetComponent<InventoryMainPanel>().ChangeInputLock();
     }
 
     public override void ReturnCanvas()
     {
         icc.mainCamera.GetComponent<CameraController_IC>().startSpecialMove(icc.cameraStartPos, cameraTransformSpeed);
+        bindedPanel.GetComponent<InventoryMainPanel>().ChangeInputLock();
     }
 }

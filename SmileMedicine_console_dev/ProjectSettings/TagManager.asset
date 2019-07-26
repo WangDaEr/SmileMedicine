@@ -19,10 +19,12 @@ TagManager:
   - InventoryButton
   - InventoryCanvas
   - InventoryMainPanel
-  - InventoryItemPanel
   - InventoryWindows
   - InventoryFirstLayerPanel
   - InventorySecondLayerPanel
+  - InventoryChildItemPanel
+  - InventoryChildInfoPanel
+  - InventoryChildLabelPanel
   layers:
   - Default
   - TransparentFX

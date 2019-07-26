@@ -957,7 +957,7 @@ GameObject:
   - component: {fileID: 193143056}
   m_Layer: 5
   m_Name: OpalShardItemPanel
-  m_TagString: InventoryWindows
+  m_TagString: InventoryChildItemPanel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1608,7 +1608,7 @@ GameObject:
   - component: {fileID: 339425232}
   m_Layer: 5
   m_Name: CollectibleInfoPanel
-  m_TagString: Untagged
+  m_TagString: InventoryChildInfoPanel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1684,7 +1684,7 @@ GameObject:
   - component: {fileID: 362669039}
   m_Layer: 5
   m_Name: SandstoneLabelPanel
-  m_TagString: Untagged
+  m_TagString: InventoryChildLabelPanel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4291,7 +4291,7 @@ GameObject:
   - component: {fileID: 834647945}
   m_Layer: 5
   m_Name: CraftToolInfoPanel
-  m_TagString: Untagged
+  m_TagString: InventoryChildInfoPanel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4366,7 +4366,7 @@ GameObject:
   - component: {fileID: 841587071}
   m_Layer: 5
   m_Name: SandstoneInfoPanel
-  m_TagString: Untagged
+  m_TagString: InventoryChildInfoPanel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5770,7 +5770,7 @@ GameObject:
   - component: {fileID: 1177657635}
   m_Layer: 5
   m_Name: CraftToolLabelPanel
-  m_TagString: Untagged
+  m_TagString: InventoryChildLabelPanel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6838,6 +6838,7 @@ GameObject:
   - component: {fileID: 1338404997}
   - component: {fileID: 1338404999}
   - component: {fileID: 1338404998}
+  - component: {fileID: 1338405000}
   m_Layer: 5
   m_Name: SandstonePanel
   m_TagString: InventoryFirstLayerPanel
@@ -6904,6 +6905,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1338404996}
   m_CullTransparentMesh: 0
+--- !u!114 &1338405000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1338404996}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 878d3beb5a7260d499330d486ee38f9d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentSelectedIndex: 0
+  focusColor: {r: 0, g: 0, b: 0, a: 0}
+  icc: {fileID: 0}
+  childPanels: []
+  useGridLayoutGroup: 0
+  gridRowSize: 0
+  gridColumnSize: 0
 --- !u!1 &1348697824
 GameObject:
   m_ObjectHideFlags: 0
@@ -8679,7 +8699,7 @@ GameObject:
   - component: {fileID: 1673671838}
   m_Layer: 5
   m_Name: CollectibleLabelPanel
-  m_TagString: Untagged
+  m_TagString: InventoryChildLabelPanel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8757,6 +8777,7 @@ GameObject:
   - component: {fileID: 1674988497}
   - component: {fileID: 1674988499}
   - component: {fileID: 1674988498}
+  - component: {fileID: 1674988500}
   m_Layer: 5
   m_Name: OpalShardPanel
   m_TagString: InventoryFirstLayerPanel
@@ -8823,6 +8844,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1674988496}
   m_CullTransparentMesh: 0
+--- !u!114 &1674988500
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1674988496}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 878d3beb5a7260d499330d486ee38f9d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentSelectedIndex: 0
+  focusColor: {r: 0, g: 0, b: 0, a: 0}
+  icc: {fileID: 0}
+  childPanels: []
+  useGridLayoutGroup: 0
+  gridRowSize: 0
+  gridColumnSize: 0
 --- !u!1 &1675796266 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4075417812885608031, guid: 3d9ef4d67c226694a9b11142e6696852,
@@ -9200,7 +9240,7 @@ GameObject:
   - component: {fileID: 1702426488}
   m_Layer: 5
   m_Name: CollectibleItemPanel
-  m_TagString: InventoryWindows
+  m_TagString: InventoryChildItemPanel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9466,7 +9506,7 @@ GameObject:
   - component: {fileID: 1760904308}
   m_Layer: 5
   m_Name: MapLabelPanel
-  m_TagString: Untagged
+  m_TagString: InventoryChildLabelPanel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10395,6 +10435,7 @@ GameObject:
   - component: {fileID: 1938818116}
   - component: {fileID: 1938818118}
   - component: {fileID: 1938818117}
+  - component: {fileID: 1938818119}
   m_Layer: 5
   m_Name: CollectiblePanel
   m_TagString: InventoryFirstLayerPanel
@@ -10461,6 +10502,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1938818115}
   m_CullTransparentMesh: 0
+--- !u!114 &1938818119
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1938818115}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 878d3beb5a7260d499330d486ee38f9d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentSelectedIndex: 0
+  focusColor: {r: 0, g: 0, b: 0, a: 0}
+  icc: {fileID: 0}
+  childPanels: []
+  useGridLayoutGroup: 0
+  gridRowSize: 0
+  gridColumnSize: 0
 --- !u!1 &1973919404
 GameObject:
   m_ObjectHideFlags: 0
@@ -10474,7 +10534,7 @@ GameObject:
   - component: {fileID: 1973919406}
   m_Layer: 5
   m_Name: OpalShardLabelPanel
-  m_TagString: Untagged
+  m_TagString: InventoryChildLabelPanel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10628,7 +10688,7 @@ GameObject:
   - component: {fileID: 2025011568}
   m_Layer: 5
   m_Name: OpalShardInfoPanel
-  m_TagString: Untagged
+  m_TagString: InventoryChildInfoPanel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11152,7 +11212,7 @@ GameObject:
   - component: {fileID: 2110679206}
   m_Layer: 5
   m_Name: SandstoneItemPanel
-  m_TagString: InventoryWindows
+  m_TagString: InventoryChildItemPanel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

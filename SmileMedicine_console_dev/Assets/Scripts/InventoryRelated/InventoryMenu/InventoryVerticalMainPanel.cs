@@ -11,8 +11,6 @@ public class InventoryVerticalMainPanel : InventoryMainPanel
     // Start is called before the first frame update
     void Start()
     {
-        currentSelectedIndex = 0;
-        //transform.GetChild(0).GetChild(currentSelectedIndex).gameObject.GetComponent<Image>().color = focusColor;
     }
 
     // Update is called once per frame
@@ -21,29 +19,8 @@ public class InventoryVerticalMainPanel : InventoryMainPanel
         
     }
 
-    public override void ChangeSelectedItem(int input, NewIndexType it)
+    protected override void PanelInput()
     {
-        int newItemIndex = 0;
-        switch (it)
-        {
-            case NewIndexType.Increment:
-
-                newItemIndex = currentSelectedIndex + input;
-
-                break;
-
-            case NewIndexType.NewIndex:
-
-                newItemIndex = input;
-
-                break;
-
-            default:
-                break;
-        }
-
-        transform.GetChild(0).GetChild(currentSelectedIndex).gameObject.GetComponent<Image>().color = Color.white;
-        transform.GetChild(0).GetChild(newItemIndex).gameObject.GetComponent<Image>().color = focusColor;
-        currentSelectedIndex = newItemIndex;
+        
     }
 }
