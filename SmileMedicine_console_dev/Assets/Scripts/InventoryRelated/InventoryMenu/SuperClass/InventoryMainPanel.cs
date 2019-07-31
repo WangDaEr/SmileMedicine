@@ -5,7 +5,8 @@ using UnityEngine;
 public class InventoryMainPanel : MonoBehaviour
 {
     public int currentSelectedIndex = 0;
-    public Color focusColor;
+    public Color selectedColor;
+    public Color unSelectedColor;
 
     public InventoryCanvasController icc;
 
@@ -44,6 +45,8 @@ public class InventoryMainPanel : MonoBehaviour
     {
         childPanels = new List<GameObject>() { null, null, null };
 
+        //Debug.Log("mainpanel super class panel initialization");
+
         foreach (Transform panel in transform)
         {
             int curIdx = childPanels.Count;
@@ -52,8 +55,6 @@ public class InventoryMainPanel : MonoBehaviour
             {
                 curIdx = (int)panelIndex[panel.tag];
                 childPanels[curIdx] = panel.gameObject;
-
-                //Debug.Log("MainPanel add:" + panel.name);
             }
             catch (KeyNotFoundException)
             {
@@ -71,7 +72,7 @@ public class InventoryMainPanel : MonoBehaviour
     {
     }
 
-    protected virtual void switchItem(bool isHorInput)
+    protected virtual void switchItem(int newSelectedIndex)
     {
     } 
 }

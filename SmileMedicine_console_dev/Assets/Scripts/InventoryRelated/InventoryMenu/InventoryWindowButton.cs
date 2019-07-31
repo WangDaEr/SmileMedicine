@@ -12,6 +12,13 @@ public class InventoryWindowButton : InventoryButton
 
     private float cameraTransformSpeed;
 
+    private void Awake()
+    {
+        bindedPanel.GetComponent<InventoryMainPanel>().icc = transform.parent.parent.GetComponent<InventoryCanvasController>();
+        bindedPanel.GetComponent<InventoryMainPanel>().selectedColor = GetComponent<Image>().color;
+        bindedPanel.GetComponent<InventoryMainPanel>().unSelectedColor = Color.white;
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -24,10 +31,6 @@ public class InventoryWindowButton : InventoryButton
         if (transform.parent.parent.GetComponent<InventoryCanvasController>().initialButtonIdx == transform.GetSiblingIndex() 
             && transform.parent.parent.GetComponent<InventoryCanvasController>().initialPanelIdx == transform.parent.GetSiblingIndex())
         {
-            //Color temp = GetComponent<Image>().color;
-            //temp.a = selectedAlpha;
-            //GetComponent<Image>().color = temp;
-
             GetFocus();
 
             Debug.Log("initial button: " + gameObject.name);
@@ -37,7 +40,6 @@ public class InventoryWindowButton : InventoryButton
     // Update is called once per frame
     void Update()
     {
-        
     }
 
     public override void GetFocus()

@@ -5,40 +5,28 @@ using UnityEngine.UI;
 
 public class InventoryGridMainPanel : InventoryMainPanel
 {
+    public bool checkItemPanel;
     public bool useGridLayoutGroup;
+    public bool setGridLayout;
 
     public int gridRowSize;
     public int gridColumnSize;
+
+    public int itemCount;
+
+    public List<int> gridLayout = new List<int>();
     
     // Start is called before the first frame update
     void Start()
     {
-        if (useGridLayoutGroup)
+        useGridLayoutGroup = true;
+
+        if (useGridLayoutGroup && childPanels[(int)panelIndex["InventoryChildItemPanel"]].GetComponent<GridLayoutGroup>())
         {
-            GridLayoutGroup ItemPanelGroup = childPanels[(int)panelIndex["InventoryChildItemPanel"]].GetComponent<GridLayoutGroup>();
-
-            switch (ItemPanelGroup.constraint)
-            {
-                case GridLayoutGroup.Constraint.FixedColumnCount:
-
-                    gridRowSize = ItemPanelGroup.constraintCount;
-                    gridColumnSize = Mathf.CeilToInt(((float)ItemPanelGroup.transform.childCount / (float)gridRowSize));
-
-                    break;
-
-                case GridLayoutGroup.Constraint.FixedRowCount:
-
-                    gridColumnSize = ItemPanelGroup.constraintCount;
-                    gridRowSize = Mathf.CeilToInt(((float)ItemPanelGroup.transform.childCount / (float)gridColumnSize));
-
-                    break;
-
-                default:
-                    break;
-            }
+            //checkGridLayout();
         }
-
-        Debug.Log(name + " GridRowSize: " + gridRowSize + " GridColumnSize: " + gridColumnSize);
+        switchItem(currentSelectedIndex);
+        Debug.Log(name + " GridRowSize: " + gridRowSize + " GridColumnSize: " + gridColumnSize + " " + useGridLayoutGroup);
     }
 
     // Update is called once per frame
@@ -50,32 +38,42 @@ public class InventoryGridMainPanel : InventoryMainPanel
         }
     }
 
-    protected override void switchItem(bool isHorInput)
+    private void checkGridLayout()
     {
-        int newItemIdx = currentSelectedIndex;
-        int increment = 0;
-        if (isHorInput)
-        {
-            
-        }
-        else
-        {
+        gridColumnSize = childPanels[(int)panelIndex["InventoryChildItemPanel"]].GetComponent<GridLayoutGroup>().constraintCount;
+        itemCount = childPanels[(int)panelIndex["InventoryChildItemPanel"]].transform.childCount;
 
+        while (itemCount > 0)
+        {
+            int rowNum = Mathf.Min(itemCount, gridColumnSize);
+            gridLayout.Add(rowNum);
+            itemCount -= rowNum;
         }
+
+        Debug.Log("gridColumn: " + gridColumnSize);
+    }
+
+    protected override void switchItem(int newSelectedIndex)
+    {
+        Debug.Log(name + "change from: " + currentSelectedIndex + "to " + newSelectedIndex);
+
+        childPanels[(int)panelIndex["InventoryChildItemPanel"]].transform.GetChild(currentSelectedIndex).GetComponent<Image>().color = unSelectedColor;
+        childPanels[(int)panelIndex["InventoryChildItemPanel"]].transform.GetChild(newSelectedIndex).GetComponent<Image>().color = selectedColor;
+
+        currentSelectedIndex = newSelectedIndex;
     }
 
     protected override void PanelInput()
     {
         if (inputInterpolation[icc.m_input.hor_axis_button] != 0)
         {
-            
-            return;
+            int newIdx = Mathf.Clamp(currentSelectedIndex + inputInterpolation[icc.m_input.hor_axis_button], 0, childPanels[(int)panelIndex["InventoryChildItemPanel"]].transform.childCount - 1);
+            switchItem(newIdx);
         }
-
-        if (inputInterpolation[icc.m_input.ver_axis_button] != 0)
+        else if (inputInterpolation[icc.m_input.ver_axis_button] != 0)
         {
-
-            return;
+            int newIdx = Mathf.Clamp(currentSelectedIndex + (-inputInterpolation[icc.m_input.ver_axis_button] * gridColumnSize), 0, childPanels[(int)panelIndex["InventoryChildItemPanel"]].transform.childCount - 1);
+            switchItem(newIdx);
         }
     }
 }
