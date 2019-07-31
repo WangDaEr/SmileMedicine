@@ -25,10 +25,14 @@ public class InventoryCanvasController : MonoBehaviour
     private bool inputLockAcquired;
     private Dictionary<InputSystem.AxisButtomPressed, int> inputMapping;
 
+    private void Awake()
+    {
+        inputLockAcquired = false;
+    }
+
     // Start is called before the first frame update
     void Start()
     {
-        inputLockAcquired = true;
         atIndividualPanel = false;
 
         //inputMappingSetup();
@@ -62,6 +66,7 @@ public class InventoryCanvasController : MonoBehaviour
     public void ChangeInputLock()
     {
         inputLockAcquired = !inputLockAcquired;
+        Debug.Log("InventoryController InputLock: " + inputLockAcquired);
     }
 
     private void inputMappingSetup()

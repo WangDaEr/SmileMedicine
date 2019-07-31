@@ -11,6 +11,8 @@ public class GameManager : MonoBehaviour
     public GameObject layerManager;
     public GameObject inventoryCanvas;
 
+    public Camera mainCamera;
+
     public enum SystemUsingInput
     {
         PlayerController,
@@ -40,6 +42,8 @@ public class GameManager : MonoBehaviour
             //inventoryCanvas.GetComponent<InventoryCanvasController>().ChangeInputLock();
 
             inventoryCanvas.SetActive(sui == SystemUsingInput.InventoryMenu);
+            mainCamera.orthographic = (sui != SystemUsingInput.InventoryMenu);
+            inventoryCanvas.GetComponent<InventoryCanvasController>().ChangeInputLock();
         }
     }
 

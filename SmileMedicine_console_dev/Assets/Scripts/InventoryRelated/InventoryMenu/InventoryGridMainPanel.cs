@@ -26,7 +26,7 @@ public class InventoryGridMainPanel : InventoryMainPanel
             //checkGridLayout();
         }
         switchItem(currentSelectedIndex);
-        Debug.Log(name + " GridRowSize: " + gridRowSize + " GridColumnSize: " + gridColumnSize + " " + useGridLayoutGroup);
+        //Debug.Log(name + " GridRowSize: " + gridRowSize + " GridColumnSize: " + gridColumnSize + " " + useGridLayoutGroup);
     }
 
     // Update is called once per frame
@@ -50,12 +50,12 @@ public class InventoryGridMainPanel : InventoryMainPanel
             itemCount -= rowNum;
         }
 
-        Debug.Log("gridColumn: " + gridColumnSize);
+        //Debug.Log("gridColumn: " + gridColumnSize);
     }
 
     protected override void switchItem(int newSelectedIndex)
     {
-        Debug.Log(name + "change from: " + currentSelectedIndex + "to " + newSelectedIndex);
+        //Debug.Log(name + "change from: " + currentSelectedIndex + "to " + newSelectedIndex);
 
         childPanels[(int)panelIndex["InventoryChildItemPanel"]].transform.GetChild(currentSelectedIndex).GetComponent<Image>().color = unSelectedColor;
         childPanels[(int)panelIndex["InventoryChildItemPanel"]].transform.GetChild(newSelectedIndex).GetComponent<Image>().color = selectedColor;

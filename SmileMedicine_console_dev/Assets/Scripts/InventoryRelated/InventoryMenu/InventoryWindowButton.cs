@@ -28,7 +28,7 @@ public class InventoryWindowButton : InventoryButton
 
         //Debug.Log("Window button: " + gameObject.name + transform.parent.parent.GetComponent<InventoryCanvasController>().initialButtonIdx + " " + transform.parent.parent.GetComponent<InventoryCanvasController>().initialPanelIdx);
 
-        if (transform.parent.parent.GetComponent<InventoryCanvasController>().initialButtonIdx == transform.GetSiblingIndex() 
+        if (transform.parent.parent.GetComponent<InventoryCanvasController>().initialButtonIdx == transform.GetSiblingIndex()
             && transform.parent.parent.GetComponent<InventoryCanvasController>().initialPanelIdx == transform.parent.GetSiblingIndex())
         {
             GetFocus();
