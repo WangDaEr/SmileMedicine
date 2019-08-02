@@ -38,12 +38,14 @@ public class GameManager : MonoBehaviour
         {
             sui = (SystemUsingInput)(((int)sui + 1) % 2);
 
-            playerCharacter.GetComponent<PlayerController>().ChangeInputLock();
-            //inventoryCanvas.GetComponent<InventoryCanvasController>().ChangeInputLock();
+            bool showCanvas = sui == SystemUsingInput.InventoryMenu;
 
-            inventoryCanvas.SetActive(sui == SystemUsingInput.InventoryMenu);
-            mainCamera.orthographic = (sui != SystemUsingInput.InventoryMenu);
+            inventoryCanvas.SetActive(showCanvas);
+            mainCamera.orthographic = !showCanvas;
+            playerCharacter.GetComponent<PlayerController>().ChangeInputLock();
             inventoryCanvas.GetComponent<InventoryCanvasController>().ChangeInputLock();
+            layerManager.SetActive(!showCanvas);
+            playerCharacter.SetActive(!showCanvas);
         }
     }
 
