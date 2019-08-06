@@ -74,5 +74,9 @@ public class InventoryMainPanel : MonoBehaviour
 
     protected virtual void switchItem(int newSelectedIndex)
     {
-    } 
+    }
+
+    public virtual void AddItemToPanel(InventoryItem ii, int previousCount)
+    {
+    }
 }

@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class InventorySystem : MonoBehaviour
 {
-    private int itemTypeNum = 6;
+    public readonly int itemTypeNum = 5;
 
     public enum ItemType
     {
@@ -13,11 +13,11 @@ public class InventorySystem : MonoBehaviour
         SandstoneFragments,
         CollectibleRelics,
         CraftableItems,
-        FunctionalTools,
         Maps
     }
 
     public List<List<InventoryItem>> items;
+    public List<GameObject> itemPanels;
 
     private void Awake()
     {
@@ -40,8 +40,9 @@ public class InventorySystem : MonoBehaviour
         
     }
 
-    public void AcquireItem(ItemType it, InventoryItem ii)
+    public void AcquireItem(InventoryItem ii)
     {
-        items[(int)it].Add(ii);
+        items[(int)ii.itemType].Add(ii);
+        itemPanels[(int)ii.itemType].GetComponent<InventoryMainPanel>().AddItemToPanel(new InventoryItem(ii), items[(int)ii.itemType].Count);
     }
 }

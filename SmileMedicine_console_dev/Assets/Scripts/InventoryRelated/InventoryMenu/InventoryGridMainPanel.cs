@@ -76,4 +76,18 @@ public class InventoryGridMainPanel : InventoryMainPanel
             switchItem(newIdx);
         }
     }
+
+    public override void AddItemToPanel(InventoryItem ii, int previousCount)
+    {
+        Transform itemGrid = childPanels[(int)panelIndex["InventoryChildItemPanel"]].transform.GetChild(previousCount - 1);
+
+        if (ii.itemSprite)
+        {
+
+        }
+        else
+        {
+            
+        }
+    }
 }

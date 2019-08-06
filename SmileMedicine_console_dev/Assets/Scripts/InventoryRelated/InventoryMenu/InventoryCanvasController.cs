@@ -46,7 +46,7 @@ public class InventoryCanvasController : MonoBehaviour
             }
         }
         mainCamera = Camera.main;
-        cameraStartPos = mainCamera.transform.position;
+        cameraStartPos = mainCamera.transform.position; //record the start position when inventory is active;
 
         mainCamera.orthographic = false; //change project mode when active canvas in GameManager
 

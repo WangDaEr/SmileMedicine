@@ -13,4 +13,13 @@ public class InventoryItem : MonoBehaviour
     public string itemDescription;
 
     public virtual void ItemPickUp() { }
+
+    public InventoryItem(InventoryItem ii)
+    {
+        itemType = ii.itemType;
+        itemSprite = ii.itemSprite;
+        itemColor = ii.itemColor;
+        itemName = ii.itemName;
+        itemDescription = ii.itemDescription;
+    }
 }
