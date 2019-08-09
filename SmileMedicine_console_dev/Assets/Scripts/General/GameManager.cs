@@ -22,12 +22,15 @@ public class GameManager : MonoBehaviour
     private InputSystem m_input;
     private SystemUsingInput sui;
 
+    private void Awake()
+    {
+        SetGMReference();
+        m_input = GetComponent<InputSystem>();
+    }
+
     // Start is called before the first frame update
     void Start()
     {
-        SetGMReference();
-
-        m_input = GetComponent<InputSystem>();
         sui = SystemUsingInput.PlayerController;
     }
 
@@ -59,8 +62,9 @@ public class GameManager : MonoBehaviour
 
         layerManager.GetComponent<LayersManager>().gm = this;
 
-        inventoryCanvas.GetComponent<InventoryCanvasController>().gm = this;
         inventoryCanvas.GetComponent<InventoryCanvasController>().m_input = GetComponent<InputSystem>();
+        inventoryCanvas.GetComponent<InventoryCanvasController>().m_is = inventoryCanvas.transform.parent.GetComponent<InventorySystem>();
+        inventoryCanvas.transform.parent.GetComponent<InventorySystem>().gm = this;
     }
 
     /// <summary>

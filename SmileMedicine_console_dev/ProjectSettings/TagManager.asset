@@ -25,6 +25,8 @@ TagManager:
   - InventoryChildItemPanel
   - InventoryChildInfoPanel
   - InventoryChildLabelPanel
+  - InventoryItemPanel
+  - InventorySystem
   layers:
   - Default
   - TransparentFX

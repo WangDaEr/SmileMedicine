@@ -16,6 +16,8 @@ public class InventorySystem : MonoBehaviour
         Maps
     }
 
+    public GameManager gm;
+
     public List<List<InventoryItem>> items;
     public List<GameObject> itemPanels;
 

@@ -26,6 +26,9 @@ public class InventoryGridMainPanelInspector : Editor
     private int gridColumnSize;
     public int GridColumnSize { get { return gridColumnSize; } set { gridColumnSize = value; igmp.gridColumnSize = value; } }
 
+    private InventorySystem.ItemType itemType;
+    public InventorySystem.ItemType ItemType { get { return itemType; } set { itemType = value; igmp.itemType = value; } }
+
     private void AnalyzeItemPanel()
     {
         foreach (Transform panel in igmp.transform)
@@ -56,6 +59,7 @@ public class InventoryGridMainPanelInspector : Editor
         checkItemPanel = igmp.checkItemPanel;
         itemCount = igmp.itemCount;
         itemLeft = itemCount;
+        itemType = igmp.itemType;
 
         if (!CheckItemPanel)
         {
@@ -66,20 +70,8 @@ public class InventoryGridMainPanelInspector : Editor
     public override void OnInspectorGUI()
     {
         EditorGUILayout.BeginVertical();
-        /*
-        if (!useGridLayoutGroup && !igmp.setGridLayout)
-        {
-            for (int i = 0; i < igmp.gridLayout.Count; ++i)
-            {
-                igmp.gridLayout[i] = EditorGUILayout.IntSlider(new GUIContent("Row " + (i + 1)), igmp.gridLayout[i], 1, 5);
-            }
 
-            if (GUILayout.Button(new GUIContent("Add a New Row")))
-            {
-                igmp.gridLayout.Add(1);
-            }
-        }
-        */
+        ItemType = (InventorySystem.ItemType)EditorGUILayout.EnumPopup(new GUIContent("Item Type for Panel"), itemType);
 
         EditorGUILayout.EndVertical();
     }

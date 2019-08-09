@@ -7,6 +7,7 @@ public class InventoryMainPanel : MonoBehaviour
     public int currentSelectedIndex = 0;
     public Color selectedColor;
     public Color unSelectedColor;
+    public InventorySystem.ItemType itemType;
 
     public InventoryCanvasController icc;
 

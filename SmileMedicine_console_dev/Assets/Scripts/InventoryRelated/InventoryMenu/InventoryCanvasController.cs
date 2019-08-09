@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class InventoryCanvasController : MonoBehaviour
 {
-    public GameManager gm;
+    public InventorySystem m_is;
     public InputSystem m_input;
 
     public int initialPanelIdx;

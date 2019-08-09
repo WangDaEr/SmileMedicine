@@ -60,6 +60,29 @@ public class InventoryGridMainPanel : InventoryMainPanel
         childPanels[(int)panelIndex["InventoryChildItemPanel"]].transform.GetChild(currentSelectedIndex).GetComponent<Image>().color = unSelectedColor;
         childPanels[(int)panelIndex["InventoryChildItemPanel"]].transform.GetChild(newSelectedIndex).GetComponent<Image>().color = selectedColor;
 
+        Transform infoPanel = childPanels[(int)panelIndex["InventoryChildInfoPanel"]].transform;
+        Sprite itemSprite = null;
+        string itemDescription = "";
+
+        if (newSelectedIndex < icc.m_is.items[(int)itemType].Count)
+        {
+            InventoryItem selectedItem = icc.m_is.items[(int)itemType][newSelectedIndex];
+            itemSprite = selectedItem.itemSprite;
+            itemDescription = selectedItem.itemDescription;
+        }
+        
+        foreach (Transform info in infoPanel)
+        {
+            if (info.GetComponent<Text>())
+            {
+                info.GetComponent<Text>().text = itemDescription;
+            }
+            else if (info.GetComponent<Image>())
+            {
+                //set image window;
+            }
+        }
+
         currentSelectedIndex = newSelectedIndex;
     }
 
@@ -83,7 +106,7 @@ public class InventoryGridMainPanel : InventoryMainPanel
 
         if (ii.itemSprite)
         {
-
+            itemGrid.GetComponent<Image>().sprite = ii.itemSprite;
         }
         else
         {
