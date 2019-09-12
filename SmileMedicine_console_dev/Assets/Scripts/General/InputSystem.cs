@@ -21,6 +21,10 @@ public class InputSystem : MonoBehaviour
     public AxisButtomPressed ver_axis_button;
     private bool ver_button_lock;
 
+    public bool useMobileInput;
+    public MobileInput mi;
+    public MobileInput.MobileInputData mid;
+
     public enum AxisButtomPressed
     {
         Positive,
@@ -32,6 +36,8 @@ public class InputSystem : MonoBehaviour
     void Start()
     {
         ResetAllInputs();
+
+        //Debug.Log("mobile input: " + mi == null);
     }
 
     // Update is called once per frame
@@ -75,9 +81,7 @@ public class InputSystem : MonoBehaviour
         }
         else
         {
-            
             button = AxisButtomPressed.NoInput;
-            
         }
 
         if (val == 0.0F)
@@ -93,8 +97,26 @@ public class InputSystem : MonoBehaviour
     /// </summary>
     private void ReadAllInputs()
     {
-        hor_axis_val = Input.GetAxis("Horizontal");
-        ver_axis_val = Input.GetAxis("Vertical");
+        if (!useMobileInput)
+        {
+            hor_axis_val = Input.GetAxis("Horizontal");
+            ver_axis_val = Input.GetAxis("Vertical");
+        }
+        else
+        {
+            if (mid.hasSwipe)
+            {
+                hor_axis_val = 0.0F;
+                ver_axis_val = mid.movement.normalized.y;
+            }
+            else
+            {
+                hor_axis_val = 0.0F;
+                if (mid.fingerClick || mid.fingerHold) { hor_axis_val = mid.fingerClickLeft ? -1.0F : 1.0F; }
+                ver_axis_val = 0.0F;
+            }
+        }
+
         A_pressed = Input.GetButtonDown("A");
         B_pressed = Input.GetButtonDown("B");
         A_hold = Input.GetButton("A");

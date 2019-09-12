@@ -52,6 +52,10 @@ MonoBehaviour:
   B_hold: 0
   START_pressed: 0
   SELECT_pressed: 0
+  hor_axis_button: 0
+  ver_axis_button: 0
+  useMobileInput: 1
+  mi: {fileID: 0}
 --- !u!114 &6729841443491716612
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -65,4 +69,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerCharacter: {fileID: 0}
-  layers: {fileID: 0}
+  layerManager: {fileID: 0}
+  inventoryCanvas: {fileID: 0}
+  mainCamera: {fileID: 0}

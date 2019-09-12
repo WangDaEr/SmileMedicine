@@ -10,6 +10,7 @@ public class PlatformGeneral : MonoBehaviour
     public Vector3 cameraCentre;
     public Vector2 platformSize;
     public Vector2 platformCenter;
+    public Vector2 platformMargin;
 
     protected virtual void activatePlatform()
     {

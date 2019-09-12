@@ -17,12 +17,21 @@ public class PlatformExplorationInspector : Editor
     private Vector2 platformSize;
     public Vector2 PlatformSize { get { return platformSize; } set { platformSize = value; pe.platformSize = value; } }
 
+    private Vector2 platformCenter;
+    public Vector2 PlatformCenter { get { return platformCenter; } set { platformCenter = value; pe.platformCenter = value; } }
+
+    private Vector2 platformMargin;
+    public Vector2 PlatformMargin { get { return platformMargin; } set { platformMargin = value; pe.platformMargin = value; } }
+
     private void OnEnable()
     {
         pe = (PlatformExploration)target;
 
         cameraCentre = pe.cameraCentre;
         platformType = pe.platformType;
+        platformCenter = pe.platformCenter;
+        platformSize = pe.platformSize;
+        platformMargin = pe.platformMargin;
     }
 
     private void bindCurCameraPos()
@@ -32,7 +41,7 @@ public class PlatformExplorationInspector : Editor
 
     private void defaultPlatformSize()
     {
-        List<Vector2> size = new List<Vector2>(2);
+        List<Vector2> size = new List<Vector2> { new Vector2(), new Vector2()};
         Transform layerManager = null;
         foreach (Transform child in pe.transform)
         {
@@ -79,7 +88,7 @@ public class PlatformExplorationInspector : Editor
 
             Vector2 s = new Vector2(size[0].x - size[0].y, size[1].x - size[1].y);
             PlatformSize = s;
-            pe.platformCenter = new Vector2((size[0].x - size[0].y) / 2, (size[1].x - size[1].y) / 2);
+            PlatformCenter = new Vector2((size[0].x + size[0].y) / 2, (size[1].x + size[1].y) / 2);
         }
         else
         {
@@ -99,11 +108,25 @@ public class PlatformExplorationInspector : Editor
             bindCurCameraPos();
         }
 
+        if (GUILayout.Button(new GUIContent("Bind Camera to Paltform Center")))
+        {
+            Vector3 cPos = new Vector3(platformSize.x, platformSize.y, Camera.main.transform.position.z);
+            CameraCentre = cPos;
+        }
+
         PlatformSize = EditorGUILayout.Vector2Field(new GUIContent("Platform Size"), PlatformSize);
         if (GUILayout.Button(new GUIContent("Use Default Platform Size")))
         {
             defaultPlatformSize();
         }
+
+        //test change of platform center;
+        //PlatformCenter = EditorGUILayout.Vector2Field(new GUIContent("Platform Center"), PlatformCenter);
+        Vector2 margins = new Vector2(
+            EditorGUILayout.Slider(new GUIContent("Platform Margin X"), PlatformMargin.x, 0.0F, 0.5F),
+            EditorGUILayout.Slider(new GUIContent("Platform Margin Y"), PlatformMargin.y, 0.0F, 0.5F)
+            );
+        PlatformMargin = margins;
 
         EditorGUILayout.EndVertical();
     }

@@ -4,8 +4,15 @@ using UnityEngine;
 
 public class PlatformPortal : MonoBehaviour
 {
-    public List<PlatformGeneral> desPlatforms;
+    public enum PlatformPortalType
+    {
+        Enter,
+        Exit
+    }
 
+    public PlatformPortalType portalType;
+    public List<PlatformPortal> desPlatforms = new List<PlatformPortal>();
+    public PlatformGeneral platform;
     public bool portalActive;
     
     // Start is called before the first frame update
