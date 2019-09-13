@@ -52,6 +52,8 @@ public class PlayerController : MonoBehaviour
     private Vector3 zMoveBackPosition;
     private Vector3 zMoveBackScale;
 
+    private float gravityTimer = 0.0F;
+
 
     private bool inputLoackAcquired;
     public bool InputLockAcquired { get { return inputLoackAcquired; } set { } }
@@ -327,7 +329,22 @@ public class PlayerController : MonoBehaviour
             Debug.Log("moving " + mov_dir);
             mov_dir = string.Empty;
         }
-
+        
+        //add gravity;
+        if (Y_restraint && Z_restraint)
+        {
+            float mag = (2 * gravityTimer + Time.deltaTime) * Time.deltaTime / 2;
+            movementTotal += Physics.gravity * mag;
+        }
+        if (controller.isGrounded)
+        {
+            gravityTimer = 0.0F;
+        }
+        else
+        {
+            gravityTimer += Time.deltaTime;
+        }
+        
         controller.Move(movementTotal);
     }
 }
