@@ -11,7 +11,7 @@ public class PlatformPortal : MonoBehaviour
     }
 
     public PlatformPortalType portalType;
-    public List<PlatformPortal> desPlatforms = new List<PlatformPortal>();
+    public GameObject desPortal;
     public PlatformGeneral platform;
     public bool portalActive;
     
