@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 /// <summary>
 /// control the information flow in the system and conduct macro tasks;
@@ -10,6 +11,8 @@ public class GameManager : MonoBehaviour
     public GameObject playerCharacter;
     public GameObject layerManager;
     public GameObject inventoryCanvas;
+
+    public CheckPoint cp;
 
     public Camera mainCamera;
 
@@ -81,5 +84,16 @@ public class GameManager : MonoBehaviour
     public void StartInventory()
     {
         inventoryCanvas.SetActive(true);
+    }
+
+    public void ReloadScene()
+    {
+        Scene scene = SceneManager.GetActiveScene();
+        SceneManager.LoadScene(scene.name);
+    }
+
+    public void RespawnPlayerCharacter()
+    {
+        playerCharacter.transform.position = cp.transform.position;
     }
 }

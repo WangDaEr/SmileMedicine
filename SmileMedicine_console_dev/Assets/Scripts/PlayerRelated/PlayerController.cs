@@ -54,6 +54,8 @@ public class PlayerController : MonoBehaviour
 
     private float gravityTimer;
 
+    public float fallLimit;
+
     private bool inputLoackAcquired;
     public bool InputLockAcquired { get { return inputLoackAcquired; } set { } }
 
@@ -122,6 +124,8 @@ public class PlayerController : MonoBehaviour
                 PlayerMove();
             }
         }
+
+        checkPlayerRespawn();
     }
 
     public void ChangeInputLock()
@@ -280,6 +284,7 @@ public class PlayerController : MonoBehaviour
 
         //check horizontal movement;
         if (!X_restraint && m_input.hor_axis_val != 0.0F)
+        //if (!X_restraint && m_input.hor_axis_button != InputSystem.AxisButtomPressed.NoInput)
         {
             Vector3 movementHor = transform.TransformDirection(Vector3.right);
             movementHor *= m_input.hor_axis_val * curSpeed * Time.deltaTime;
@@ -304,7 +309,8 @@ public class PlayerController : MonoBehaviour
             mov_dir = string.Empty;
         }
 
-        if (!Z_restraint && m_input.ver_axis_val != 0.0F)
+        //if (!Z_restraint && m_input.ver_axis_val != 0.0F)
+        if (!Z_restraint && m_input.ver_axis_button != InputSystem.AxisButtomPressed.NoInput)
         {
             if (specifyDestination)
             {
@@ -345,5 +351,13 @@ public class PlayerController : MonoBehaviour
         }
 
         controller.Move(movementTotal);
+    }
+
+    private void checkPlayerRespawn()
+    {
+        if (transform.position.y < fallLimit && !controller.isGrounded)
+        {
+            gm.RespawnPlayerCharacter();
+        }
     }
 }

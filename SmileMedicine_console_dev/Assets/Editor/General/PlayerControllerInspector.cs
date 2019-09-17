@@ -60,6 +60,11 @@ public class PlayerControllerInspector : Editor
         Z_test = EditorGUILayout.Toggle(new GUIContent("Test Z Axis Movement"), Z_test);
 
         GravityFactor = EditorGUILayout.FloatField(new GUIContent("Gravity For Player"), GravityFactor);
+        pc.fallLimit = EditorGUILayout.FloatField(new GUIContent("Lowest Y Value Player Can Reach"), pc.fallLimit);
+        if (GUILayout.Button(new GUIContent("Use Player's Current Y Value")))
+        {
+            pc.fallLimit = pc.transform.position.y;
+        }
 
         EditorGUILayout.EndVertical();
     }
