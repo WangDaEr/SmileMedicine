@@ -1,0 +1,4467 @@
+fileFormatVersion: 2
+guid: dac8eba45d55049c3a9defd7e493ed16
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2470123494051816084
+    second: Nila_Idle_0
+  - first:
+      213: 7533366043312712185
+    second: Nila_Idle_1
+  - first:
+      213: 6681973670358373735
+    second: Nila_Idle_2
+  - first:
+      213: -450992481900981371
+    second: Nila_Idle_3
+  - first:
+      213: 5075308226861736607
+    second: Nila_Idle_4
+  - first:
+      213: -2302474117486646539
+    second: Nila_Idle_5
+  - first:
+      213: 3246376201259698013
+    second: Nila_Idle_6
+  - first:
+      213: 4216957670417149423
+    second: Nila_Idle_7
+  - first:
+      213: -4907026677821514175
+    second: Nila_Idle_8
+  - first:
+      213: -5645744821839204718
+    second: Nila_Idle_9
+  - first:
+      213: 5203514910745515095
+    second: Nila_Idle_10
+  - first:
+      213: 7590229823916833272
+    second: Nila_Idle_11
+  - first:
+      213: 4828509451298363018
+    second: Nila_Idle_12
+  - first:
+      213: 538298091296729788
+    second: Nila_Idle_13
+  - first:
+      213: -5347232100464853941
+    second: Nila_Idle_14
+  - first:
+      213: -4949816568844996067
+    second: Nila_Idle_15
+  - first:
+      213: 4067764286666661966
+    second: Nila_Idle_16
+  - first:
+      213: 8526988148476092242
+    second: Nila_Idle_17
+  - first:
+      213: -1288619285165931767
+    second: Nila_Idle_18
+  - first:
+      213: 7827272322784496961
+    second: Nila_Idle_19
+  - first:
+      213: -2262479732564560799
+    second: Nila_Idle_20
+  - first:
+      213: 6698627229588513255
+    second: Nila_Idle_21
+  - first:
+      213: 2426585336588715422
+    second: Nila_Idle_22
+  - first:
+      213: 949424947080384377
+    second: Nila_Idle_23
+  - first:
+      213: -5859814450530038947
+    second: Nila_Idle_24
+  - first:
+      213: -3231729745557288510
+    second: Nila_Idle_25
+  - first:
+      213: -1269308558308047756
+    second: Nila_Idle_26
+  - first:
+      213: 6361509311784083009
+    second: Nila_Idle_27
+  - first:
+      213: -7961937929774150014
+    second: Nila_Idle_28
+  - first:
+      213: -417709310303110442
+    second: Nila_Idle_29
+  - first:
+      213: -4410187746071789795
+    second: Nila_Idle_30
+  - first:
+      213: -6731636688220431075
+    second: Nila_Idle_31
+  - first:
+      213: 8568952306149648810
+    second: Nila_Idle_32
+  - first:
+      213: -993739509153467718
+    second: Nila_Idle_33
+  - first:
+      213: 1317538334094028501
+    second: Nila_Idle_34
+  - first:
+      213: -6599090377864491879
+    second: Nila_Idle_35
+  - first:
+      213: -6190028188316251628
+    second: Nila_Idle_36
+  - first:
+      213: 8097727573529811225
+    second: Nila_Idle_37
+  - first:
+      213: 5394850478945443166
+    second: Nila_Idle_38
+  - first:
+      213: 8414418029225846652
+    second: Nila_Idle_39
+  - first:
+      213: -9064188427162255153
+    second: Nila_Idle_40
+  - first:
+      213: 3061987801647203840
+    second: Nila_Idle_41
+  - first:
+      213: -811908609738867843
+    second: Nila_Idle_42
+  - first:
+      213: -6479020238364728434
+    second: Nila_Idle_43
+  - first:
+      213: 3712188566623339693
+    second: Nila_Idle_44
+  - first:
+      213: 5819883852454506746
+    second: Nila_Idle_45
+  - first:
+      213: -3736402004293523917
+    second: Nila_Idle_46
+  - first:
+      213: 3059528150835877760
+    second: Nila_Idle_47
+  - first:
+      213: 1104518988564285607
+    second: Nila_Idle_48
+  - first:
+      213: 4224842610789802681
+    second: Nila_Idle_49
+  - first:
+      213: -7021610499267447629
+    second: Nila_Idle_50
+  - first:
+      213: 8019468201684306163
+    second: Nila_Idle_51
+  - first:
+      213: -2997433856997307795
+    second: Nila_Idle_52
+  - first:
+      213: -818851396129526231
+    second: Nila_Idle_53
+  - first:
+      213: 1314126324589790598
+    second: Nila_Idle_54
+  - first:
+      213: 1795824367519771639
+    second: Nila_Idle_55
+  - first:
+      213: -1733684812308175373
+    second: Nila_Idle_56
+  - first:
+      213: 9020838720385664582
+    second: Nila_Idle_57
+  - first:
+      213: 2323791805888804308
+    second: Nila_Idle_58
+  - first:
+      213: -4121134901077128761
+    second: Nila_Idle_59
+  - first:
+      213: 6676734431904713188
+    second: Nila_Idle_60
+  - first:
+      213: 7710265425162179888
+    second: Nila_Idle_61
+  - first:
+      213: 7000580562864284878
+    second: Nila_Idle_62
+  - first:
+      213: -1982145048424234922
+    second: Nila_Idle_63
+  - first:
+      213: 6216050072503620431
+    second: Nila_Idle_64
+  - first:
+      213: -2123314766588651348
+    second: Nila_Idle_65
+  - first:
+      213: 5709773117948988654
+    second: Nila_Idle_66
+  - first:
+      213: 4615245475091852349
+    second: Nila_Idle_67
+  - first:
+      213: -2457975829850960135
+    second: Nila_Idle_68
+  - first:
+      213: -4358375509491102418
+    second: Nila_Idle_69
+  - first:
+      213: -8289564115296562276
+    second: Nila_Idle_70
+  - first:
+      213: -2997898478918695686
+    second: Nila_Idle_71
+  - first:
+      213: -3613285802936218848
+    second: Nila_Idle_72
+  - first:
+      213: -7375876784174104783
+    second: Nila_Idle_73
+  - first:
+      213: -8969001490374643112
+    second: Nila_Idle_74
+  - first:
+      213: -3811185247547122792
+    second: Nila_Idle_75
+  - first:
+      213: -4256030599253983515
+    second: Nila_Idle_76
+  - first:
+      213: 419916547495107488
+    second: Nila_Idle_77
+  - first:
+      213: -3317781653184493779
+    second: Nila_Idle_78
+  - first:
+      213: -395877708638999519
+    second: Nila_Idle_79
+  - first:
+      213: -5811860213538762076
+    second: Nila_Idle_80
+  - first:
+      213: 8611928591450101760
+    second: Nila_Idle_81
+  - first:
+      213: -7804454683371052956
+    second: Nila_Idle_82
+  - first:
+      213: 8454718690243272056
+    second: Nila_Idle_83
+  - first:
+      213: -5000378114984099371
+    second: Nila_Idle_84
+  - first:
+      213: -2907102531090173942
+    second: Nila_Idle_85
+  - first:
+      213: -4550466612133115081
+    second: Nila_Idle_86
+  - first:
+      213: -519409917831407665
+    second: Nila_Idle_87
+  - first:
+      213: 5825535095628011378
+    second: Nila_Idle_88
+  - first:
+      213: 8006341100606387423
+    second: Nila_Idle_89
+  - first:
+      213: -5643861822920344405
+    second: Nila_Idle_90
+  - first:
+      213: 1186302936295616087
+    second: Nila_Idle_91
+  - first:
+      213: -4033270526764873353
+    second: Nila_Idle_92
+  - first:
+      213: -659104105478003103
+    second: Nila_Idle_93
+  - first:
+      213: 980888871599757940
+    second: Nila_Idle_94
+  - first:
+      213: -8133660772547345343
+    second: Nila_Idle_95
+  - first:
+      213: 4589878012080669632
+    second: Nila_Idle_96
+  - first:
+      213: -8069569491208318918
+    second: Nila_Idle_97
+  - first:
+      213: -1812868490735314575
+    second: Nila_Idle_98
+  - first:
+      213: 7620772810209917596
+    second: Nila_Idle_99
+  - first:
+      213: 1018950651147179839
+    second: Nila_Idle_100
+  - first:
+      213: -5281519136056498711
+    second: Nila_Idle_101
+  - first:
+      213: -1736452643369906472
+    second: Nila_Idle_102
+  - first:
+      213: -7639317547461345776
+    second: Nila_Idle_103
+  - first:
+      213: 5406869449933310390
+    second: Nila_Idle_104
+  - first:
+      213: -8675039325116028898
+    second: Nila_Idle_105
+  - first:
+      213: -8321198974246141650
+    second: Nila_Idle_106
+  - first:
+      213: 1172963297036505125
+    second: Nila_Idle_107
+  - first:
+      213: 1386577556866991013
+    second: Nila_Idle_108
+  - first:
+      213: -5430411764547867649
+    second: Nila_Idle_109
+  - first:
+      213: -7432046334587571599
+    second: Nila_Idle_110
+  - first:
+      213: -3077333605003781787
+    second: Nila_Idle_111
+  - first:
+      213: -1677469530658526528
+    second: Nila_Idle_112
+  - first:
+      213: 6357472736078494939
+    second: Nila_Idle_113
+  - first:
+      213: 7083069272314005825
+    second: Nila_Idle_114
+  - first:
+      213: 3511042412398023125
+    second: Nila_Idle_115
+  - first:
+      213: -3798557110441175116
+    second: Nila_Idle_116
+  - first:
+      213: -8893913248073169449
+    second: Nila_Idle_117
+  - first:
+      213: -1429251342432896142
+    second: Nila_Idle_118
+  - first:
+      213: 5077118994399211068
+    second: Nila_Idle_119
+  - first:
+      213: -9021214288829612858
+    second: Nila_Idle_120
+  - first:
+      213: 2968091325002351373
+    second: Nila_Idle_121
+  - first:
+      213: -2465816949540166700
+    second: Nila_Idle_122
+  - first:
+      213: -7153997488107384974
+    second: Nila_Idle_123
+  - first:
+      213: 2177008417901634408
+    second: Nila_Idle_124
+  - first:
+      213: 3779548238914546592
+    second: Nila_Idle_125
+  - first:
+      213: -7199046656416534605
+    second: Nila_Idle_126
+  - first:
+      213: 517065029062374842
+    second: Nila_Idle_127
+  - first:
+      213: -6067973485551690803
+    second: Nila_Idle_128
+  - first:
+      213: -2671946622297640554
+    second: Nila_Idle_129
+  - first:
+      213: 6508612595820343802
+    second: Nila_Idle_130
+  - first:
+      213: 3537539204757099993
+    second: Nila_Idle_131
+  - first:
+      213: 517920805114092218
+    second: Nila_Idle_132
+  - first:
+      213: 6550803353589196268
+    second: Nila_Idle_133
+  - first:
+      213: -3632451033697755261
+    second: Nila_Idle_134
+  - first:
+      213: 204211763312328185
+    second: Nila_Idle_135
+  - first:
+      213: -4864654861309799780
+    second: Nila_Idle_136
+  - first:
+      213: 5438770747010530634
+    second: Nila_Idle_137
+  - first:
+      213: -6063040299669917621
+    second: Nila_Idle_138
+  - first:
+      213: -4475857687774933376
+    second: Nila_Idle_139
+  - first:
+      213: -2648643795988677588
+    second: Nila_Idle_140
+  - first:
+      213: -4218346631000286444
+    second: Nila_Idle_141
+  - first:
+      213: 6004273176220473923
+    second: Nila_Idle_142
+  - first:
+      213: -5683982295055836875
+    second: Nila_Idle_143
+  - first:
+      213: 1507861708462723435
+    second: Nila_Idle_144
+  - first:
+      213: -8377010529412868905
+    second: Nila_Idle_145
+  - first:
+      213: -5043055860865187717
+    second: Nila_Idle_146
+  - first:
+      213: -6539102952421702941
+    second: Nila_Idle_147
+  - first:
+      213: 5706996727214450379
+    second: Nila_Idle_148
+  - first:
+      213: 5796982624305535645
+    second: Nila_Idle_149
+  - first:
+      213: 9137130331163931629
+    second: Nila_Idle_150
+  - first:
+      213: 4465522478490566892
+    second: Nila_Idle_151
+  - first:
+      213: -8029677354794870350
+    second: Nila_Idle_152
+  - first:
+      213: -8810700933878749439
+    second: Nila_Idle_153
+  - first:
+      213: 3324158853485894298
+    second: Nila_Idle_154
+  - first:
+      213: -886602843307240533
+    second: Nila_Idle_155
+  - first:
+      213: -8275270378061634120
+    second: Nila_Idle_156
+  - first:
+      213: -4019848361193769396
+    second: Nila_Idle_157
+  - first:
+      213: -155758768573811056
+    second: Nila_Idle_158
+  - first:
+      213: 8557858596841609025
+    second: Nila_Idle_159
+  - first:
+      213: -3833261474581400101
+    second: Nila_Idle_160
+  - first:
+      213: 6808255550411357963
+    second: Nila_Idle_161
+  - first:
+      213: -602919780453625242
+    second: Nila_Idle_162
+  - first:
+      213: -1667637967505675890
+    second: Nila_Idle_163
+  - first:
+      213: -5301209133659819427
+    second: Nila_Idle_164
+  - first:
+      213: -5584157898914153269
+    second: Nila_Idle_165
+  - first:
+      213: 7092635460058304879
+    second: Nila_Idle_166
+  - first:
+      213: -1173141567787122294
+    second: Nila_Idle_167
+  - first:
+      213: 1675811007465449929
+    second: Nila_Idle_168
+  - first:
+      213: 3769132194580090618
+    second: Nila_Idle_169
+  - first:
+      213: -4581471486897745024
+    second: Nila_Idle_170
+  - first:
+      213: 2868066762194743430
+    second: Nila_Idle_171
+  - first:
+      213: 1847943371727830989
+    second: Nila_Idle_172
+  - first:
+      213: 7071627941050659932
+    second: Nila_Idle_173
+  - first:
+      213: -7258673004619279763
+    second: Nila_Idle_174
+  - first:
+      213: -634358168531645799
+    second: Nila_Idle_175
+  - first:
+      213: 2337270157236045942
+    second: Nila_Idle_176
+  - first:
+      213: -4926148963741547592
+    second: Nila_Idle_177
+  - first:
+      213: 1170781325266650406
+    second: Nila_Idle_178
+  - first:
+      213: 2843669995283682409
+    second: Nila_Idle_179
+  - first:
+      213: -8086722527611897128
+    second: Nila_Idle_180
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 250
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: iPhone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Android
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Nila_Idle_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 11880
+        width: 792
+        height: 792
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4c18ea238a6f477aa16f95eab8acf72
+      internalID: 2470123494051816084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nila_Idle_1
+      rect:
+        serializedVersion: 2
+        x: 792
+        y: 11880
+        width: 792
+        height: 792
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01e427ec2a0094842a69f907c17198b1
+      internalID: 7533366043312712185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nila_Idle_2
+      rect:
+        serializedVersion: 2
+        x: 1584
+        y: 11880
+        width: 792
+        height: 792
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fac5db4b2aff140de93a4c7d4aeb62a3
+      internalID: 6681973670358373735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nila_Idle_3
+      rect:
+        serializedVersion: 2
+        x: 2376
+        y: 11880
+        width: 792
+        height: 792
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86b0a2de78ed84d468d84f26f34c9121
+      internalID: -450992481900981371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nila_Idle_4
+      rect:
+        serializedVersion: 2
+        x: 3168
+        y: 11880
+        width: 792
+        height: 792
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: adfeeba0beed2482baf7e524dd765ef2
+      internalID: 5075308226861736607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nila_Idle_5
+      rect:
+        serializedVersion: 2
+        x: 3960
+        y: 11880
+        width: 792
+        height: 792
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7401b260d7faa463195cd7c17f06faac
+      internalID: -2302474117486646539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nila_Idle_6
+      rect:
+        serializedVersion: 2
+        x: 4752
+        y: 11880
+        width: 792
+        height: 792
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c20d38fc55e845c2b7c65ad67dcc88c
+      internalID: 3246376201259698013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nila_Idle_7
+      rect:
+        serializedVersion: 2
+        x: 5544
+        y: 11880
+        width: 792
+        height: 792
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e71c9a48f619d47ae8a69f2f34288b40
+      internalID: 4216957670417149423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nila_Idle_8
+      rect:
+        serializedVersion: 2
+        x: 6336
+        y: 11880
+        width: 792
+        height: 792
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14ebb5f43a52a4ae68642090eb8d0967
+      internalID: -4907026677821514175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nila_Idle_9
+      rect:
+        serializedVersion: 2
+        x: 7128
+        y: 11880
+        width: 792
+        height: 792
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c93f2ab7793144c1afb3ad69733bb56
+      internalID: -5645744821839204718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nila_Idle_10
+      rect:
+        serializedVersion: 2
+        x: 7920
+        y: 11880
+        width: 792
+        height: 792
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3000c04d816db4b72a2633e2876eca0a
+      internalID: 5203514910745515095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nila_Idle_11
+      rect:
+        serializedVersion: 2
+        x: 8712
+        y: 11880
+        width: 792
+        height: 792
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c1296d913fda41709c681bdc37b1be8
+      internalID: 7590229823916833272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nila_Idle_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 11088
+        width: 792
+        height: 792
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 255038b1d8458452db78d8b92f7d60c4
+      internalID: 4828509451298363018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nila_Idle_13
+      rect:
+        serializedVersion: 2
+        x: 792
+        y: 11088
+        width: 792
+        height: 792
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b46a967c9ad5542a791b02087b5ca7d3
+      internalID: 538298091296729788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nila_Idle_14
+      rect:
+        serializedVersion: 2
+        x: 1584
+        y: 11088
+        width: 792
+        height: 792
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d51125c31632147db9ca10e11c71cf53
+      internalID: -5347232100464853941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nila_Idle_15
+      rect:
+        serializedVersion: 2
+        x: 2376
+        y: 11088
+        width: 792
+        height: 792
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5dcb739aa468426ca2383957aecc9f3
+      internalID: -4949816568844996067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nila_Idle_16
+      rect:
+        serializedVersion: 2
+        x: 3168
+        y: 11088
+        width: 792
+        height: 792
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4e2dc4e33c6249d5958b1f9bb4e1e9a
+      internalID: 4067764286666661966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nila_Idle_17
+      rect:
+        serializedVersion: 2
+        x: 3960
+        y: 11088
+        width: 792
+        height: 792
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8fb6e7d01c824bd7a8df2d762767798
+      internalID: 8526988148476092242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nila_Idle_18
+      rect:
+        serializedVersion: 2
+        x: 4752
+        y: 11088
+        width: 792
+        height: 792
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f77aa9de8f3f40e586fd6f9b2c6169c
+      internalID: -1288619285165931767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nila_Idle_19
+      rect:
+        serializedVersion: 2
+        x: 5544
+        y: 11088
+        width: 792
+        height: 792
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c474e1baa06554927838f5317d1a7aa0
+      internalID: 7827272322784496961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nila_Idle_20
+      rect:
+        serializedVersion: 2
+        x: 6336
+        y: 11088
+        width: 792
+        height: 792
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8869ad5d783a9491aa82263b5a04e275
+      internalID: -2262479732564560799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nila_Idle_21
+      rect:
+        serializedVersion: 2
+        x: 7128
+        y: 11088
+        width: 792
+        height: 792
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83ea1baba1f9d4c0d832b7c37d81ed9c
+      internalID: 6698627229588513255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nila_Idle_22
+      rect:
+        serializedVersion: 2
+        x: 7920
+        y: 11088
+        width: 792
+        height: 792
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5aedf21efb2d414693f1aa194bd5dc0
+      internalID: 2426585336588715422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nila_Idle_23
+      rect:
+        serializedVersion: 2
+        x: 8712
+        y: 11088
+        width: 792
+        height: 792
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b418040a9f634366a1eb4f3eb378cbc
+      internalID: 949424947080384377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nila_Idle_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 10296
+        width: 792
+        height: 792
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 283a1251318a9409798c7c015ca21b30
+      internalID: -5859814450530038947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nila_Idle_25
+      rect:
+        serializedVersion: 2
+        x: 792
+        y: 10296
+        width: 792
+        height: 792
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3dd88cc76816a408e94746ae761684cc
+      internalID: -3231729745557288510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nila_Idle_26
+      rect:
+        serializedVersion: 2
+        x: 1584
+        y: 10296
+        width: 792
+        height: 792
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cffcf03023b14434b9c8016242f550ec
+      internalID: -1269308558308047756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nila_Idle_27
+      rect:
+        serializedVersion: 2
+        x: 2376
+        y: 10296
+        width: 792
+        height: 792
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f6bfca2573904ca99e69ace6ee5ddbb
+      internalID: 6361509311784083009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nila_Idle_28
+      rect:
+        serializedVersion: 2
+        x: 3168
+        y: 10296
+        width: 792
+        height: 792
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c0c96b357c244a8dbb61603f6da72ae
+      internalID: -7961937929774150014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nila_Idle_29
+      rect:
+        serializedVersion: 2
+        x: 3960
+        y: 10296
+        width: 792
+        height: 792
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 159b1fff5e4354f99b6964be11bbdc9d
+      internalID: -417709310303110442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nila_Idle_30
+      rect:
+        serializedVersion: 2
+        x: 4752
+        y: 10296
+        width: 792
+        height: 792
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e2e0fb032fa141389ef51bf04c5ac49
+      internalID: -4410187746071789795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nila_Idle_31
+      rect:
+        serializedVersion: 2
+        x: 5544
+        y: 10296
+        width: 792
+        height: 792
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4f9d19cffbbf448fbd499cee58e6cb2
+      internalID: -6731636688220431075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nila_Idle_32
+      rect:
+        serializedVersion: 2
+        x: 6336
+        y: 10296
+        width: 792
+        height: 792
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9889119a502314111872ef6f623859d4
+      internalID: 8568952306149648810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nila_Idle_33
+      rect:
+        serializedVersion: 2
+        x: 7128
+        y: 10296
+        width: 792
+        height: 792
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 523aa6689b4c84b38839efb270bdaf76
+      internalID: -993739509153467718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nila_Idle_34
+      rect:
+        serializedVersion: 2
+        x: 7920
+        y: 10296
+        width: 792
+        height: 792
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb7f9d2534cd74d2a8e3f6a65953547e
+      internalID: 1317538334094028501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nila_Idle_35
+      rect:
+        serializedVersion: 2
+        x: 8712
+        y: 10296
+        width: 792
+        height: 792
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 014d2818711e44642a52a19ea5ac33dc
+      internalID: -6599090377864491879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nila_Idle_36
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 9504
+        width: 792
+        height: 792
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45bf4d7491d544dd4b2a3ec264f2ca4b
+      internalID: -6190028188316251628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nila_Idle_37
+      rect:
+        serializedVersion: 2
+        x: 792
+        y: 9504
+        width: 792
+        height: 792
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa0c754e5a54a4ca78029e8a9a3d6e45
+      internalID: 8097727573529811225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nila_Idle_38
+      rect:
+        serializedVersion: 2
+        x: 1584
+        y: 9504
+        width: 792
+        height: 792
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3dcfbcbc0a38843ef958588fe054d026
+      internalID: 5394850478945443166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nila_Idle_39
+      rect:
+        serializedVersion: 2
+        x: 2376
+        y: 9504
+        width: 792
+        height: 792
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54feadd9381e940ea840cdad586d0670
+      internalID: 8414418029225846652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nila_Idle_40
+      rect:
+        serializedVersion: 2
+        x: 3168
+        y: 9504
+        width: 792
+        height: 792
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47058528a3c084449b41659d03b7c62a
+      internalID: -9064188427162255153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nila_Idle_41
+      rect:
+        serializedVersion: 2
+        x: 3960
+        y: 9504
+        width: 792
+        height: 792
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf8591fcd985e470ba5a2516ad81a016
+      internalID: 3061987801647203840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nila_Idle_42
+      rect:
+        serializedVersion: 2
+        x: 4752
+        y: 9504
+        width: 792
+        height: 792
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5df9a0d5444bb43bfb22cdf8ac2d2cba
+      internalID: -811908609738867843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nila_Idle_43
+      rect:
+        serializedVersion: 2
+        x: 5544
+        y: 9504
+        width: 792
+        height: 792
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ddd5da842126e472aab209af9978c090
+      internalID: -6479020238364728434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nila_Idle_44
+      rect:
+        serializedVersion: 2
+        x: 6336
+        y: 9504
+        width: 792
+        height: 792
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74cfea27414b3496582358a4badd5064
+      internalID: 3712188566623339693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nila_Idle_45
+      rect:
+        serializedVersion: 2
+        x: 7128
+        y: 9504
+        width: 792
+        height: 792
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99a7515334ac9445ca43f74dd52b6a88
+      internalID: 5819883852454506746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nila_Idle_46
+      rect:
+        serializedVersion: 2
+        x: 7920
+        y: 9504
+        width: 792
+        height: 792
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5d0d13e9b9874411bf9a092fb468c2a
+      internalID: -3736402004293523917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nila_Idle_47
+      rect:
+        serializedVersion: 2
+        x: 8712
+        y: 9504
+        width: 792
+        height: 792
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca0238b42854a4a9ca6d9569c89e5b13
+      internalID: 3059528150835877760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nila_Idle_48
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 8712
+        width: 792
+        height: 792
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6047f8114be6148b0ad3b7274365c006
+      internalID: 1104518988564285607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nila_Idle_49
+      rect:
+        serializedVersion: 2
+        x: 792
+        y: 8712
+        width: 792
+        height: 792
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df5eb71b0eee64b348c0fa8d1aab3c67
+      internalID: 4224842610789802681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nila_Idle_50
+      rect:
+        serializedVersion: 2
+        x: 1584
+        y: 8712
+        width: 792
+        height: 792
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c179a0751b524b22b12b6fb47410906
+      internalID: -7021610499267447629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nila_Idle_51
+      rect:
+        serializedVersion: 2
+        x: 2376
+        y: 8712
+        width: 792
+        height: 792
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 576c11a5c5abc425eb9640d566f3ac9f
+      internalID: 8019468201684306163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nila_Idle_52
+      rect:
+        serializedVersion: 2
+        x: 3168
+        y: 8712
+        width: 792
+        height: 792
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed8a024f9733946d6aa52ad0890928f5
+      internalID: -2997433856997307795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nila_Idle_53
+      rect:
+        serializedVersion: 2
+        x: 3960
+        y: 8712
+        width: 792
+        height: 792
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd9a1a098f6e0433f87e6f75041ce25e
+      internalID: -818851396129526231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nila_Idle_54
+      rect:
+        serializedVersion: 2
+        x: 4752
+        y: 8712
+        width: 792
+        height: 792
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9cb7df1d9638f47fb8712e9fea3771ef
+      internalID: 1314126324589790598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nila_Idle_55
+      rect:
+        serializedVersion: 2
+        x: 5544
+        y: 8712
+        width: 792
+        height: 792
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2672a134cf544ee2b331967298504f4
+      internalID: 1795824367519771639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nila_Idle_56
+      rect:
+        serializedVersion: 2
+        x: 6336
+        y: 8712
+        width: 792
+        height: 792
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b41e75cb9c66f41f59fe2ab42d25afca
+      internalID: -1733684812308175373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nila_Idle_57
+      rect:
+        serializedVersion: 2
+        x: 7128
+        y: 8712
+        width: 792
+        height: 792
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69428ee2216f647c185262bf2f119da2
+      internalID: 9020838720385664582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nila_Idle_58
+      rect:
+        serializedVersion: 2
+        x: 7920
+        y: 8712
+        width: 792
+        height: 792
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1d982a6270c749108c0e445b5ae5b53
+      internalID: 2323791805888804308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nila_Idle_59
+      rect:
+        serializedVersion: 2
+        x: 8712
+        y: 8712
+        width: 792
+        height: 792
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c4c86be442b34562a6be649ef91d243
+      internalID: -4121134901077128761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nila_Idle_60
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 7920
+        width: 792
+        height: 792
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f58795e2041f4347b58bdbd894de189
+      internalID: 6676734431904713188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nila_Idle_61
+      rect:
+        serializedVersion: 2
+        x: 792
+        y: 7920
+        width: 792
+        height: 792
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d44542c37d29471abddced6b05911ca
+      internalID: 7710265425162179888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nila_Idle_62
+      rect:
+        serializedVersion: 2
+        x: 1584
+        y: 7920
+        width: 792
+        height: 792
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4c9567078e2d4f99a6033d3cc043bec
+      internalID: 7000580562864284878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nila_Idle_63
+      rect:
+        serializedVersion: 2
+        x: 2376
+        y: 7920
+        width: 792
+        height: 792
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51b83caad3bba4019a1828ef1977ae23
+      internalID: -1982145048424234922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nila_Idle_64
+      rect:
+        serializedVersion: 2
+        x: 3168
+        y: 7920
+        width: 792
+        height: 792
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f008eb9b452c54c28961ca7e6f17a427
+      internalID: 6216050072503620431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nila_Idle_65
+      rect:
+        serializedVersion: 2
+        x: 3960
+        y: 7920
+        width: 792
+        height: 792
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e9c0c8dd826e4309815df5f37ac3c3e
+      internalID: -2123314766588651348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nila_Idle_66
+      rect:
+        serializedVersion: 2
+        x: 4752
+        y: 7920
+        width: 792
+        height: 792
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10d3cadba07c34f3daede16f1a8bd9a8
+      internalID: 5709773117948988654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nila_Idle_67
+      rect:
+        serializedVersion: 2
+        x: 5544
+        y: 7920
+        width: 792
+        height: 792
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb6fd196c30c449079f3c62c8b4c31f1
+      internalID: 4615245475091852349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nila_Idle_68
+      rect:
+        serializedVersion: 2
+        x: 6336
+        y: 7920
+        width: 792
+        height: 792
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 927415082cfc64dfeb7eae1ba50dbe5c
+      internalID: -2457975829850960135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nila_Idle_69
+      rect:
+        serializedVersion: 2
+        x: 7128
+        y: 7920
+        width: 792
+        height: 792
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af886d8c59d324aa6945dfda1c604656
+      internalID: -4358375509491102418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nila_Idle_70
+      rect:
+        serializedVersion: 2
+        x: 7920
+        y: 7920
+        width: 792
+        height: 792
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eadec2e735bc742aebf733bad5101a8e
+      internalID: -8289564115296562276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nila_Idle_71
+      rect:
+        serializedVersion: 2
+        x: 8712
+        y: 7920
+        width: 792
+        height: 792
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6cc1c5adeecfd424fa092898a27ab81c
+      internalID: -2997898478918695686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nila_Idle_72
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 7128
+        width: 792
+        height: 792
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8dfb803b66e7c4c73bc9197487ea0abc
+      internalID: -3613285802936218848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nila_Idle_73
+      rect:
+        serializedVersion: 2
+        x: 792
+        y: 7128
+        width: 792
+        height: 792
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 202fc6b3b38284c81ba108135582602c
+      internalID: -7375876784174104783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nila_Idle_74
+      rect:
+        serializedVersion: 2
+        x: 1584
+        y: 7128
+        width: 792
+        height: 792
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebed95c4abcbd4f8eab7d75f0cbdd1a1
+      internalID: -8969001490374643112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nila_Idle_75
+      rect:
+        serializedVersion: 2
+        x: 2376
+        y: 7128
+        width: 792
+        height: 792
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fa6f35fcb4424e8db5ab6facb601cbc
+      internalID: -3811185247547122792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nila_Idle_76
+      rect:
+        serializedVersion: 2
+        x: 3168
+        y: 7128
+        width: 792
+        height: 792
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01047298092334c69a8aac70b598f8ef
+      internalID: -4256030599253983515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nila_Idle_77
+      rect:
+        serializedVersion: 2
+        x: 3960
+        y: 7128
+        width: 792
+        height: 792
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b3ef0beaef764bf1a1bb275881b98a0
+      internalID: 419916547495107488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nila_Idle_78
+      rect:
+        serializedVersion: 2
+        x: 4752
+        y: 7128
+        width: 792
+        height: 792
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: facbf7a5915444490b54ecf701714d4f
+      internalID: -3317781653184493779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nila_Idle_79
+      rect:
+        serializedVersion: 2
+        x: 5544
+        y: 7128
+        width: 792
+        height: 792
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07dae649597ca467f8ded8073ddb013c
+      internalID: -395877708638999519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nila_Idle_80
+      rect:
+        serializedVersion: 2
+        x: 6336
+        y: 7128
+        width: 792
+        height: 792
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a030be762f02433c90df0bae7e5a4fa
+      internalID: -5811860213538762076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nila_Idle_81
+      rect:
+        serializedVersion: 2
+        x: 7128
+        y: 7128
+        width: 792
+        height: 792
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05b2d9df875634085957f21d7f13d4c9
+      internalID: 8611928591450101760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nila_Idle_82
+      rect:
+        serializedVersion: 2
+        x: 7920
+        y: 7128
+        width: 792
+        height: 792
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce0dea2c365d74fd880d9678ab1ec7f4
+      internalID: -7804454683371052956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nila_Idle_83
+      rect:
+        serializedVersion: 2
+        x: 8712
+        y: 7128
+        width: 792
+        height: 792
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 682d0fe17d8804adab10359483a1c1fe
+      internalID: 8454718690243272056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nila_Idle_84
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 6336
+        width: 792
+        height: 792
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b3f580a61eaa4f1b98e8dac094ab3d0
+      internalID: -5000378114984099371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nila_Idle_85
+      rect:
+        serializedVersion: 2
+        x: 792
+        y: 6336
+        width: 792
+        height: 792
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6a2ffcf860364d8d906c8c5b93e9679
+      internalID: -2907102531090173942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nila_Idle_86
+      rect:
+        serializedVersion: 2
+        x: 1584
+        y: 6336
+        width: 792
+        height: 792
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed90ae9adc68c44f8aef60609f32f7b9
+      internalID: -4550466612133115081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nila_Idle_87
+      rect:
+        serializedVersion: 2
+        x: 2376
+        y: 6336
+        width: 792
+        height: 792
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6889adbcbeba74c90957881b5d7816c4
+      internalID: -519409917831407665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nila_Idle_88
+      rect:
+        serializedVersion: 2
+        x: 3168
+        y: 6336
+        width: 792
+        height: 792
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7cc751e02929f4cc7850e6741a41e3e2
+      internalID: 5825535095628011378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nila_Idle_89
+      rect:
+        serializedVersion: 2
+        x: 3960
+        y: 6336
+        width: 792
+        height: 792
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8549260abb854271998d14da1e0b3af
+      internalID: 8006341100606387423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nila_Idle_90
+      rect:
+        serializedVersion: 2
+        x: 4752
+        y: 6336
+        width: 792
+        height: 792
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d565241df858142d284ffe48feb7695e
+      internalID: -5643861822920344405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nila_Idle_91
+      rect:
+        serializedVersion: 2
+        x: 5544
+        y: 6336
+        width: 792
+        height: 792
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fa8145f3eb6b48818e8068dee6780d8
+      internalID: 1186302936295616087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nila_Idle_92
+      rect:
+        serializedVersion: 2
+        x: 6336
+        y: 6336
+        width: 792
+        height: 792
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f12b048c2d2a48dba9fb98e3efe6a7e
+      internalID: -4033270526764873353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nila_Idle_93
+      rect:
+        serializedVersion: 2
+        x: 7128
+        y: 6336
+        width: 792
+        height: 792
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbe2eb1a316964f73849e81b685c81af
+      internalID: -659104105478003103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nila_Idle_94
+      rect:
+        serializedVersion: 2
+        x: 7920
+        y: 6336
+        width: 792
+        height: 792
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e94b64732f3e43e6979975e0edd80a8
+      internalID: 980888871599757940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nila_Idle_95
+      rect:
+        serializedVersion: 2
+        x: 8712
+        y: 6336
+        width: 792
+        height: 792
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: caf916d12adf34cc78876f0852364daa
+      internalID: -8133660772547345343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nila_Idle_96
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5544
+        width: 792
+        height: 792
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65e5cd4663f8a4fccb3e8f430969851d
+      internalID: 4589878012080669632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nila_Idle_97
+      rect:
+        serializedVersion: 2
+        x: 792
+        y: 5544
+        width: 792
+        height: 792
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e09acc145dd9a4f25adad969314219cd
+      internalID: -8069569491208318918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nila_Idle_98
+      rect:
+        serializedVersion: 2
+        x: 1584
+        y: 5544
+        width: 792
+        height: 792
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a398088439feb4d09a1d3c38dd66ee2f
+      internalID: -1812868490735314575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nila_Idle_99
+      rect:
+        serializedVersion: 2
+        x: 2376
+        y: 5544
+        width: 792
+        height: 792
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55d72abfa765f459e89e693ef855126c
+      internalID: 7620772810209917596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nila_Idle_100
+      rect:
+        serializedVersion: 2
+        x: 3168
+        y: 5544
+        width: 792
+        height: 792
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd816c4f9827c413eae61f8b06d48cb4
+      internalID: 1018950651147179839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nila_Idle_101
+      rect:
+        serializedVersion: 2
+        x: 3960
+        y: 5544
+        width: 792
+        height: 792
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93a370f8335df4e2fae2e0d7cc8de972
+      internalID: -5281519136056498711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nila_Idle_102
+      rect:
+        serializedVersion: 2
+        x: 4752
+        y: 5544
+        width: 792
+        height: 792
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a92554b2a72f146acaea4606d026eeb9
+      internalID: -1736452643369906472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nila_Idle_103
+      rect:
+        serializedVersion: 2
+        x: 5544
+        y: 5544
+        width: 792
+        height: 792
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0c25e5a30981433f96a6a3cb51014e2
+      internalID: -7639317547461345776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nila_Idle_104
+      rect:
+        serializedVersion: 2
+        x: 6336
+        y: 5544
+        width: 792
+        height: 792
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9509b1f80649b49abac6cd9f52887b7f
+      internalID: 5406869449933310390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nila_Idle_105
+      rect:
+        serializedVersion: 2
+        x: 7128
+        y: 5544
+        width: 792
+        height: 792
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f9543ae7607641de82ac3764185b2b1
+      internalID: -8675039325116028898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nila_Idle_106
+      rect:
+        serializedVersion: 2
+        x: 7920
+        y: 5544
+        width: 792
+        height: 792
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98b09468a39304b8cab25e7e1766c520
+      internalID: -8321198974246141650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nila_Idle_107
+      rect:
+        serializedVersion: 2
+        x: 8712
+        y: 5544
+        width: 792
+        height: 792
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0acfedcf8bb934eeda19688c1c429d73
+      internalID: 1172963297036505125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nila_Idle_108
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4752
+        width: 792
+        height: 792
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98c0a11236c3b41f296920c7fa707c82
+      internalID: 1386577556866991013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nila_Idle_109
+      rect:
+        serializedVersion: 2
+        x: 792
+        y: 4752
+        width: 792
+        height: 792
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a443d7017fbe64f98a1f3faa5b076898
+      internalID: -5430411764547867649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nila_Idle_110
+      rect:
+        serializedVersion: 2
+        x: 1584
+        y: 4752
+        width: 792
+        height: 792
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 197513ab1eba44839a82392f2f4298f4
+      internalID: -7432046334587571599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nila_Idle_111
+      rect:
+        serializedVersion: 2
+        x: 2376
+        y: 4752
+        width: 792
+        height: 792
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f8a68aa9a7e94c72968276f8b42d091
+      internalID: -3077333605003781787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nila_Idle_112
+      rect:
+        serializedVersion: 2
+        x: 3168
+        y: 4752
+        width: 792
+        height: 792
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb933bb391d944cc59316dcc65c5b098
+      internalID: -1677469530658526528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nila_Idle_113
+      rect:
+        serializedVersion: 2
+        x: 3960
+        y: 4752
+        width: 792
+        height: 792
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e98b215f13ec04409b9d0079ac7bc521
+      internalID: 6357472736078494939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nila_Idle_114
+      rect:
+        serializedVersion: 2
+        x: 4752
+        y: 4752
+        width: 792
+        height: 792
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7db9f89222e804a56b05e0258fe1f414
+      internalID: 7083069272314005825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nila_Idle_115
+      rect:
+        serializedVersion: 2
+        x: 5544
+        y: 4752
+        width: 792
+        height: 792
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c76e37df78de40a499fbf486f631a52
+      internalID: 3511042412398023125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nila_Idle_116
+      rect:
+        serializedVersion: 2
+        x: 6336
+        y: 4752
+        width: 792
+        height: 792
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be98e671e0f934d9da076b4e92e96f92
+      internalID: -3798557110441175116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nila_Idle_117
+      rect:
+        serializedVersion: 2
+        x: 7128
+        y: 4752
+        width: 792
+        height: 792
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32a1d5064289d4b65bf0f1a451841927
+      internalID: -8893913248073169449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nila_Idle_118
+      rect:
+        serializedVersion: 2
+        x: 7920
+        y: 4752
+        width: 792
+        height: 792
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19861d0d7df41445f982b601bdbd4731
+      internalID: -1429251342432896142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nila_Idle_119
+      rect:
+        serializedVersion: 2
+        x: 8712
+        y: 4752
+        width: 792
+        height: 792
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b2cf12fb784b40e0a1817ea4f5d0833
+      internalID: 5077118994399211068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nila_Idle_120
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3960
+        width: 792
+        height: 792
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 905e362813db1428c8851c5d6f368913
+      internalID: -9021214288829612858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nila_Idle_121
+      rect:
+        serializedVersion: 2
+        x: 792
+        y: 3960
+        width: 792
+        height: 792
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24b191bbaee3f4cd6aeea3a22c09c1a3
+      internalID: 2968091325002351373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nila_Idle_122
+      rect:
+        serializedVersion: 2
+        x: 1584
+        y: 3960
+        width: 792
+        height: 792
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 158521d7280a14aa68cc5ca0405cd3d5
+      internalID: -2465816949540166700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nila_Idle_123
+      rect:
+        serializedVersion: 2
+        x: 2376
+        y: 3960
+        width: 792
+        height: 792
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b077b7b3eab84a538650fe238251956
+      internalID: -7153997488107384974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nila_Idle_124
+      rect:
+        serializedVersion: 2
+        x: 3168
+        y: 3960
+        width: 792
+        height: 792
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1ce340607c7b40f580b005032b55476
+      internalID: 2177008417901634408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nila_Idle_125
+      rect:
+        serializedVersion: 2
+        x: 3960
+        y: 3960
+        width: 792
+        height: 792
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc9d41e8470594a0fa932a5a3b25b980
+      internalID: 3779548238914546592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nila_Idle_126
+      rect:
+        serializedVersion: 2
+        x: 4752
+        y: 3960
+        width: 792
+        height: 792
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e00e23670f8014a80bd0331e93a8b1ad
+      internalID: -7199046656416534605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nila_Idle_127
+      rect:
+        serializedVersion: 2
+        x: 5544
+        y: 3960
+        width: 792
+        height: 792
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77a95e9aa6a8a4d848caf4ea1422f2ad
+      internalID: 517065029062374842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nila_Idle_128
+      rect:
+        serializedVersion: 2
+        x: 6336
+        y: 3960
+        width: 792
+        height: 792
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97490cf2262194934b7ec8e2e7eb6ee3
+      internalID: -6067973485551690803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nila_Idle_129
+      rect:
+        serializedVersion: 2
+        x: 7128
+        y: 3960
+        width: 792
+        height: 792
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd6e6b964f32a41828149563c15d9735
+      internalID: -2671946622297640554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nila_Idle_130
+      rect:
+        serializedVersion: 2
+        x: 7920
+        y: 3960
+        width: 792
+        height: 792
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6016ad9a5ffa941db9d8b2ccd1d7f88e
+      internalID: 6508612595820343802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nila_Idle_131
+      rect:
+        serializedVersion: 2
+        x: 8712
+        y: 3960
+        width: 792
+        height: 792
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10569bfaecd4d4235911b8c534a73b13
+      internalID: 3537539204757099993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nila_Idle_132
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3168
+        width: 792
+        height: 792
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e47127373767a483382a00196fa24de7
+      internalID: 517920805114092218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nila_Idle_133
+      rect:
+        serializedVersion: 2
+        x: 792
+        y: 3168
+        width: 792
+        height: 792
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c476f26f5b8e489990540fbea6390bd
+      internalID: 6550803353589196268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nila_Idle_134
+      rect:
+        serializedVersion: 2
+        x: 1584
+        y: 3168
+        width: 792
+        height: 792
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b51232a7771d244f58919d6df75b5a9a
+      internalID: -3632451033697755261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nila_Idle_135
+      rect:
+        serializedVersion: 2
+        x: 2376
+        y: 3168
+        width: 792
+        height: 792
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0096ea537b5f345c091718388aeb1699
+      internalID: 204211763312328185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nila_Idle_136
+      rect:
+        serializedVersion: 2
+        x: 3168
+        y: 3168
+        width: 792
+        height: 792
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7683ec0a05024214a37d02ab0f6a325
+      internalID: -4864654861309799780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nila_Idle_137
+      rect:
+        serializedVersion: 2
+        x: 3960
+        y: 3168
+        width: 792
+        height: 792
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0bd1323a6eac8467d8af9573eb824e54
+      internalID: 5438770747010530634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nila_Idle_138
+      rect:
+        serializedVersion: 2
+        x: 4752
+        y: 3168
+        width: 792
+        height: 792
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37ff2030904d44c95856effecb1b0a1b
+      internalID: -6063040299669917621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nila_Idle_139
+      rect:
+        serializedVersion: 2
+        x: 5544
+        y: 3168
+        width: 792
+        height: 792
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 101ed0ee470504e29844ecba3c744128
+      internalID: -4475857687774933376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nila_Idle_140
+      rect:
+        serializedVersion: 2
+        x: 6336
+        y: 3168
+        width: 792
+        height: 792
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7cbf66b3df41b49e688f81bf7098893e
+      internalID: -2648643795988677588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nila_Idle_141
+      rect:
+        serializedVersion: 2
+        x: 7128
+        y: 3168
+        width: 792
+        height: 792
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cef54499d69954366a85c22ebee65a3a
+      internalID: -4218346631000286444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nila_Idle_142
+      rect:
+        serializedVersion: 2
+        x: 7920
+        y: 3168
+        width: 792
+        height: 792
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc74edbbf37bd4c899db316c2b58d8eb
+      internalID: 6004273176220473923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nila_Idle_143
+      rect:
+        serializedVersion: 2
+        x: 8712
+        y: 3168
+        width: 792
+        height: 792
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec59ec04e3c67450a98a0f9a4e45c6b6
+      internalID: -5683982295055836875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nila_Idle_144
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2376
+        width: 792
+        height: 792
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 026722495a3224ad7be6107f667e3839
+      internalID: 1507861708462723435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nila_Idle_145
+      rect:
+        serializedVersion: 2
+        x: 792
+        y: 2376
+        width: 792
+        height: 792
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c5bc31c5b6c4436e9309d102a00f7da
+      internalID: -8377010529412868905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nila_Idle_146
+      rect:
+        serializedVersion: 2
+        x: 1584
+        y: 2376
+        width: 792
+        height: 792
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d10771ce76b5f46a392120155641d5aa
+      internalID: -5043055860865187717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nila_Idle_147
+      rect:
+        serializedVersion: 2
+        x: 2376
+        y: 2376
+        width: 792
+        height: 792
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ae8236b405b84139893ef6d972f10f7
+      internalID: -6539102952421702941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nila_Idle_148
+      rect:
+        serializedVersion: 2
+        x: 3168
+        y: 2376
+        width: 792
+        height: 792
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3eb99b1339344b4cbe9b2dcee5eda0d
+      internalID: 5706996727214450379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nila_Idle_149
+      rect:
+        serializedVersion: 2
+        x: 3960
+        y: 2376
+        width: 792
+        height: 792
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 145437f41d43641968d4cd21e4bd2315
+      internalID: 5796982624305535645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nila_Idle_150
+      rect:
+        serializedVersion: 2
+        x: 4752
+        y: 2376
+        width: 792
+        height: 792
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14e09ceb8f2fb462181a2f2996942337
+      internalID: 9137130331163931629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nila_Idle_151
+      rect:
+        serializedVersion: 2
+        x: 5544
+        y: 2376
+        width: 792
+        height: 792
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d8bfa6103cb74430b5c8fae4f101347
+      internalID: 4465522478490566892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nila_Idle_152
+      rect:
+        serializedVersion: 2
+        x: 6336
+        y: 2376
+        width: 792
+        height: 792
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9abd31d62793448b4bdb6f0b95bc7938
+      internalID: -8029677354794870350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nila_Idle_153
+      rect:
+        serializedVersion: 2
+        x: 7128
+        y: 2376
+        width: 792
+        height: 792
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 538fd22d7b4714407a0824b27c817975
+      internalID: -8810700933878749439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nila_Idle_154
+      rect:
+        serializedVersion: 2
+        x: 7920
+        y: 2376
+        width: 792
+        height: 792
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 186127790a4f04a9281adb671a6fc986
+      internalID: 3324158853485894298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nila_Idle_155
+      rect:
+        serializedVersion: 2
+        x: 8712
+        y: 2376
+        width: 792
+        height: 792
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09230c46e81d24e2bab617c64d0eac67
+      internalID: -886602843307240533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nila_Idle_156
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1584
+        width: 792
+        height: 792
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a401ca1c0fbd147d59caaa87d6750be0
+      internalID: -8275270378061634120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nila_Idle_157
+      rect:
+        serializedVersion: 2
+        x: 792
+        y: 1584
+        width: 792
+        height: 792
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d81c5c9f9a3324c6f8e064be16e83fcc
+      internalID: -4019848361193769396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nila_Idle_158
+      rect:
+        serializedVersion: 2
+        x: 1584
+        y: 1584
+        width: 792
+        height: 792
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4f7c7911e3b0448e9a726f47931aeb0
+      internalID: -155758768573811056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nila_Idle_159
+      rect:
+        serializedVersion: 2
+        x: 2376
+        y: 1584
+        width: 792
+        height: 792
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee78ec022506d4d1bb0972eb788f9063
+      internalID: 8557858596841609025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nila_Idle_160
+      rect:
+        serializedVersion: 2
+        x: 3168
+        y: 1584
+        width: 792
+        height: 792
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b08bc02465d341fbaa6a96414c8a7d3
+      internalID: -3833261474581400101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nila_Idle_161
+      rect:
+        serializedVersion: 2
+        x: 3960
+        y: 1584
+        width: 792
+        height: 792
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b0860ee8174745dd82a0e1ba47c0394
+      internalID: 6808255550411357963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nila_Idle_162
+      rect:
+        serializedVersion: 2
+        x: 4752
+        y: 1584
+        width: 792
+        height: 792
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91b536472eb61477496c9179511871cd
+      internalID: -602919780453625242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nila_Idle_163
+      rect:
+        serializedVersion: 2
+        x: 5544
+        y: 1584
+        width: 792
+        height: 792
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c7b5a5b0bf8544ba9a7f438b165dfcc
+      internalID: -1667637967505675890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nila_Idle_164
+      rect:
+        serializedVersion: 2
+        x: 6336
+        y: 1584
+        width: 792
+        height: 792
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5b957b078a81435884668d9337039fa
+      internalID: -5301209133659819427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nila_Idle_165
+      rect:
+        serializedVersion: 2
+        x: 7128
+        y: 1584
+        width: 792
+        height: 792
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f67f7a82e07aa405b94ef71ece5db2e6
+      internalID: -5584157898914153269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nila_Idle_166
+      rect:
+        serializedVersion: 2
+        x: 7920
+        y: 1584
+        width: 792
+        height: 792
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a19955e3ce2f43bd9ac2fe3a1dc7e3d
+      internalID: 7092635460058304879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nila_Idle_167
+      rect:
+        serializedVersion: 2
+        x: 8712
+        y: 1584
+        width: 792
+        height: 792
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9c941fff2f274233a98755bb9dabfc6
+      internalID: -1173141567787122294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nila_Idle_168
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 792
+        width: 792
+        height: 792
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01ccee1e787b14b178a60fc5e7902745
+      internalID: 1675811007465449929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nila_Idle_169
+      rect:
+        serializedVersion: 2
+        x: 792
+        y: 792
+        width: 792
+        height: 792
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf5945974981244259baefde1f23cd6b
+      internalID: 3769132194580090618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nila_Idle_170
+      rect:
+        serializedVersion: 2
+        x: 1584
+        y: 792
+        width: 792
+        height: 792
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fedd3a1fe0b60488b9e479745bf25283
+      internalID: -4581471486897745024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nila_Idle_171
+      rect:
+        serializedVersion: 2
+        x: 2376
+        y: 792
+        width: 792
+        height: 792
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3c3b680a19df45d6be2a9639a55a59a
+      internalID: 2868066762194743430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nila_Idle_172
+      rect:
+        serializedVersion: 2
+        x: 3168
+        y: 792
+        width: 792
+        height: 792
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27134aea21567441182dcd4c21b201ae
+      internalID: 1847943371727830989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nila_Idle_173
+      rect:
+        serializedVersion: 2
+        x: 3960
+        y: 792
+        width: 792
+        height: 792
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8346588ed13b846c490be693753702de
+      internalID: 7071627941050659932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nila_Idle_174
+      rect:
+        serializedVersion: 2
+        x: 4752
+        y: 792
+        width: 792
+        height: 792
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c980ed0e9b8d44d06946c8a0bc122296
+      internalID: -7258673004619279763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nila_Idle_175
+      rect:
+        serializedVersion: 2
+        x: 5544
+        y: 792
+        width: 792
+        height: 792
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f4fc16e465744f9498f0dc5a9f7c4ff
+      internalID: -634358168531645799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nila_Idle_176
+      rect:
+        serializedVersion: 2
+        x: 6336
+        y: 792
+        width: 792
+        height: 792
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ad947da27e1f4c17b2ceb1964c0c0f4
+      internalID: 2337270157236045942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nila_Idle_177
+      rect:
+        serializedVersion: 2
+        x: 7128
+        y: 792
+        width: 792
+        height: 792
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ffa882a74f084826bd9a49acfc4018b
+      internalID: -4926148963741547592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nila_Idle_178
+      rect:
+        serializedVersion: 2
+        x: 7920
+        y: 792
+        width: 792
+        height: 792
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 049ae6a8fc4284ba481b3ab8e5eccb8e
+      internalID: 1170781325266650406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nila_Idle_179
+      rect:
+        serializedVersion: 2
+        x: 8712
+        y: 792
+        width: 792
+        height: 792
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abcd2f4a03f614ed69a3a97f4d204afe
+      internalID: 2843669995283682409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nila_Idle_180
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 792
+        height: 792
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 269cf57cb12fd48af9db9c8c949af733
+      internalID: -8086722527611897128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 6d37b6c2d8e454837b567d369fc7c928
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
